@@ -1,39 +1,65 @@
-# AGENTS.md — Codex Navigation & Operating Guide
+# AGENTS.md — Codex Navigation Guide
 
 ## Purpose
 
-This file is the **navigation guide for Codex**.
+This file tells Codex **where to look, what to read, what to update, and how to avoid unnecessary work**.
 
-Its job is to help the AI find the right information quickly, avoid rereading the whole repository, reuse prior work, and know exactly which file to read or update for each planning task.
+It is a routing guide, not a duplicate of the planner requirements.
 
-Do **not** treat this file as a duplicate of the project requirements. Detailed planner rules live in `Requirements/`.
-
----
-
-# 1. Default behavior
-
-Before doing any task:
-
-1. Identify the exact task.
-2. Use the routing tables in this file to read only the files needed for that task.
-3. Check whether the result already exists in `Planning/`, `State/`, or `Output/`.
-4. Reuse valid existing work instead of repeating research or analysis.
-5. Read source files only when the current task genuinely depends on their content.
-6. Save meaningful new analysis to the designated planning/state file.
-
-> **Do not recursively read the whole repository by default.**
-
-This is important for speed, context efficiency, and credit usage.
+Detailed rules live in `Requirements/`.
 
 ---
 
-# 2. Project map
+# 1. Core operating rule
+
+> **Use the smallest amount of context needed for the current task.**
+
+Do not recursively read or deeply analyze the repository.
+
+For planning, Codex usually only needs to understand:
+
+- what each source is;
+- which track it belongs to;
+- whether it is primary, supporting, practice-oriented, optional, or pending;
+- its approximate size/density;
+- its major sections/topics;
+- enough information to estimate a realistic duration.
+
+Codex does **not** need to fully understand, summarize, fact-check, rewrite, or memorize study notes in order to build the planner.
+
+---
+
+# 2. Cheap source-inspection protocol
+
+When estimating or classifying a source, use this order:
+
+1. filename/path;
+2. file metadata;
+3. size / line count / word count / page count;
+4. headings / table of contents / section titles;
+5. a small targeted sample only if needed.
+
+Stop as soon as **scope + role + rough workload** are clear.
+
+Do not by default:
+
+- read large Markdown files line-by-line;
+- inspect every code block/example;
+- parse every embedded image;
+- deeply compare paired notes;
+- summarize entire sources;
+- load all of `Sources/` into context;
+- reopen raw notes after workload estimates have already been saved.
+
+A recursive **directory listing** is allowed. Recursive **content analysis** is not.
+
+---
+
+# 3. Project map
 
 ```text
 placement/
 ├── AGENTS.md
-├── README.md
-│
 ├── Requirements/
 │   ├── master_requirements.md
 │   ├── availability.md
@@ -68,396 +94,301 @@ placement/
 
 ---
 
-# 3. Where to go for each kind of information
+# 4. Routing table
 
-| Need | Read this |
+| Need | Read |
 |---|---|
-| Overall goal, priorities, preparation philosophy, mandatory tracks, feasibility policy | `Requirements/master_requirements.md` |
-| Dates, daily hours, meals, classes, attendance, namaz, hard scheduling constraints | `Requirements/availability.md` |
-| Meaning of slot types such as Full Revision, Practice, Final Verification, Project Questionnaire, Mock | `Requirements/planner_description.md` |
-| Calendar title style, descriptions, resource links, event validation, calendar behavior | `Requirements/calendar_rules.md` |
-| Raw study/reference material | Relevant file under `Sources/` |
-| Logical source groupings and source roles | `Planning/source_map.json` |
-| Existing duration/workload estimates | `Planning/workload_estimates.json` |
-| Full list of required planner tasks | `Planning/task_inventory.json` |
-| Selected external resources and rationale | `Planning/resource_research.md` |
-| Important prior reasoning/decisions | `Planning/planning_decisions.md` |
-| Capacity/overload analysis | `Planning/feasibility.md` |
-| Current project phase/progress | `State/planner_state.json` |
-| User-approved hard constraints | `State/approved_constraints.json` |
-| User-approved removals/cuts | `State/approved_cuts.json` |
+| Overall goals, priorities, required tracks, feasibility rules | `Requirements/master_requirements.md` |
+| Dates, hours, meals, classes, attendance, namaz | `Requirements/availability.md` |
+| Meaning of planner slot types | `Requirements/planner_description.md` |
+| Calendar naming, descriptions, resources, event rules | `Requirements/calendar_rules.md` |
+| Raw study material | only the relevant file under `Sources/` |
+| Logical source grouping / source role | `Planning/source_map.json` |
+| Existing time estimates | `Planning/workload_estimates.json` |
+| Required tasks and dependencies | `Planning/task_inventory.json` |
+| Chosen external resources | `Planning/resource_research.md` |
+| Important prior decisions | `Planning/planning_decisions.md` |
+| Capacity / overload result | `Planning/feasibility.md` |
+| Current phase | `State/planner_state.json` |
+| Approved constraints | `State/approved_constraints.json` |
+| Approved cuts | `State/approved_cuts.json` |
 | Proposed schedule | `Output/draft_plan.md` |
-| User-approved final schedule | `Output/final_plan.md` |
-| Structured events prepared for calendar creation | `Output/calendar_events.json` |
+| Approved schedule | `Output/final_plan.md` |
+| Calendar-ready events | `Output/calendar_events.json` |
 
 ---
 
-# 4. Authority order
+# 5. Authority order
 
-If information conflicts, use this order of authority:
+If information conflicts:
 
-1. **User's newest explicit instruction**
-2. **User-approved values stored in `State/`**
-3. `Requirements/master_requirements.md`
-4. `Requirements/availability.md`
-5. `Requirements/planner_description.md`
-6. `Requirements/calendar_rules.md`
-7. Existing files in `Planning/`
-8. Codex's own inference
+1. user's newest explicit instruction;
+2. user-approved state in `State/`;
+3. `Requirements/master_requirements.md`;
+4. `Requirements/availability.md`;
+5. `Requirements/planner_description.md`;
+6. `Requirements/calendar_rules.md`;
+7. existing `Planning/` analysis;
+8. Codex inference.
 
-Never override an explicit user-approved requirement simply because another schedule would appear more convenient.
-
-If new evidence creates a real conflict with an approved decision, explain the conflict before changing the approved decision.
+Do not override an approved requirement for convenience.
 
 ---
 
-# 5. Task routing table
+# 6. Planning workflow
 
-Use this table instead of loading unrelated files.
-
-| Current task | Minimum files to read | File(s) to update |
-|---|---|---|
-| Inspect/classify a new source | relevant `Sources/...` file + `master_requirements.md` if role is unclear | `Planning/source_map.json` |
-| Estimate a subject/source | relevant source + `Planning/source_map.json` + existing estimate if present | `Planning/workload_estimates.json` |
-| Research an external study/practice resource | relevant requirement/slot rule + source role + existing research | `Planning/resource_research.md` |
-| Build/update task inventory | `master_requirements.md` + `source_map.json` + `workload_estimates.json` + approved state | `Planning/task_inventory.json` |
-| Choose college attendance | `Requirements/availability.md` + current task inventory | `Planning/planning_decisions.md` and relevant planning output |
-| Run feasibility | `availability.md` + `task_inventory.json` + `workload_estimates.json` + approved state | `Planning/feasibility.md` |
-| Propose cuts after overload | `feasibility.md` + `task_inventory.json` + `master_requirements.md` | `Planning/planning_decisions.md`; do **not** write to `approved_cuts.json` until user approves |
-| Draft schedule | requirements needed for scheduling + approved state + feasibility + task inventory + estimates | `Output/draft_plan.md` |
-| Validate draft | draft + `availability.md` + `calendar_rules.md` + requirements + approved state | fix `Output/draft_plan.md`; record important decisions if needed |
-| Finalize approved schedule | approved draft + relevant state | `Output/final_plan.md`, `State/planner_state.json` |
-| Prepare calendar event data | `final_plan.md` + `calendar_rules.md` + resource research | `Output/calendar_events.json` |
-| Create live calendar events | `calendar_events.json` + explicit current user instruction | live calendar only after permission |
-| Add newly received JD/resume/OA/CV material | new source + relevant requirement section | relevant `Sources/` path, then update source map/estimates as needed |
-
----
-
-# 6. Required planning workflow
-
-Do not jump directly from raw sources to a final calendar.
-
-Use this sequence unless the user explicitly requests a narrower task:
+Use this sequence:
 
 ```text
 1. Read relevant requirements/state
-2. Inventory available source material
+2. Inventory Sources/ using metadata
 3. Build/update source_map.json
-4. Inspect required source content
-5. Build/update workload_estimates.json
-6. Research external resources where needed
-7. Build/update task_inventory.json
-8. Calculate realistic available capacity
-9. Run feasibility analysis
-10. If infeasible: stop and ask user to approve trade-offs
-11. Build draft plan
-12. Validate draft against all hard constraints
-13. Present/wait for approval
-14. Produce final plan
-15. Prepare calendar_events.json
-16. Create live calendar events only when explicitly requested
+4. Estimate workload using size + headings + minimal targeted reading
+5. Research only external resources that are actually needed
+6. Build/update task_inventory.json
+7. Calculate realistic available capacity
+8. Run feasibility analysis
+9. If infeasible, stop and ask for trade-off approval
+10. Build draft plan
+11. Validate hard constraints/dependencies
+12. Present for approval
+13. Produce final plan
+14. Prepare calendar_events.json
+15. Create live calendar events only when explicitly requested
 ```
 
-Do not skip the feasibility gate.
+Do not skip feasibility.
+
+Do not use Step 4 as a deep note-analysis phase.
 
 ---
 
-# 7. Source-reading rules
+# 7. Source mapping rules
 
-## 7.1 Do not infer calendar time from file count
-
-A file is a source, not automatically a task.
+A file is not automatically a calendar block.
 
 Do not assume:
 
 - one file = one block;
 - one folder = one day;
-- every note deserves a dedicated event.
+- every source deserves dedicated time.
 
-Use `Planning/source_map.json` to distinguish physical files from logical study units.
+Use `Planning/source_map.json` to record logical units and source roles.
 
-## 7.2 Respect logical groupings
+Useful source roles:
 
-Recommendation Systems has paired physical files that are studied together:
+- `primary_revision`
+- `practice_reference`
+- `supporting_embedded`
+- `scope_definition`
+- `optional_or_redundant`
+- `pending_or_incomplete`
 
-- Unit 1 ChatGPT + Unit 1 Codex = one logical Unit 1
-- Unit 2 ChatGPT + Unit 2 Codex = one logical Unit 2
-- Unit 3 ChatGPT + Unit 3 Codex = one logical Unit 3
+Important established mappings should be taken from the requirements/source structure rather than rediscovered through deep analysis.
 
-Do not schedule paired files as separate units merely because two files exist.
+Examples:
 
-## 7.3 Respect source roles
-
-Sources may be classified as:
-
-- primary revision source;
-- practice reference;
-- supporting/embedded reference;
-- optional/redundant source;
-- pending/incomplete source.
-
-The source role should be stored in `Planning/source_map.json`.
-
-## 7.4 Missing/empty sources
-
-If a required source is missing or empty:
-
-- do not hallucinate its content;
-- record that it is pending;
-- continue only with analysis that does not depend on the missing content;
-- revisit estimates when the real source arrives.
-
-## 7.5 Preserve source material
-
-Do not rewrite study notes merely to make planning easier unless explicitly asked.
-
-Planning analysis belongs in `Planning/` and `State/`, not inside the original source files.
+- paired RecSys ChatGPT + Codex files form one logical unit per unit;
+- DSA pattern/mistake files are supporting references;
+- JSON and Java Collections are supporting material;
+- MongoDB reference material is inside `Node_Backend.md`;
+- JavaScript notes are reference material, while JS preparation is practice-oriented;
+- IWT scope is defined by its README;
+- the LSEG JD is the primary role-specific source.
 
 ---
 
-# 8. Workload estimation rules
+# 8. Workload estimation
 
-When estimating time:
+The goal is a **realistic duration estimate**, not a source summary.
 
-- inspect actual source length and density;
-- consider difficulty and familiarity;
-- distinguish revision from first-pass learning;
-- allow more time for practice than passive reading;
-- allow realistic time for oral verification/questionnaire/mock sessions;
-- split large logical units when required;
-- combine small compatible tasks only when sensible;
-- do not use a universal 60- or 90-minute block rule.
+Estimate using:
 
-Most importantly:
+- size / word count / page count;
+- number of major sections;
+- source role;
+- whether the user is revising or learning;
+- whether active practice is required;
+- cognitive density;
+- whether several files form one logical unit;
+- required verification/questionnaire/mock time.
 
-> **Do not reduce an honest duration estimate just because the schedule is crowded.**
+Store compact evidence in `Planning/workload_estimates.json`.
 
-If the workload does not fit, use the feasibility process instead.
+Example:
+
+```json
+{
+  "id": "os_revision",
+  "source": "Sources/Placement/Core/OS.md",
+  "role": "primary_revision",
+  "inspection": "metadata+headings",
+  "estimated_minutes": 150,
+  "confidence": "medium"
+}
+```
+
+Do not store detailed chapter summaries.
+
+If confidence is low because material is incomplete or unusually dense, mark the estimate provisional instead of automatically reading the entire source.
 
 ---
 
-# 9. Feasibility gate
+# 9. When deeper reading is justified
 
-A final planner may not be produced until feasibility has been checked.
+Read deeper only when a specific planning question cannot be answered cheaply.
 
-If realistic workload exceeds realistic capacity:
+Examples:
 
-1. Stop before finalizing the plan.
-2. Record the overload in `Planning/feasibility.md`.
-3. Identify required, desirable, and redundant/optional work.
-4. Propose specific trade-offs.
-5. Record proposals in `Planning/planning_decisions.md` if useful.
-6. Ask the user for approval.
-7. Only user-approved removals belong in `State/approved_cuts.json`.
+- the source has no useful headings;
+- two sources may be heavily redundant and that decision materially affects feasibility;
+- a JD section must be checked for topic relevance;
+- an exact OA/question sheet must be inspected to determine question type/count;
+- the user explicitly asks for content analysis.
+
+Even then, read only the smallest targeted portion needed.
+
+---
+
+# 10. Feasibility gate
+
+A final planner cannot be produced until feasibility is checked.
+
+If required workload exceeds realistic capacity:
+
+1. stop;
+2. record the overload in `Planning/feasibility.md`;
+3. separate required, desirable, and redundant/optional work;
+4. propose trade-offs;
+5. ask the user for approval;
+6. put only approved removals in `State/approved_cuts.json`.
 
 Never silently:
 
-- drop a required task;
-- shorten a task to an unrealistic duration;
-- remove a source from coverage;
-- treat a suggested cut as approved.
+- drop required work;
+- shrink durations unrealistically;
+- treat suggested cuts as approved.
+
+Feasibility should use:
+
+- `workload_estimates.json`;
+- `task_inventory.json`;
+- `availability.md`;
+- approved state.
+
+Do **not** reopen raw study notes during feasibility unless an estimate is missing or stale.
 
 ---
 
-# 10. Core planning invariants
+# 11. External resource research
 
-Detailed rules live in `Requirements/`, but every draft/final plan must preserve these invariants:
+Check `Planning/resource_research.md` before researching.
 
-- LSEG receives the largest share of preparation time.
-- At least one genuine midsem self-study block exists every day from Sep 10–16.
-- Class attendance does not count as self-study.
-- Prep starts no earlier than 9:00 AM and ends by 10:30 PM.
-- Lunch is protected from 1:00–2:00 PM.
-- Dinner is protected from 7:30–8:30 PM.
-- Friday Sep 11, 12:30–3:00 PM is protected for namaz.
-- Monday Sep 14 IWT Lab is mandatory.
-- Blockchain, EMC, and TW classes are treated as not happening.
-- Project revision occurs before project questionnaire.
-- Core revision/practice occurs before final verification.
-- LSEG OA preparation remains separate from normal DSA.
-- The plan is fixed by default; do not automatically replan because of weak performance or a missed block.
-- Sep 16 night contains the mandatory full mixed LSEG mock with ChatGPT.
-- Late Sep 16 should emphasize consolidation rather than heavy new learning where possible.
-- Real rest/buffer time must exist.
+Research only for the exact task that needs it.
 
-If a draft violates any invariant, fix the draft before presenting it.
+Prefer:
+
+- short targeted videos when equally suitable;
+- strong written/documentation resources when better;
+- real practice platforms/problem sets for practice blocks;
+- high signal-to-time ratio.
+
+Avoid broad courses/playlists for narrow tasks.
+
+Save final useful selections in `Planning/resource_research.md` so later stages do not research them again.
 
 ---
 
-# 11. External research rules
+# 12. Persistence and reuse
 
-When a task needs outside resources:
+Save planning work here:
 
-- check `Planning/resource_research.md` first;
-- reuse an existing valid resource choice rather than researching again;
-- prefer short targeted videos when equally suitable;
-- use strong written resources/documentation when better;
-- use actual practice platforms/problem sets for practice blocks;
-- avoid oversized playlists/courses for narrow tasks;
-- optimize for relevance, correctness, quality, depth, and time efficiency.
-
-Store useful final selections and rationale in `Planning/resource_research.md`.
-
-Do not repeatedly research the same topic unless:
-
-- the existing resource is missing/broken/outdated;
-- new requirements change the task;
-- the user explicitly asks for alternatives.
-
----
-
-# 12. Persistence rules
-
-After meaningful work, save the result to the correct file.
-
-| New information produced | Save to |
+| Result | Save to |
 |---|---|
-| Source meaning/grouping/role | `Planning/source_map.json` |
+| Source role/grouping/status | `Planning/source_map.json` |
 | Duration estimate | `Planning/workload_estimates.json` |
 | Required task/dependency | `Planning/task_inventory.json` |
 | External resource choice | `Planning/resource_research.md` |
-| Important reasoning/decision | `Planning/planning_decisions.md` |
-| Capacity/overload result | `Planning/feasibility.md` |
-| Current phase/progress | `State/planner_state.json` |
-| Explicit user-approved constraint | `State/approved_constraints.json` |
-| Explicit user-approved removal/cut | `State/approved_cuts.json` |
+| Important decision | `Planning/planning_decisions.md` |
+| Feasibility result | `Planning/feasibility.md` |
+| Current phase | `State/planner_state.json` |
+| Approved constraint | `State/approved_constraints.json` |
+| Approved cut | `State/approved_cuts.json` |
 | Proposed schedule | `Output/draft_plan.md` |
 | Approved schedule | `Output/final_plan.md` |
-| Calendar-ready event data | `Output/calendar_events.json` |
+| Calendar-ready events | `Output/calendar_events.json` |
 
-Do not duplicate the same analysis across multiple files unless there is a clear reason.
+Before repeating work, check whether it already exists.
 
----
+If new source material arrives, update only the affected:
 
-# 13. State and prior-work reuse
+- source-map entry;
+- estimate;
+- task;
+- feasibility calculation;
+- schedule section.
 
-Before repeating work, inspect the designated existing file.
-
-Examples:
-
-- Before estimating OS again, check `workload_estimates.json`.
-- Before researching JavaScript practice again, check `resource_research.md`.
-- Before deciding whether RecSys numericals are separate, check `source_map.json` and `planning_decisions.md`.
-- Before creating a new draft, check `planner_state.json`, `approved_constraints.json`, `approved_cuts.json`, and existing output.
-
-Existing work may be updated when new evidence arrives, but do not discard it without reason.
-
-If an estimate changes because a new source was added, update the estimate and record the reason where useful.
+Do not rerun the entire project unnecessarily.
 
 ---
 
-# 14. Inputs that may arrive later
+# 13. Calendar safety
 
-The project may receive new material after initial analysis, including:
+Never create, modify, move, or delete live calendar events unless the user's **current explicit instruction** authorizes it.
 
-- exact LSEG job description;
-- exact resume submitted to LSEG;
-- 4 major LSEG OA questions;
-- 3 minor LSEG OA questions;
-- current Computer Vision PPTs/notes;
-- official midsem timetable.
-
-When new material arrives:
-
-1. place/use it in the appropriate `Sources/` location;
-2. update `source_map.json`;
-3. update affected estimates/tasks/resources;
-4. rerun only the affected part of feasibility/planning where possible;
-5. preserve unrelated approved decisions.
-
-Do **not** rerun the entire project unnecessarily.
+A final plan or `calendar_events.json` is not permission to touch the live calendar.
 
 ---
 
-# 15. Output semantics
+# 14. Minimal-read examples
 
-## `Output/draft_plan.md`
+## Estimate a large note
 
-A proposed schedule. It is not automatically approved.
+```text
+1. check source_map.json
+2. measure file size/words
+3. extract headings
+4. inspect a small sample only if necessary
+5. estimate duration
+6. save estimate
+```
 
-## `Output/final_plan.md`
+Do not read the full note unless there is a specific unresolved planning question.
 
-The user-approved planner.
+## RecSys
 
-## `Output/calendar_events.json`
+Treat each ChatGPT + Codex pair as one logical unit.
 
-Structured calendar-ready event data derived from the approved final plan.
+Use combined size + headings + revision status.
 
-Generating a final plan or `calendar_events.json` does **not** imply permission to touch the live calendar.
+Do not deeply compare the pair.
 
----
+## Feasibility
 
-# 16. Calendar safety
+Use saved estimates and task inventory.
 
-Never create, modify, move, or delete live calendar events unless the user's **current explicit instruction** authorizes calendar action.
+Do not reopen raw sources.
 
-A previous statement such as “eventually create my calendar” is not sufficient permission.
+## Draft/final planner
 
-Before live creation, validate against `Requirements/calendar_rules.md` and `Requirements/availability.md`.
+Use requirements, approved state, estimates, inventory, feasibility, and resource research.
 
----
-
-# 17. Editing discipline
-
-Prefer updating the existing designated project files rather than creating new planning files.
-
-Do not create unnecessary folders, duplicate state files, scratch files, or alternate requirement documents unless they materially improve the workflow and the user has requested or approved them.
-
-Keep:
-
-- human-readable reasoning in Markdown;
-- structured planner state/data in JSON;
-- source material under `Sources/`;
-- outputs under `Output/`.
+Do not redo source analysis.
 
 ---
 
-# 18. Minimal-read principle
+# 15. Final operating principle
 
-Use the smallest sufficient context for the current task.
+For every task, ask:
 
-Examples:
+> **What is the minimum information I need to understand the scope and estimate the time accurately?**
 
-### If asked to estimate DBMS revision time
-Read:
-- `Planning/source_map.json`
-- `Sources/Placement/Core/DBMS.md`
-- existing DBMS entry in `Planning/workload_estimates.json`
-- only the relevant requirement section if needed
+Use:
 
-Do **not** load all project notes, all midsem notes, or the entire calendar rulebook.
+- `Requirements/` for rules;
+- `Sources/` for lightweight scope/size inspection;
+- `Planning/` for reusable analysis;
+- `State/` for approved/current decisions;
+- `Output/` for planner deliverables.
 
-### If asked to choose which CV class to attend
-Read:
-- `Requirements/availability.md`
-- current task schedule/inventory
-- relevant approved constraints
-
-Do **not** reread all technical notes.
-
-### If asked to build the final calendar event descriptions
-Read:
-- `Output/final_plan.md`
-- `Requirements/calendar_rules.md`
-- `Requirements/planner_description.md` where slot meaning is needed
-- `Planning/resource_research.md`
-
-Do **not** redo workload estimation unless a contradiction is found.
-
----
-
-# 19. Final operating principle
-
-For every task, ask internally:
-
-> **What is the smallest set of files I need to read, what prior work can I reuse, and where should I persist the result?**
-
-Use this file as the routing map.
-
-Use `Requirements/` for rules.
-Use `Sources/` for raw material.
-Use `Planning/` for analysis.
-Use `State/` for approved/current state.
-Use `Output/` for planner deliverables.
-
-Do not get lost in the repository, and do not redo work that has already been completed and saved.
+The planner should be accurate because Codex understands **scope and workload**, not because it deeply read every study note.
