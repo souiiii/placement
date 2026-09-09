@@ -341,7 +341,7 @@ DSA supporting pages such as the pattern index and mistake log are references fo
 
 The LSEG OA track is **separate from general DSA**.
 
-The user will provide:
+The OA source is present under `Sources/LSEG/OA/` and is the source of truth for this track. It contains:
 
 - **4 major OA questions**
 - **3 minor OA questions**
@@ -894,8 +894,6 @@ The user will add/provide:
 
 - exact LSEG job description;
 - exact resume submitted to LSEG;
-- 4 major LSEG OA questions;
-- 3 minor LSEG OA questions;
 - current Computer Vision PPTs/notes/material when available;
 - official midsem timetable when released.
 
