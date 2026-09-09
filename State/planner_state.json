@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "phase": "feasibility_complete",
+  "status": "awaiting_tradeoff_approval",
+  "planning_window": {
+    "start": "2026-09-10",
+    "end": "2026-09-16",
+    "timezone": "Asia/Kolkata"
+  },
+  "feasibility_report": "Planning/feasibility.md",
+  "result": "full_approved_workload_infeasible",
+  "baseline": {
+    "lseg_placement_minutes": 4815,
+    "required_midsem_minutes": 1680,
+    "conditional_recsys_numericals_minutes": 90,
+    "midsem_minutes_including_conditional": 1770,
+    "total_minutes": 6585,
+    "cv_mandatory_provisional_reserve_minutes": 480
+  },
+  "capacity": {
+    "gross_active_window_minutes": 5670,
+    "meal_minutes": 840,
+    "friday_namaz_total_minutes": 150,
+    "friday_namaz_meal_overlap_minutes": 60,
+    "friday_namaz_incremental_minutes": 90,
+    "mandatory_lab_minutes": 120,
+    "selected_other_class_minutes": 180,
+    "fixed_unavailable_union_minutes": 1230,
+    "rest_transition_buffer_minutes": 1050,
+    "focused_study_minutes": 3390,
+    "assumption_note": "150 minutes/day rest, logistics and contingency; assumes no substantial additional commute. This is a capacity estimate, not a schedule."
+  },
+  "attendance_selection_for_feasibility": [
+    {
+      "subject": "IWT",
+      "selected_class": "Monday mandatory lab",
+      "date": "2026-09-14",
+      "minutes": 120,
+      "selected_meetings": 1,
+      "listed_meetings": 5
+    },
+    {
+      "subject": "CV",
+      "selected_class": "Thursday before lunch",
+      "date": "2026-09-10",
+      "minutes": 60,
+      "selected_meetings": 1,
+      "listed_meetings": 3
+    },
+    {
+      "subject": "RecSys",
+      "selected_class": "Thursday after lunch",
+      "date": "2026-09-10",
+      "minutes": 60,
+      "selected_meetings": 1,
+      "listed_meetings": 3
+    },
+    {
+      "subject": "EPQ",
+      "selected_class": "Monday before mandatory lab",
+      "date": "2026-09-14",
+      "minutes": 60,
+      "selected_meetings": 1,
+      "listed_meetings": 3
+    }
+  ],
+  "overload_minutes": 3195,
+  "overload_excluding_conditional_numericals_minutes": 3105,
+  "proposals_not_approved": [
+    {
+      "id": "package_a",
+      "status": "proposal_only_still_infeasible",
+      "saved_minutes": 270,
+      "remaining_workload_minutes": 6315,
+      "remaining_overload_minutes": 2925
+    },
+    {
+      "id": "package_b",
+      "status": "proposal_only_scope_approval_required",
+      "saved_minutes": 3225,
+      "lseg_placement_minutes": 2040,
+      "midsem_minutes": 1320,
+      "remaining_workload_minutes": 3360,
+      "aggregate_margin_minutes": 30,
+      "schedule_validated": false,
+      "details": "Planning/feasibility.md; selective preparation with explicit required-track deferrals, not completion of original scope."
+    }
+  ],
+  "pending_decisions": [
+    "Accept Package B or specify sufficient alternative scope changes.",
+    "Approve each stated required-track deferral and depth reduction before any application.",
+    "Decide whether to omit the conditional separate RecSys numericals allowance; redundancy remains unverified."
+  ],
+  "cuts_applied": false,
+  "approved_cuts_file_modified": false,
+  "schedule_created": false,
+  "next_action": "Wait for user trade-off approval; do not generate draft schedule.",
+  "input_sha256": {
+    "Planning/source_map.json": "839d83670fcd4bee5825378bf48a6ee2dc3d0d66f07eb310d7f457ecd9d71618",
+    "Planning/workload_estimates.json": "0050c49b723712a6c2b6b00a64bed69aa29f5fab16e7a6f4564a8f63a4fe76de",
+    "Planning/task_inventory.json": "70153802833598a3d4720b70527e410e0cb77c362840a547604a4f78796486a0",
+    "Planning/resource_research.md": "220cb9a43ddeb4c33674f8f9f8ca1b3e468c242af2e27e1547ad255604d40e25",
+    "State/approved_constraints.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "State/approved_cuts.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}
