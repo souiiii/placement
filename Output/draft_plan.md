@@ -1,17 +1,17 @@
 # Draft preparation plan — 10 to 16 September 2026
 
-**Status: proposed schedule awaiting approval.** Per `AGENTS.md` §6 (steps 10–13) this is the draft; `Output/final_plan.md` and `Output/calendar_events.json` stay empty until the schedule is approved, and no live calendar event may be created without an explicit instruction (`calendar_rules.md` §2, `master_requirements.md` §37).
+**Status: APPROVED as the scheduling baseline (9 September 2026).** This file is retained as the approved draft record. The finalized plan is `Output/final_plan.md` and the calendar-ready event data is `Output/calendar_events.json`; both are substantively identical to this draft. No live calendar event has been created (`calendar_rules.md` §2, `master_requirements.md` §37, `AGENTS.md` §13).
 
 Every nonzero task in `Planning/task_inventory.json` is scheduled exactly once, at its accepted duration. No estimate, duration, scope, source mapping or approved constraint was changed. The day-level split reproduces the approved feasibility partition in `Planning/feasibility.md` exactly, day for day.
 
 | | Minutes | Hours |
 |---|---:|---:|
-| LSEG / placement preparation | 2365 | 39h 25m |
+| LSEG / placement preparation | 2,365 | 39h 25m |
 | Final mixed mock + debrief | 135 | 2h 15m |
-| Midsem preparation (incl. 45 conditional) | 1065 | 17h 45m |
-| **Total scheduled preparation** | **3565** | **59h 25m** |
+| Midsem preparation (incl. 45 conditional) | 1,065 | 17h 45m |
+| **Total scheduled preparation** | **3,565** | **59h 25m** |
 | Protected rest / transition / contingency | 1,050 | 17h 30m |
-| True unused slack (Tuesday) | 5 | 0h 05m |
+| True unused slack (Tue 22:25–22:30, labelled) | 5 | 0h 05m |
 
 ## How the week is shaped
 
@@ -75,6 +75,8 @@ Coverage first, consolidation last. Core theory and the DSA pattern base open th
 | 21:30–22:30 | 🌙 Wind Down | — | Rest/buffer | 60 |
 
 **Totals —** LSEG **300**, midsem **150**, fixed commitments **210**, protected rest/buffer **150**, true unused slack **0** · day total **810** minutes (09:00–22:30).
+
+Friday's protected 12:30–15:00 namaz window is shown as two namaz events with the fixed 13:00–14:00 lunch between them, so both protected periods appear explicitly and nothing overlaps. No preparation of any kind sits inside 12:30–15:00.
 
 <details><summary>Session briefs</summary>
 
@@ -221,9 +223,10 @@ Coverage first, consolidation last. Core theory and the DSA pattern base open th
 | 19:20–19:30 | ☕ Break | — | Rest/buffer | 10 |
 | 19:30–20:30 | 🍛 Dinner | — | Fixed — meal | 60 |
 | 20:30–22:00 | ⚡ EPQ — Numericals & Cross-topic Revision | `epq_revision.consolidate` (90) | Midsem | 90 |
-| 22:00–22:30 | 🌙 Wind Down | — | Rest/buffer | 30 |
+| 22:00–22:25 | 🌙 Wind Down | — | Rest/buffer | 25 |
+| 22:25–22:30 | 🕓 Unused Slack | — | Unused slack | 5 |
 
-**Totals —** LSEG **310**, midsem **225**, fixed commitments **120**, protected rest/buffer **150**, true unused slack **5** · day total **810** minutes (09:00–22:30).
+**Totals —** LSEG **310**, midsem **225**, fixed commitments **120**, protected rest/buffer **150**, true unused slack **5** · day total **805** minutes (09:00–22:30).
 
 <details><summary>Session briefs</summary>
 
@@ -291,9 +294,11 @@ Coverage first, consolidation last. Core theory and the DSA pattern base open th
 | Mon 14 Sep | 300 | — | 120 | 420 | 240 | 150 | 0 | 810 |
 | Tue 15 Sep | 310 | — | 225 | 535 | 120 | 150 | 5 | 810 |
 | Wed 16 Sep | 285 | 135 | 120 | 540 | 120 | 150 | 0 | 810 |
-| **Total** | **2365** | **135** | **1065** | **3565** | **1050** | **1,050** | **5** | **5,670** |
+| **Total** | **2,365** | **135** | **1,065** | **3,565** | **1,050** | **1,050** | **5** | **5,670** |
 
-Fixed commitments are meals (7×120), Friday namaz (90 minutes outside the lunch hour) and the mandatory Monday IWT lab (120). None is counted as preparation. Protected rest is exactly 150 minutes every day; Tuesday's wind-down carries an extra 5 minutes, which is the week's true unused slack, not extra study.
+Fixed commitments are meals (7×120), Friday namaz (90 minutes outside the lunch hour) and the mandatory Monday IWT lab (120). None is counted as preparation. Protected rest is exactly **150 minutes every day**, and the week's only true unused slack is the separately labelled **🕓 Unused Slack, Tuesday 22:25–22:30**. It is deliberately not rest and deliberately not study.
+
+**Finishing a block early does not create extra work.** Reclaimed time stays buffer or slack — do not pull the next block forward, extend the current one, or add unplanned study. This is the fixed-plan rule in `master_requirements.md` §5.
 
 ## 2. Task reconciliation
 
@@ -361,7 +366,7 @@ All **60 nonzero tasks**, each appearing exactly once at its recorded duration. 
 | `final_mixed_mock.debrief` | Wed 16 Sep 19:15–19:30 | 15 | ✅ |
 | `recsys_final_revision.consolidate` | Wed 16 Sep 20:30–21:45 | 75 | ✅ |
 | `recsys_numericals.conditional_practice` | Wed 16 Sep 21:45–22:30 | 45 | ✅ |
-| **Total** | | **3565** | |
+| **Total** | | **3,565** | |
 
 Five tasks are delivered across more than one session, which `task_inventory.json` explicitly permits ("the aggregate dependencies express the preparation-to-closure sequence, not a requirement for uninterrupted multi-hour blocks") and `master_requirements.md` §8 encourages for large units: `dsa.practice` (105+90+45, spread deliberately for breadth), the three RecSys units (150 each, split around a meal rather than sat in one 2½-hour block) and `cv.reserved_preparation` (120+60). No task marked `separate_session_required` is merged with anything: the six project sessions and the mock each hold their own block.
 
@@ -436,13 +441,13 @@ No genuine conflict between two active authorities was found.
 
 | Check | Expected | Scheduled | Result |
 |---|---:|---:|:--:|
-| Total scheduled preparation | 3,565 | 3565 | **PASS** |
-| LSEG / placement (incl. mock) | 2,500 | 2500 | **PASS** |
-| Midsem (incl. conditional) | 1,065 | 1065 | **PASS** |
+| Total scheduled preparation | 3,565 | 3,565 | **PASS** |
+| LSEG / placement (incl. mock) | 2,500 | 2,500 | **PASS** |
+| Midsem (incl. conditional) | 1,065 | 1,065 | **PASS** |
 | Conditional RecSys numericals | 45 | 45 | **PASS** |
 | Nonzero tasks scheduled exactly once | 60 | 60 | **PASS** |
 | Task durations altered | 0 | 0 | **PASS** |
-| Protected rest/buffer | 1,050 | 1050 | **PASS** |
+| Protected rest/buffer | 1,050 | 1,050 | **PASS** |
 | True unused slack | 5 | 5 | **PASS** |
 | Overlapping or missing periods | 0 | 0 | **PASS** |
 
@@ -458,4 +463,5 @@ These are the feasibility risks unchanged by scheduling, not new findings:
 4. **DSA fluency is unmeasured** at 420 minutes; the fixed-plan rule in `master_requirements.md` §5 applies — a weak pattern must not consume another track's time.
 5. **Execution prerequisites are unverified:** a usable MongoDB environment for Saturday morning and LeetCode sign-in with Java execution. Substantial setup time is not budgeted anywhere.
 6. **The Wednesday mock placement is fixed by arithmetic.** The 135-minute mock+debrief does not fit the 120-minute post-dinner window, so it sits pre-dinner at 17:15–19:30 and the 20:30–22:30 slot is midsem-only.
-7. **The midsem exam order is still unknown.** It may change the relative emphasis of the 15–16 September midsem blocks without changing any total.
+7. **The conditional RecSys numericals block may simply not be needed.** If Wednesday's final revision has already closed the numerical gaps, 21:45–22:30 should be dropped and the week finished early. Do not replace it with other study; its redundancy is still unverified, so it stays in the plan until you decide at the block itself.
+8. **The midsem exam order is still unknown.** It may change the relative emphasis of the 15–16 September midsem blocks without changing any total.

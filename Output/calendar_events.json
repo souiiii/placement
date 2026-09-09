@@ -1,0 +1,1840 @@
+{
+ "schema_version": 1,
+ "status": "prepared_not_created",
+ "source_plan": "Output/final_plan.md",
+ "generated_on": "2026-09-09",
+ "timezone": "Asia/Kolkata",
+ "planning_window": {
+  "start": "2026-09-10",
+  "end": "2026-09-16"
+ },
+ "creation_permission": "Event data only. Do not create, modify or delete live calendar events without an explicit current user instruction (master_requirements.md 37, calendar_rules.md 2, AGENTS.md 13).",
+ "execution_rules": [
+  "Class, meal, namaz, rest/buffer and unused-slack events are never preparation time.",
+  "Protected rest is exactly 150 minutes per day; the single unused_slack event on 2026-09-15 is the week's only true slack.",
+  "Finishing a block early does not create extra work: reclaimed time stays buffer or slack.",
+  "The conditional RecSys numericals event may be dropped if genuinely unnecessary after the final revision; finish early rather than substituting other study."
+ ],
+ "totals_minutes": {
+  "lseg_preparation": 2365,
+  "mock_interview": 135,
+  "midsem_preparation": 1065,
+  "scheduled_preparation": 3565,
+  "protected_rest": 1050,
+  "unused_slack": 5,
+  "conditional_recsys_numericals": 45
+ },
+ "event_count": 116,
+ "events": [
+  {
+   "id": "e001",
+   "date": "2026-09-10",
+   "start": "2026-09-10T09:00:00",
+   "end": "2026-09-10T10:30:00",
+   "duration_minutes": 90,
+   "title": "⚙️ OS — Targeted Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh high-value and weak OS areas from `Sources/Placement/Core/OS.md` using retrieval first, then work the applied checks. Explain answers aloud and open the notes only to close gaps; this block also carries the OS closure check, so no separate verification slot exists.",
+   "task_ids": [
+    {
+     "task_id": "os.prepare",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Core/OS.md"
+   ]
+  },
+  {
+   "id": "e002",
+   "date": "2026-09-10",
+   "start": "2026-09-10T10:30:00",
+   "end": "2026-09-10T10:45:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e003",
+   "date": "2026-09-10",
+   "start": "2026-09-10T10:45:00",
+   "end": "2026-09-10T12:15:00",
+   "duration_minutes": 90,
+   "title": "🌐 CN — Targeted Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh networking from `Sources/Placement/Core/CN.md` by recalling the high-value layers, protocols and trade-offs before reading. Verify weak explanations inside this block; CN closure is integrated here.",
+   "task_ids": [
+    {
+     "task_id": "cn.prepare",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Core/CN.md"
+   ]
+  },
+  {
+   "id": "e004",
+   "date": "2026-09-10",
+   "start": "2026-09-10T12:15:00",
+   "end": "2026-09-10T13:00:00",
+   "duration_minutes": 45,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e005",
+   "date": "2026-09-10",
+   "start": "2026-09-10T13:00:00",
+   "end": "2026-09-10T14:00:00",
+   "duration_minutes": 60,
+   "title": "🍽️ Lunch",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e006",
+   "date": "2026-09-10",
+   "start": "2026-09-10T14:00:00",
+   "end": "2026-09-10T15:15:00",
+   "duration_minutes": 75,
+   "title": "🗃️ DBMS — Targeted Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh database concepts and reasoning from `Sources/Placement/Core/DBMS.md`. This must come before tomorrow's SQL chain, whose review block carries the DBMS closure check — do not add a separate DBMS verification session.",
+   "task_ids": [
+    {
+     "task_id": "dbms.prepare",
+     "minutes": 75
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Core/DBMS.md"
+   ]
+  },
+  {
+   "id": "e007",
+   "date": "2026-09-10",
+   "start": "2026-09-10T15:15:00",
+   "end": "2026-09-10T15:45:00",
+   "duration_minutes": 30,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e008",
+   "date": "2026-09-10",
+   "start": "2026-09-10T15:45:00",
+   "end": "2026-09-10T16:15:00",
+   "duration_minutes": 30,
+   "title": "🧩 DSA — Pattern Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Use `Sources/Placement/Supporting/DSA_Pattern_Index.md` and the mistake log to re-fix the major interview patterns before solving starts. Targeted refresh only — no full notes pass.",
+   "task_ids": [
+    {
+     "task_id": "dsa.refresh",
+     "minutes": 30
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/top-interview-150/",
+    "Sources/Placement/Supporting/DSA_Pattern_Index.md",
+    "Sources/Placement/Supporting/DSA_Mistake_Log.md"
+   ]
+  },
+  {
+   "id": "e009",
+   "date": "2026-09-10",
+   "start": "2026-09-10T16:15:00",
+   "end": "2026-09-10T18:00:00",
+   "duration_minutes": 105,
+   "title": "🧩 DSA — Practice (Part 1)",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Solve representative problems from [LeetCode Top Interview 150](https://leetcode.com/studyplan/top-interview-150/) in Java, guided by the pattern index. Name the pattern, implement, and explain complexity during the attempt. Breadth over volume; completing the collection is not the goal.",
+   "task_ids": [
+    {
+     "task_id": "dsa.practice",
+     "minutes": 105
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/top-interview-150/",
+    "Sources/Placement/Supporting/DSA_Pattern_Index.md",
+    "Sources/Placement/Supporting/DSA_Mistake_Log.md"
+   ]
+  },
+  {
+   "id": "e010",
+   "date": "2026-09-10",
+   "start": "2026-09-10T18:00:00",
+   "end": "2026-09-10T18:30:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e011",
+   "date": "2026-09-10",
+   "start": "2026-09-10T18:30:00",
+   "end": "2026-09-10T19:30:00",
+   "duration_minutes": 60,
+   "title": "🧠 RecSys — Unit 1 (Part 1)",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Work `Sources/Midsem/RecSys/unit1_chatgpt.md` and `unit1_codex.md` side by side as one logical unit. Cover concepts and methods with recall built in; no separate consolidation pass is scheduled.",
+   "task_ids": [
+    {
+     "task_id": "recsys_unit_1.prepare",
+     "minutes": 60
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/RecSys/unit1_chatgpt.md",
+    "Sources/Midsem/RecSys/unit1_codex.md"
+   ]
+  },
+  {
+   "id": "e012",
+   "date": "2026-09-10",
+   "start": "2026-09-10T19:30:00",
+   "end": "2026-09-10T20:30:00",
+   "duration_minutes": 60,
+   "title": "🍛 Dinner",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e013",
+   "date": "2026-09-10",
+   "start": "2026-09-10T20:30:00",
+   "end": "2026-09-10T22:00:00",
+   "duration_minutes": 90,
+   "title": "🧠 RecSys — Unit 1 (Part 2)",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Continue the paired Unit 1 sources, finishing the methods and worked examples. Explain each method in your own words before checking it.",
+   "task_ids": [
+    {
+     "task_id": "recsys_unit_1.prepare",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/RecSys/unit1_chatgpt.md",
+    "Sources/Midsem/RecSys/unit1_codex.md"
+   ]
+  },
+  {
+   "id": "e014",
+   "date": "2026-09-10",
+   "start": "2026-09-10T22:00:00",
+   "end": "2026-09-10T22:30:00",
+   "duration_minutes": 30,
+   "title": "🌙 Wind Down",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e015",
+   "date": "2026-09-11",
+   "start": "2026-09-11T09:00:00",
+   "end": "2026-09-11T10:15:00",
+   "duration_minutes": 75,
+   "title": "☕ Java / OOP — Targeted Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Check OOP and the relevant Collections through explanation and short implementation using `Sources/Placement/Core/Java_OOP.md` and the Collections reference. Java is the interview language, so write code rather than only reading. Closure is integrated here.",
+   "task_ids": [
+    {
+     "task_id": "java_oop.prepare",
+     "minutes": 75
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Core/Java_OOP.md",
+    "Sources/Placement/Supporting/Java_Collections.md"
+   ]
+  },
+  {
+   "id": "e016",
+   "date": "2026-09-11",
+   "start": "2026-09-11T10:15:00",
+   "end": "2026-09-11T10:30:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e017",
+   "date": "2026-09-11",
+   "start": "2026-09-11T10:30:00",
+   "end": "2026-09-11T12:30:00",
+   "duration_minutes": 120,
+   "title": "🟩 Node.js / Backend — Targeted Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh backend concepts from `Sources/Placement/Core/Node_Backend.md`, using the JSON and Redis references where they come up. This precedes tomorrow's MongoDB chain, whose review block carries the backend closure check.",
+   "task_ids": [
+    {
+     "task_id": "node_backend.prepare",
+     "minutes": 120
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Core/Node_Backend.md",
+    "Sources/Placement/Supporting/JSON.md",
+    "Sources/Placement/Supporting/Redis.md"
+   ]
+  },
+  {
+   "id": "e018",
+   "date": "2026-09-11",
+   "start": "2026-09-11T12:30:00",
+   "end": "2026-09-11T13:00:00",
+   "duration_minutes": 30,
+   "title": "🕌 Namaz",
+   "category": "namaz",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e019",
+   "date": "2026-09-11",
+   "start": "2026-09-11T13:00:00",
+   "end": "2026-09-11T14:00:00",
+   "duration_minutes": 60,
+   "title": "🍽️ Lunch",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e020",
+   "date": "2026-09-11",
+   "start": "2026-09-11T14:00:00",
+   "end": "2026-09-11T15:00:00",
+   "duration_minutes": 60,
+   "title": "🕌 Namaz",
+   "category": "namaz",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e021",
+   "date": "2026-09-11",
+   "start": "2026-09-11T15:00:00",
+   "end": "2026-09-11T15:30:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e022",
+   "date": "2026-09-11",
+   "start": "2026-09-11T15:30:00",
+   "end": "2026-09-11T16:40:00",
+   "duration_minutes": 70,
+   "title": "🗃️ SQL — Refresh & Practice",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Take the short syntax refresh you actually need, then write queries from [LeetCode SQL 50](https://leetcode.com/studyplan/top-sql-50/) — joins, grouping, subqueries, window functions. Use the DBMS notes only to unblock a concept; this is execution, not theory.",
+   "task_ids": [
+    {
+     "task_id": "sql_practice.refresh",
+     "minutes": 10
+    },
+    {
+     "task_id": "sql_practice.practice",
+     "minutes": 60
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/top-sql-50/",
+    "Sources/Placement/Core/DBMS.md"
+   ]
+  },
+  {
+   "id": "e023",
+   "date": "2026-09-11",
+   "start": "2026-09-11T16:40:00",
+   "end": "2026-09-11T16:55:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e024",
+   "date": "2026-09-11",
+   "start": "2026-09-11T16:55:00",
+   "end": "2026-09-11T17:30:00",
+   "duration_minutes": 35,
+   "title": "🗃️ SQL — Timed Set & Error Review",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Solve a distinct timed set, then review only the errors. Close with a brief DBMS reasoning check — this is the recorded DBMS closure checkpoint, so no extra DBMS session follows.",
+   "task_ids": [
+    {
+     "task_id": "sql_practice.timed",
+     "minutes": 20
+    },
+    {
+     "task_id": "sql_practice.review",
+     "minutes": 15
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/top-sql-50/",
+    "Sources/Placement/Core/DBMS.md"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e025",
+   "date": "2026-09-11",
+   "start": "2026-09-11T17:30:00",
+   "end": "2026-09-11T19:00:00",
+   "duration_minutes": 90,
+   "title": "🧠 RecSys — Unit 2 (Part 1)",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Work `unit2_chatgpt.md` and `unit2_codex.md` side by side as one logical unit, covering concepts and methods with recall built in.",
+   "task_ids": [
+    {
+     "task_id": "recsys_unit_2.prepare",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/RecSys/unit2_chatgpt.md",
+    "Sources/Midsem/RecSys/unit2_codex.md"
+   ]
+  },
+  {
+   "id": "e026",
+   "date": "2026-09-11",
+   "start": "2026-09-11T19:00:00",
+   "end": "2026-09-11T19:30:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e027",
+   "date": "2026-09-11",
+   "start": "2026-09-11T19:30:00",
+   "end": "2026-09-11T20:30:00",
+   "duration_minutes": 60,
+   "title": "🍛 Dinner",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e028",
+   "date": "2026-09-11",
+   "start": "2026-09-11T20:30:00",
+   "end": "2026-09-11T21:30:00",
+   "duration_minutes": 60,
+   "title": "🧠 RecSys — Unit 2 (Part 2)",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Finish the paired Unit 2 sources, prioritising the methods and numerical steps you cannot yet reproduce unaided.",
+   "task_ids": [
+    {
+     "task_id": "recsys_unit_2.prepare",
+     "minutes": 60
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/RecSys/unit2_chatgpt.md",
+    "Sources/Midsem/RecSys/unit2_codex.md"
+   ]
+  },
+  {
+   "id": "e029",
+   "date": "2026-09-11",
+   "start": "2026-09-11T21:30:00",
+   "end": "2026-09-11T22:30:00",
+   "duration_minutes": 60,
+   "title": "🌙 Wind Down",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e030",
+   "date": "2026-09-12",
+   "start": "2026-09-12T09:00:00",
+   "end": "2026-09-12T10:30:00",
+   "duration_minutes": 90,
+   "title": "🏗️ System Design — Targeted Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Walk one focused design discussion using `Sources/Placement/Core/System_Design.md`, retrieving concepts and exposing weak trade-offs. Explanation and verification happen inside this walkthrough.",
+   "task_ids": [
+    {
+     "task_id": "system_design.prepare",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Core/System_Design.md",
+    "Sources/Placement/Supporting/Redis.md"
+   ]
+  },
+  {
+   "id": "e031",
+   "date": "2026-09-12",
+   "start": "2026-09-12T10:30:00",
+   "end": "2026-09-12T10:45:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e032",
+   "date": "2026-09-12",
+   "start": "2026-09-12T10:45:00",
+   "end": "2026-09-12T12:00:00",
+   "duration_minutes": 75,
+   "title": "🍃 MongoDB — Refresh & Practice",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Take a short query-syntax refresh, then reconstruct pipelines from the [MongoDB aggregation tutorials](https://www.mongodb.com/docs/manual/tutorial/aggregation-complete-examples/) — filtering, grouping, arrays, joins. Attempt each before reading the worked solution, then run and compare. A working environment is a prerequisite.",
+   "task_ids": [
+    {
+     "task_id": "mongodb_practice.refresh",
+     "minutes": 10
+    },
+    {
+     "task_id": "mongodb_practice.practice",
+     "minutes": 65
+    }
+   ],
+   "resources": [
+    "https://www.mongodb.com/docs/manual/tutorial/aggregation-complete-examples/",
+    "Sources/Placement/Core/Node_Backend.md"
+   ]
+  },
+  {
+   "id": "e033",
+   "date": "2026-09-12",
+   "start": "2026-09-12T12:00:00",
+   "end": "2026-09-12T12:15:00",
+   "duration_minutes": 15,
+   "title": "🍃 MongoDB — Review & Backend Closure",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Review only the pipelines you got wrong, then close with a brief backend reasoning check. This is the recorded Node/backend closure checkpoint.",
+   "task_ids": [
+    {
+     "task_id": "mongodb_practice.review",
+     "minutes": 15
+    }
+   ],
+   "resources": [
+    "https://www.mongodb.com/docs/manual/tutorial/aggregation-complete-examples/",
+    "Sources/Placement/Core/Node_Backend.md"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e034",
+   "date": "2026-09-12",
+   "start": "2026-09-12T12:15:00",
+   "end": "2026-09-12T13:00:00",
+   "duration_minutes": 45,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e035",
+   "date": "2026-09-12",
+   "start": "2026-09-12T13:00:00",
+   "end": "2026-09-12T14:00:00",
+   "duration_minutes": 60,
+   "title": "🍽️ Lunch",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e036",
+   "date": "2026-09-12",
+   "start": "2026-09-12T14:00:00",
+   "end": "2026-09-12T15:20:00",
+   "duration_minutes": 80,
+   "title": "⚡ JavaScript — Refresh & Practice",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh only the syntax you need, then solve selected exercises from [30 Days of JavaScript](https://leetcode.com/studyplan/30-days-of-javascript/). `Sources/Placement/Tech/JavaScript.md` is reference material — do not turn this into a reading block.",
+   "task_ids": [
+    {
+     "task_id": "javascript_practice.refresh",
+     "minutes": 10
+    },
+    {
+     "task_id": "javascript_practice.practice",
+     "minutes": 70
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/30-days-of-javascript/",
+    "Sources/Placement/Tech/JavaScript.md"
+   ]
+  },
+  {
+   "id": "e037",
+   "date": "2026-09-12",
+   "start": "2026-09-12T15:20:00",
+   "end": "2026-09-12T15:35:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e038",
+   "date": "2026-09-12",
+   "start": "2026-09-12T15:35:00",
+   "end": "2026-09-12T16:15:00",
+   "duration_minutes": 40,
+   "title": "⚡ JavaScript — Timed Set & Review",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Solve a distinct set under a timer, then review errors and flag anything worth re-exposure. Do not repeat the whole practice pass.",
+   "task_ids": [
+    {
+     "task_id": "javascript_practice.timed",
+     "minutes": 25
+    },
+    {
+     "task_id": "javascript_practice.review",
+     "minutes": 15
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/30-days-of-javascript/",
+    "Sources/Placement/Tech/JavaScript.md"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e039",
+   "date": "2026-09-12",
+   "start": "2026-09-12T16:15:00",
+   "end": "2026-09-12T16:45:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e040",
+   "date": "2026-09-12",
+   "start": "2026-09-12T16:45:00",
+   "end": "2026-09-12T18:15:00",
+   "duration_minutes": 90,
+   "title": "🧩 DSA — Practice (Part 2)",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Continue representative problems from Top Interview 150 in Java, deliberately covering patterns you have not touched yet this week. Explain the approach and complexity as you solve.",
+   "task_ids": [
+    {
+     "task_id": "dsa.practice",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/top-interview-150/",
+    "Sources/Placement/Supporting/DSA_Pattern_Index.md",
+    "Sources/Placement/Supporting/DSA_Mistake_Log.md"
+   ]
+  },
+  {
+   "id": "e041",
+   "date": "2026-09-12",
+   "start": "2026-09-12T18:15:00",
+   "end": "2026-09-12T18:30:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e042",
+   "date": "2026-09-12",
+   "start": "2026-09-12T18:30:00",
+   "end": "2026-09-12T19:30:00",
+   "duration_minutes": 60,
+   "title": "🧠 RecSys — Unit 3 (Part 1)",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Work `unit3_chatgpt.md` and `unit3_codex.md` side by side as one logical unit, covering concepts and methods with recall built in.",
+   "task_ids": [
+    {
+     "task_id": "recsys_unit_3.prepare",
+     "minutes": 60
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/RecSys/unit3_chatgpt.md",
+    "Sources/Midsem/RecSys/unit3_codex.md"
+   ]
+  },
+  {
+   "id": "e043",
+   "date": "2026-09-12",
+   "start": "2026-09-12T19:30:00",
+   "end": "2026-09-12T20:30:00",
+   "duration_minutes": 60,
+   "title": "🍛 Dinner",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e044",
+   "date": "2026-09-12",
+   "start": "2026-09-12T20:30:00",
+   "end": "2026-09-12T22:00:00",
+   "duration_minutes": 90,
+   "title": "🧠 RecSys — Unit 3 (Part 2)",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Finish the paired Unit 3 sources. This completes all three units, which the Wednesday final revision depends on.",
+   "task_ids": [
+    {
+     "task_id": "recsys_unit_3.prepare",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/RecSys/unit3_chatgpt.md",
+    "Sources/Midsem/RecSys/unit3_codex.md"
+   ]
+  },
+  {
+   "id": "e045",
+   "date": "2026-09-12",
+   "start": "2026-09-12T22:00:00",
+   "end": "2026-09-12T22:30:00",
+   "duration_minutes": 30,
+   "title": "🌙 Wind Down",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e046",
+   "date": "2026-09-13",
+   "start": "2026-09-13T09:00:00",
+   "end": "2026-09-13T09:45:00",
+   "duration_minutes": 45,
+   "title": "🧩 DSA — Practice (Part 3)",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Close out the representative-problem pass with the patterns still uncovered. This is the last practice block — timed solving depends on it.",
+   "task_ids": [
+    {
+     "task_id": "dsa.practice",
+     "minutes": 45
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/top-interview-150/",
+    "Sources/Placement/Supporting/DSA_Pattern_Index.md",
+    "Sources/Placement/Supporting/DSA_Mistake_Log.md"
+   ]
+  },
+  {
+   "id": "e047",
+   "date": "2026-09-13",
+   "start": "2026-09-13T09:45:00",
+   "end": "2026-09-13T10:00:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e048",
+   "date": "2026-09-13",
+   "start": "2026-09-13T10:00:00",
+   "end": "2026-09-13T11:30:00",
+   "duration_minutes": 90,
+   "title": "🧩 DSA — Timed Solving",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Solve distinct, previously unattempted problems under interview time pressure in Java. Commit to an approach quickly, state complexity, and log what went wrong for Tuesday's review. General DSA stays separate from the OA track.",
+   "task_ids": [
+    {
+     "task_id": "dsa.timed",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/top-interview-150/",
+    "Sources/Placement/Supporting/DSA_Pattern_Index.md",
+    "Sources/Placement/Supporting/DSA_Mistake_Log.md"
+   ]
+  },
+  {
+   "id": "e049",
+   "date": "2026-09-13",
+   "start": "2026-09-13T11:30:00",
+   "end": "2026-09-13T12:00:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e050",
+   "date": "2026-09-13",
+   "start": "2026-09-13T12:00:00",
+   "end": "2026-09-13T12:50:00",
+   "duration_minutes": 50,
+   "title": "💹 LSEG OA — Task 1: Market Data Integrity",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Re-read `Sources/LSEG/OA/Major/Task_1_Market_Data_Integrity.md`, refresh the map/set processing rules, then implement once in Java with tests and complexity discussed inside the attempt. Note the recorded source-fidelity caveat on this task.",
+   "task_ids": [
+    {
+     "task_id": "lseg_oa_task_1.prepare",
+     "minutes": 50
+    }
+   ],
+   "resources": [
+    "Sources/LSEG/OA/Major/Task_1_Market_Data_Integrity.md"
+   ]
+  },
+  {
+   "id": "e051",
+   "date": "2026-09-13",
+   "start": "2026-09-13T12:50:00",
+   "end": "2026-09-13T13:00:00",
+   "duration_minutes": 10,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e052",
+   "date": "2026-09-13",
+   "start": "2026-09-13T13:00:00",
+   "end": "2026-09-13T14:00:00",
+   "duration_minutes": 60,
+   "title": "🍽️ Lunch",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e053",
+   "date": "2026-09-13",
+   "start": "2026-09-13T14:00:00",
+   "end": "2026-09-13T15:10:00",
+   "duration_minutes": 70,
+   "title": "💹 LSEG OA — Task 2: Hierarchical Risk Limits",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Work `Task_2_Hierarchical_Risk_Limits.md`: refresh hierarchy, inherited limits and violation rules, then write a substantive Java implementation and test the edge cases. Be able to talk through the design, not just reproduce it.",
+   "task_ids": [
+    {
+     "task_id": "lseg_oa_task_2.prepare",
+     "minutes": 70
+    }
+   ],
+   "resources": [
+    "Sources/LSEG/OA/Major/Task_2_Hierarchical_Risk_Limits.md"
+   ]
+  },
+  {
+   "id": "e054",
+   "date": "2026-09-13",
+   "start": "2026-09-13T15:10:00",
+   "end": "2026-09-13T15:30:00",
+   "duration_minutes": 20,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e055",
+   "date": "2026-09-13",
+   "start": "2026-09-13T15:30:00",
+   "end": "2026-09-13T16:40:00",
+   "duration_minutes": 70,
+   "title": "💹 LSEG OA — Task 5: SLA Window Breaches",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Work `Task_5_Monitoring_SLA_Window_Breaches.md`. Re-establish the sliding-window/deque invariants, implement once in Java, and combine edge-case and complexity checking into the same attempt.",
+   "task_ids": [
+    {
+     "task_id": "lseg_oa_task_5.prepare",
+     "minutes": 70
+    }
+   ],
+   "resources": [
+    "Sources/LSEG/OA/Major/Task_5_Monitoring_SLA_Window_Breaches.md"
+   ]
+  },
+  {
+   "id": "e056",
+   "date": "2026-09-13",
+   "start": "2026-09-13T16:40:00",
+   "end": "2026-09-13T17:10:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e057",
+   "date": "2026-09-13",
+   "start": "2026-09-13T17:10:00",
+   "end": "2026-09-13T17:45:00",
+   "duration_minutes": 35,
+   "title": "📄 Velvet — Revision",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh Velvet's architecture, decisions and implementation details from `Sources/Projects/Velvet.md` and note cues for likely follow-ups. Tomorrow's questionnaire depends on this session.",
+   "task_ids": [
+    {
+     "task_id": "project_velvet.revision",
+     "minutes": 35
+    }
+   ],
+   "resources": [
+    "Sources/Projects/Velvet.md"
+   ]
+  },
+  {
+   "id": "e058",
+   "date": "2026-09-13",
+   "start": "2026-09-13T17:45:00",
+   "end": "2026-09-13T18:15:00",
+   "duration_minutes": 30,
+   "title": "📄 Relay — Revision",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh Relay's architecture, decisions and implementation details from `Sources/Projects/Relay.md`. Its questionnaire is on Tuesday.",
+   "task_ids": [
+    {
+     "task_id": "project_relay.revision",
+     "minutes": 30
+    }
+   ],
+   "resources": [
+    "Sources/Projects/Relay.md"
+   ]
+  },
+  {
+   "id": "e059",
+   "date": "2026-09-13",
+   "start": "2026-09-13T18:15:00",
+   "end": "2026-09-13T18:30:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e060",
+   "date": "2026-09-13",
+   "start": "2026-09-13T18:30:00",
+   "end": "2026-09-13T19:30:00",
+   "duration_minutes": 60,
+   "title": "⚡ EPQ — Theory Refresh",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh EPQ theory by retrieval, using `Sources/Midsem/EPQ/notes.md` for targeted lookup rather than a linear pass. Numerical execution is handled in Tuesday's revision-notes block.",
+   "task_ids": [
+    {
+     "task_id": "epq_full_notes.consolidate",
+     "minutes": 60
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/EPQ/notes.md"
+   ]
+  },
+  {
+   "id": "e061",
+   "date": "2026-09-13",
+   "start": "2026-09-13T19:30:00",
+   "end": "2026-09-13T20:30:00",
+   "duration_minutes": 60,
+   "title": "🍛 Dinner",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e062",
+   "date": "2026-09-13",
+   "start": "2026-09-13T20:30:00",
+   "end": "2026-09-13T22:00:00",
+   "duration_minutes": 90,
+   "title": "🎨 IWT — Web Fundamentals + HTML/CSS",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Use MDN's [How the web works](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works) for clients/servers, DNS, TCP/IP, HTTP and URLs, then do the [HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills) and [CSS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills) skills exercises. `Sources/Midsem/IWT/README.md` fixes the scope — stop at CSS.",
+   "task_ids": [
+    {
+     "task_id": "iwt.prepare",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works",
+    "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills",
+    "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills",
+    "Sources/Midsem/IWT/README.md"
+   ]
+  },
+  {
+   "id": "e063",
+   "date": "2026-09-13",
+   "start": "2026-09-13T22:00:00",
+   "end": "2026-09-13T22:30:00",
+   "duration_minutes": 30,
+   "title": "🌙 Wind Down",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e064",
+   "date": "2026-09-14",
+   "start": "2026-09-14T09:00:00",
+   "end": "2026-09-14T09:30:00",
+   "duration_minutes": 30,
+   "title": "🔧 Git / GitHub — Workflow Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Short rehearsal of the everyday workflow from `Sources/Placement/Tech/Git_GitHub.md` — branching, merge vs rebase, conflict resolution, undoing mistakes. Explain each aloud; this is a tool you already use.",
+   "task_ids": [
+    {
+     "task_id": "git_github.prepare",
+     "minutes": 30
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Tech/Git_GitHub.md"
+   ]
+  },
+  {
+   "id": "e065",
+   "date": "2026-09-14",
+   "start": "2026-09-14T09:30:00",
+   "end": "2026-09-14T10:00:00",
+   "duration_minutes": 30,
+   "title": "🚶 Transition / Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e066",
+   "date": "2026-09-14",
+   "start": "2026-09-14T10:00:00",
+   "end": "2026-09-14T12:00:00",
+   "duration_minutes": 120,
+   "title": "🏫 IWT — Lab (Mandatory)",
+   "category": "class_attendance",
+   "counts_as_preparation": false,
+   "description": "Mandatory IWT lab attendance. This is not study time and does not replace today's midsem self-study block."
+  },
+  {
+   "id": "e067",
+   "date": "2026-09-14",
+   "start": "2026-09-14T12:00:00",
+   "end": "2026-09-14T12:15:00",
+   "duration_minutes": 15,
+   "title": "🚶 Transition / Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e068",
+   "date": "2026-09-14",
+   "start": "2026-09-14T12:15:00",
+   "end": "2026-09-14T13:00:00",
+   "duration_minutes": 45,
+   "title": "🤖 AI Fundamentals — Concept Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh the key concepts in `Sources/Placement/Tech/AI_Fundamentals.md` through interview-style explanations. The OA evaluation-metric reasoning has its own short slot on Tuesday.",
+   "task_ids": [
+    {
+     "task_id": "ai_fundamentals.prepare",
+     "minutes": 45
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Tech/AI_Fundamentals.md"
+   ]
+  },
+  {
+   "id": "e069",
+   "date": "2026-09-14",
+   "start": "2026-09-14T13:00:00",
+   "end": "2026-09-14T14:00:00",
+   "duration_minutes": 60,
+   "title": "🍽️ Lunch",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e070",
+   "date": "2026-09-14",
+   "start": "2026-09-14T14:00:00",
+   "end": "2026-09-14T15:30:00",
+   "duration_minutes": 90,
+   "title": "⚛️ React — Targeted Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Targeted behavioural and code checks against `Sources/Placement/Tech/React.md` — rendering, state, effects, keys, performance. Reason about small snippets rather than rereading the note; React closure is integrated here.",
+   "task_ids": [
+    {
+     "task_id": "react.prepare",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Tech/React.md"
+   ]
+  },
+  {
+   "id": "e071",
+   "date": "2026-09-14",
+   "start": "2026-09-14T15:30:00",
+   "end": "2026-09-14T15:50:00",
+   "duration_minutes": 20,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e072",
+   "date": "2026-09-14",
+   "start": "2026-09-14T15:50:00",
+   "end": "2026-09-14T16:35:00",
+   "duration_minutes": 45,
+   "title": "▲ Next.js — Targeted Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh routing, rendering strategies and the decisions you actually made in your projects, using `Sources/Placement/Tech/NextJS.md`. Check by applying, not by rereading.",
+   "task_ids": [
+    {
+     "task_id": "nextjs.prepare",
+     "minutes": 45
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Tech/NextJS.md"
+   ]
+  },
+  {
+   "id": "e073",
+   "date": "2026-09-14",
+   "start": "2026-09-14T16:35:00",
+   "end": "2026-09-14T16:50:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e074",
+   "date": "2026-09-14",
+   "start": "2026-09-14T16:50:00",
+   "end": "2026-09-14T17:35:00",
+   "duration_minutes": 45,
+   "title": "🔷 TypeScript — Targeted Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh the type system from `Sources/Placement/Tech/TypeScript.md` with short typed snippets — generics, narrowing, utility types. Familiar material, so keep it applied.",
+   "task_ids": [
+    {
+     "task_id": "typescript.prepare",
+     "minutes": 45
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Tech/TypeScript.md"
+   ]
+  },
+  {
+   "id": "e075",
+   "date": "2026-09-14",
+   "start": "2026-09-14T17:35:00",
+   "end": "2026-09-14T18:15:00",
+   "duration_minutes": 40,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e076",
+   "date": "2026-09-14",
+   "start": "2026-09-14T18:15:00",
+   "end": "2026-09-14T19:00:00",
+   "duration_minutes": 45,
+   "title": "🎤 Velvet — Questionnaire",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Use ChatGPT for a full Velvet questionnaire. Answer aloud without notes unless stuck, and let it probe architecture, implementation, trade-offs, security, scalability and your own contribution. Brief feedback is included in this slot.",
+   "task_ids": [
+    {
+     "task_id": "project_velvet.questionnaire",
+     "minutes": 45
+    }
+   ],
+   "resources": [
+    "Sources/Projects/Velvet.md"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e077",
+   "date": "2026-09-14",
+   "start": "2026-09-14T19:00:00",
+   "end": "2026-09-14T19:30:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e078",
+   "date": "2026-09-14",
+   "start": "2026-09-14T19:30:00",
+   "end": "2026-09-14T20:30:00",
+   "duration_minutes": 60,
+   "title": "🍛 Dinner",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e079",
+   "date": "2026-09-14",
+   "start": "2026-09-14T20:30:00",
+   "end": "2026-09-14T22:30:00",
+   "duration_minutes": 120,
+   "title": "👁️ CV — Active Coverage (Part 1)",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Mandatory active CV preparation, reserved pending reliable lecturer material. Work whatever confirmed scope exists when the block starts; do not invent topics from unrelated old papers. Today's IWT lab does not substitute for this block.",
+   "task_ids": [
+    {
+     "task_id": "cv.reserved_preparation",
+     "minutes": 120
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/CV/README.md"
+   ]
+  },
+  {
+   "id": "e080",
+   "date": "2026-09-15",
+   "start": "2026-09-15T09:00:00",
+   "end": "2026-09-15T10:00:00",
+   "duration_minutes": 60,
+   "title": "💹 LSEG OA — Task 6: Portfolio Risk Metrics",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Work `Task_6_Portfolio_Risk_Metrics.md`: refresh the preserved probability and boundary rules, implement once in Java, and test and explain in the same attempt.",
+   "task_ids": [
+    {
+     "task_id": "lseg_oa_task_6.prepare",
+     "minutes": 60
+    }
+   ],
+   "resources": [
+    "Sources/LSEG/OA/Major/Task_6_Portfolio_Risk_Metrics.md"
+   ]
+  },
+  {
+   "id": "e081",
+   "date": "2026-09-15",
+   "start": "2026-09-15T10:00:00",
+   "end": "2026-09-15T10:15:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e082",
+   "date": "2026-09-15",
+   "start": "2026-09-15T10:15:00",
+   "end": "2026-09-15T10:40:00",
+   "duration_minutes": 25,
+   "title": "💹 LSEG OA — Task 3: DFS Cycle Detection Bugfix",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Trace the state-tracking bug in `Task_3_DFS_Cycle_Detection_Bugfix.md` and produce a counterexample plus the fix. Focused debugging, not full algorithm reconstruction; note the recorded source-fidelity caveat.",
+   "task_ids": [
+    {
+     "task_id": "lseg_oa_task_3.prepare",
+     "minutes": 25
+    }
+   ],
+   "resources": [
+    "Sources/LSEG/OA/Minor/Task_3_DFS_Cycle_Detection_Bugfix.md"
+   ]
+  },
+  {
+   "id": "e083",
+   "date": "2026-09-15",
+   "start": "2026-09-15T10:40:00",
+   "end": "2026-09-15T10:55:00",
+   "duration_minutes": 15,
+   "title": "💹 LSEG OA — Task 4: Order Book Zero-Quantity Bugfix",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Short trace of the zero-quantity deletion fix in `Task_4_Order_Book_Zero_Quantity_Bugfix.md`, covering edge cases and the explanation you would give an interviewer.",
+   "task_ids": [
+    {
+     "task_id": "lseg_oa_task_4.prepare",
+     "minutes": 15
+    }
+   ],
+   "resources": [
+    "Sources/LSEG/OA/Minor/Task_4_Order_Book_Zero_Quantity_Bugfix.md"
+   ]
+  },
+  {
+   "id": "e084",
+   "date": "2026-09-15",
+   "start": "2026-09-15T10:55:00",
+   "end": "2026-09-15T11:10:00",
+   "duration_minutes": 15,
+   "title": "💹 LSEG OA — Task 7: Classification Evaluation Recap",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Check the preserved evaluation reasoning in `Task_7_Classification_Evaluation_Multiple_Select.md` with ChatGPT. The original options are missing — discuss only what is preserved and do not invent them or redo AI fundamentals.",
+   "task_ids": [
+    {
+     "task_id": "lseg_oa_task_7.prepare",
+     "minutes": 15
+    }
+   ],
+   "resources": [
+    "Sources/LSEG/OA/Minor/Task_7_Classification_Evaluation_Multiple_Select.md"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e085",
+   "date": "2026-09-15",
+   "start": "2026-09-15T11:10:00",
+   "end": "2026-09-15T11:40:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e086",
+   "date": "2026-09-15",
+   "start": "2026-09-15T11:40:00",
+   "end": "2026-09-15T12:40:00",
+   "duration_minutes": 60,
+   "title": "🐍 Python — Language Refresh",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Recall and hands-on checks from `Sources/Placement/Tech/Python.md`. Java stays the interview language, so keep this to the idioms and standard-library work you would actually be asked about.",
+   "task_ids": [
+    {
+     "task_id": "python.prepare",
+     "minutes": 60
+    }
+   ],
+   "resources": [
+    "Sources/Placement/Tech/Python.md"
+   ]
+  },
+  {
+   "id": "e087",
+   "date": "2026-09-15",
+   "start": "2026-09-15T12:40:00",
+   "end": "2026-09-15T13:00:00",
+   "duration_minutes": 20,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e088",
+   "date": "2026-09-15",
+   "start": "2026-09-15T13:00:00",
+   "end": "2026-09-15T14:00:00",
+   "duration_minutes": 60,
+   "title": "🍽️ Lunch",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e089",
+   "date": "2026-09-15",
+   "start": "2026-09-15T14:00:00",
+   "end": "2026-09-15T15:00:00",
+   "duration_minutes": 60,
+   "title": "🧩 DSA — Error Review & Re-exposure",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Review only the errors and weak attempts from this week's practice and timed sets, with ChatGPT where an explanation helps. Re-attempt a small number of selected problems; do not repeat the whole pass.",
+   "task_ids": [
+    {
+     "task_id": "dsa.review",
+     "minutes": 60
+    }
+   ],
+   "resources": [
+    "https://leetcode.com/studyplan/top-interview-150/",
+    "Sources/Placement/Supporting/DSA_Pattern_Index.md",
+    "Sources/Placement/Supporting/DSA_Mistake_Log.md"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e090",
+   "date": "2026-09-15",
+   "start": "2026-09-15T15:00:00",
+   "end": "2026-09-15T15:20:00",
+   "duration_minutes": 20,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e091",
+   "date": "2026-09-15",
+   "start": "2026-09-15T15:20:00",
+   "end": "2026-09-15T16:00:00",
+   "duration_minutes": 40,
+   "title": "🎤 Relay — Questionnaire",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Use ChatGPT for the Relay questionnaire, answering aloud and allowing follow-ups on design decisions, trade-offs, failures and your contribution. Brief feedback is included here.",
+   "task_ids": [
+    {
+     "task_id": "project_relay.questionnaire",
+     "minutes": 40
+    }
+   ],
+   "resources": [
+    "Sources/Projects/Relay.md"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e092",
+   "date": "2026-09-15",
+   "start": "2026-09-15T16:00:00",
+   "end": "2026-09-15T16:35:00",
+   "duration_minutes": 35,
+   "title": "📄 Eventually — Revision",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh Eventually's architecture, decisions and implementation details from `Sources/Projects/Eventually.md`. Tomorrow's questionnaire depends on this session.",
+   "task_ids": [
+    {
+     "task_id": "project_eventually.revision",
+     "minutes": 35
+    }
+   ],
+   "resources": [
+    "Sources/Projects/Eventually.md"
+   ]
+  },
+  {
+   "id": "e093",
+   "date": "2026-09-15",
+   "start": "2026-09-15T16:35:00",
+   "end": "2026-09-15T17:05:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e094",
+   "date": "2026-09-15",
+   "start": "2026-09-15T17:05:00",
+   "end": "2026-09-15T18:20:00",
+   "duration_minutes": 75,
+   "title": "⛓️ Blockchain — Expected Question Set",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Work the lecturer's exact expected questions in `Sources/Midsem/Blockchain/questions.pdf`, including both gas/ether numericals. Stay inside this question set rather than expanding into broad syllabus study.",
+   "task_ids": [
+    {
+     "task_id": "blockchain.prepare",
+     "minutes": 75
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/Blockchain/questions.pdf"
+   ]
+  },
+  {
+   "id": "e095",
+   "date": "2026-09-15",
+   "start": "2026-09-15T18:20:00",
+   "end": "2026-09-15T19:20:00",
+   "duration_minutes": 60,
+   "title": "👁️ CV — Active Coverage (Part 2)",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Second reserved CV block, continuing from Monday against whatever confirmed material is available. Scope is still provisional — flag it if three hours is clearly not enough.",
+   "task_ids": [
+    {
+     "task_id": "cv.reserved_preparation",
+     "minutes": 60
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/CV/README.md"
+   ]
+  },
+  {
+   "id": "e096",
+   "date": "2026-09-15",
+   "start": "2026-09-15T19:20:00",
+   "end": "2026-09-15T19:30:00",
+   "duration_minutes": 10,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e097",
+   "date": "2026-09-15",
+   "start": "2026-09-15T19:30:00",
+   "end": "2026-09-15T20:30:00",
+   "duration_minutes": 60,
+   "title": "🍛 Dinner",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e098",
+   "date": "2026-09-15",
+   "start": "2026-09-15T20:30:00",
+   "end": "2026-09-15T22:00:00",
+   "duration_minutes": 90,
+   "title": "⚡ EPQ — Numericals & Cross-topic Revision",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Use `Sources/Midsem/EPQ/revision.md` mainly for numerical execution and cross-topic exam retrieval. Do not reread the theory already refreshed on Sunday or redo numericals you can already do.",
+   "task_ids": [
+    {
+     "task_id": "epq_revision.consolidate",
+     "minutes": 90
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/EPQ/revision.md"
+   ]
+  },
+  {
+   "id": "e099",
+   "date": "2026-09-15",
+   "start": "2026-09-15T22:00:00",
+   "end": "2026-09-15T22:25:00",
+   "duration_minutes": 25,
+   "title": "🌙 Wind Down",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e100",
+   "date": "2026-09-15",
+   "start": "2026-09-15T22:25:00",
+   "end": "2026-09-15T22:30:00",
+   "duration_minutes": 5,
+   "title": "🕓 Unused Slack",
+   "category": "unused_slack",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e101",
+   "date": "2026-09-16",
+   "start": "2026-09-16T09:00:00",
+   "end": "2026-09-16T09:45:00",
+   "duration_minutes": 45,
+   "title": "📑 Resume — Review & Questioning",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Refresh every meaningful claim in `Sources/Resume/submitted_resume.pdf`, then use ChatGPT for focused follow-ups with immediate feedback. The submitted version is the source of truth; do not re-run full project preparation here.",
+   "task_ids": [
+    {
+     "task_id": "resume.review",
+     "minutes": 20
+    },
+    {
+     "task_id": "resume.questionnaire",
+     "minutes": 25
+    }
+   ],
+   "resources": [
+    "Sources/Resume/submitted_resume.pdf"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e102",
+   "date": "2026-09-16",
+   "start": "2026-09-16T09:45:00",
+   "end": "2026-09-16T10:00:00",
+   "duration_minutes": 15,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e103",
+   "date": "2026-09-16",
+   "start": "2026-09-16T10:00:00",
+   "end": "2026-09-16T11:15:00",
+   "duration_minutes": 75,
+   "title": "🏢 LSEG — Role & Company",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Read `Sources/LSEG/job_description.pdf` selectively alongside [LSEG About us](https://www.lseg.com/en/about-us), connect it to your actual resume experience, then close with one ChatGPT rehearsal of why LSEG, why this role and how you fit. Keep this distinct from HR practice.",
+   "task_ids": [
+    {
+     "task_id": "lseg_role_company.study",
+     "minutes": 40
+    },
+    {
+     "task_id": "lseg_role_company.fit",
+     "minutes": 20
+    },
+    {
+     "task_id": "lseg_role_company.questionnaire",
+     "minutes": 15
+    }
+   ],
+   "resources": [
+    "https://www.lseg.com/en/about-us",
+    "Sources/LSEG/job_description.pdf",
+    "Sources/Resume/submitted_resume.pdf"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e104",
+   "date": "2026-09-16",
+   "start": "2026-09-16T11:15:00",
+   "end": "2026-09-16T11:45:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e105",
+   "date": "2026-09-16",
+   "start": "2026-09-16T11:45:00",
+   "end": "2026-09-16T12:30:00",
+   "duration_minutes": 45,
+   "title": "🎤 Eventually — Questionnaire",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Use ChatGPT for the Eventually questionnaire, answering aloud and allowing follow-ups on architecture, trade-offs, data flow, security and improvements. Brief feedback is included here.",
+   "task_ids": [
+    {
+     "task_id": "project_eventually.questionnaire",
+     "minutes": 45
+    }
+   ],
+   "resources": [
+    "Sources/Projects/Eventually.md"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e106",
+   "date": "2026-09-16",
+   "start": "2026-09-16T12:30:00",
+   "end": "2026-09-16T13:00:00",
+   "duration_minutes": 30,
+   "title": "🛑 Rest / Buffer",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e107",
+   "date": "2026-09-16",
+   "start": "2026-09-16T13:00:00",
+   "end": "2026-09-16T14:00:00",
+   "duration_minutes": 60,
+   "title": "🍽️ Lunch",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e108",
+   "date": "2026-09-16",
+   "start": "2026-09-16T14:00:00",
+   "end": "2026-09-16T15:15:00",
+   "duration_minutes": 75,
+   "title": "🗣️ HR — Behavioural Prep & Practice",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Outline your own examples against the [MIT STAR method](https://capd.mit.edu/resources/the-star-method-for-behavioral-interviews/), then run one ChatGPT rehearsal cycle across teamwork, conflict, failure, strengths and motivation. Keep answers grounded in real experience; no memorised scripts.",
+   "task_ids": [
+    {
+     "task_id": "hr_behavioural.prepare",
+     "minutes": 20
+    },
+    {
+     "task_id": "hr_behavioural.practice",
+     "minutes": 55
+    }
+   ],
+   "resources": [
+    "https://capd.mit.edu/resources/the-star-method-for-behavioral-interviews/",
+    "Sources/Resume/submitted_resume.pdf"
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e109",
+   "date": "2026-09-16",
+   "start": "2026-09-16T15:15:00",
+   "end": "2026-09-16T15:45:00",
+   "duration_minutes": 30,
+   "title": "☕ Break",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e110",
+   "date": "2026-09-16",
+   "start": "2026-09-16T15:45:00",
+   "end": "2026-09-16T16:30:00",
+   "duration_minutes": 45,
+   "title": "🧮 Aptitude — Timed Test & Review",
+   "category": "lseg_preparation",
+   "counts_as_preparation": true,
+   "description": "Take one [IndiaBIX timed aptitude test](https://www.indiabix.com/online-test/aptitude-test/) under its own timer, then review the errors in the same session. LSEG's exact assessment scope is unconfirmed, so this is a general baseline.",
+   "task_ids": [
+    {
+     "task_id": "aptitude.practice",
+     "minutes": 45
+    }
+   ],
+   "resources": [
+    "https://www.indiabix.com/online-test/aptitude-test/"
+   ]
+  },
+  {
+   "id": "e111",
+   "date": "2026-09-16",
+   "start": "2026-09-16T16:30:00",
+   "end": "2026-09-16T17:15:00",
+   "duration_minutes": 45,
+   "title": "🛑 Pre-Mock Reset",
+   "category": "rest_buffer",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e112",
+   "date": "2026-09-16",
+   "start": "2026-09-16T17:15:00",
+   "end": "2026-09-16T19:15:00",
+   "duration_minutes": 120,
+   "title": "🎯 LSEG — Full Mixed Mock",
+   "category": "mock_interview",
+   "counts_as_preparation": true,
+   "description": "Use ChatGPT for the full two-hour mixed LSEG mock: core CS, DSA and problem solving, OA follow-ups, projects, resume, HR and role/company. Treat it as a real interview, not a short verification. All LSEG preparation is complete before this block begins.",
+   "task_ids": [
+    {
+     "task_id": "final_mixed_mock.interview",
+     "minutes": 120
+    }
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e113",
+   "date": "2026-09-16",
+   "start": "2026-09-16T19:15:00",
+   "end": "2026-09-16T19:30:00",
+   "duration_minutes": 15,
+   "title": "🎯 Mock — Debrief",
+   "category": "mock_interview",
+   "counts_as_preparation": true,
+   "description": "Capture the mock's key feedback once — the two or three things to tighten before tomorrow. Do not restart preparation or re-run the interview.",
+   "task_ids": [
+    {
+     "task_id": "final_mixed_mock.debrief",
+     "minutes": 15
+    }
+   ],
+   "use_chatgpt": true
+  },
+  {
+   "id": "e114",
+   "date": "2026-09-16",
+   "start": "2026-09-16T19:30:00",
+   "end": "2026-09-16T20:30:00",
+   "duration_minutes": 60,
+   "title": "🍛 Dinner",
+   "category": "meal",
+   "counts_as_preparation": false
+  },
+  {
+   "id": "e115",
+   "date": "2026-09-16",
+   "start": "2026-09-16T20:30:00",
+   "end": "2026-09-16T21:45:00",
+   "duration_minutes": 75,
+   "title": "🧠 RecSys — Final Revision",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "Use `Sources/Midsem/RecSys/final_revision.md` to check cross-unit connections and unresolved numerical errors after Units 1–3. Do not redo every unit exercise.",
+   "task_ids": [
+    {
+     "task_id": "recsys_final_revision.consolidate",
+     "minutes": 75
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/RecSys/final_revision.md"
+   ]
+  },
+  {
+   "id": "e116",
+   "date": "2026-09-16",
+   "start": "2026-09-16T21:45:00",
+   "end": "2026-09-16T22:30:00",
+   "duration_minutes": 45,
+   "title": "🧠 RecSys — Numericals (Conditional)",
+   "category": "midsem_preparation",
+   "counts_as_preparation": true,
+   "description": "**Conditional block — retained, not approved as a cut.** Practise only numerical methods or gaps that the units and final revision did not already cover, using `Sources/Midsem/RecSys/numericals.md`. If the final revision has just covered everything, this block can be dropped; redundancy is still unverified.",
+   "task_ids": [
+    {
+     "task_id": "recsys_numericals.conditional_practice",
+     "minutes": 45
+    }
+   ],
+   "resources": [
+    "Sources/Midsem/RecSys/numericals.md"
+   ],
+   "conditional": true,
+   "conditional_note": "Retained, not approved as a cut. If the final revision has already closed the numerical gaps, drop this block and finish early — do not replace it with other study."
+  }
+ ]
+}

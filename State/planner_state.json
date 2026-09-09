@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "phase": "phase_4_draft_schedule_complete",
-  "status": "draft_schedule_awaiting_approval",
+  "phase": "phase_5_final_plan_complete",
+  "status": "final_plan_approved_calendar_events_prepared",
   "planning_window": {
     "start": "2026-09-10",
     "end": "2026-09-16",
@@ -65,13 +65,13 @@
   "feasibility_recalculated": true,
   "workload_unchanged": true,
   "schedule_created": true,
-  "next_action": "Present Output/draft_plan.md for approval. On approval, copy to Output/final_plan.md and prepare Output/calendar_events.json; create live calendar events only on an explicit user instruction.",
+  "next_action": "Plan is final and calendar-ready. Create live calendar events only on an explicit user instruction.",
   "schedule": {
     "draft_plan": "Output/draft_plan.md",
     "final_plan": "Output/final_plan.md",
-    "final_plan_status": "empty_pending_user_approval",
+    "final_plan_status": "populated",
     "calendar_events": "Output/calendar_events.json",
-    "calendar_events_status": "not_prepared_pending_approval",
+    "calendar_events_status": "prepared_not_created",
     "live_calendar_events_created": false,
     "created_on": "2026-09-09",
     "total_scheduled_minutes": 3565,
@@ -90,7 +90,7 @@
     "day_partition_matches_feasibility": true,
     "protected_rest_minutes": 1050,
     "true_unused_slack_minutes": 5,
-    "slack_location": "2026-09-15 wind-down",
+    "slack_location": "2026-09-15 22:25-22:30, labelled 🕓 Unused Slack (separate from protected rest)",
     "fixed_placements": {
       "mandatory_iwt_lab": "2026-09-14 10:00-12:00",
       "friday_namaz": "2026-09-11 12:30-15:00 (rendered as 12:30-13:00 and 14:00-15:00 around the fixed lunch hour)",
@@ -119,6 +119,40 @@
       "20% per-subject attendance target in master_requirements.md 28 and availability.md 6/11 is superseded by State/approved_constraints.json; only the mandatory Monday IWT lab is scheduled.",
       "Dedicated Phase-3 verification blocks in master_requirements.md 9 are superseded by the approved Phase 2 preparation mode; the seven verification tasks are zero-additional-minute checkpoints inside named hosts."
     ],
-    "requirement_conflicts_found": "none"
+    "requirement_conflicts_found": "none",
+    "draft_plan_status": "approved_baseline_retained_as_record",
+    "finalized_on": "2026-09-09",
+    "calendar_event_count": 116,
+    "finalization_corrections": [
+      "Tuesday's 5 minutes of true unused slack split out of the 22:00-22:30 wind-down into a labelled 22:25-22:30 event, so protected rest reads exactly 150 minutes on all seven days. No study task moved.",
+      "Added the explicit rule that finishing a block early leaves reclaimed time as buffer/slack rather than creating extra study.",
+      "Added the note that the conditional RecSys numericals block may be dropped for an early finish if the final revision has already closed the gaps, rather than replaced with other study."
+    ],
+    "unchanged_at_finalization": [
+      "study block placement",
+      "task durations",
+      "day-level workload split",
+      "dependencies",
+      "resources and links",
+      "meals, Friday namaz, Monday IWT lab",
+      "Wednesday 16:30-17:15 pre-mock reset",
+      "Wednesday mock 17:15-19:15 and debrief 19:15-19:30",
+      "Wednesday 20:30-22:30 midsem-only"
+    ],
+    "validation_final": {
+      "total_preparation_minutes": 3565,
+      "nonzero_tasks_scheduled_once": "60/60",
+      "durations_changed": 0,
+      "dependencies": "PASS",
+      "fixed_commitments": "PASS",
+      "protected_rest_150_per_day": "PASS",
+      "true_slack_labelled_separately": "PASS",
+      "daily_midsem_block": "PASS",
+      "wednesday_anchors": "PASS",
+      "conditional_numericals": "45 min, conditional",
+      "resources_present": "PASS",
+      "final_plan_and_calendar_events_agree": "PASS",
+      "result": "PASS"
+    }
   }
 }
