@@ -31,9 +31,11 @@ The active day should still contain realistic rest/buffer periods. The presence 
 These are fixed and must be labelled explicitly in the calendar.
 
 ### Lunch
+
 - **1:00 PM–2:00 PM**
 
 ### Dinner
+
 - **7:30 PM–8:30 PM**
 
 Do not place study, interview practice, class replacement work, or other preparation inside these meal blocks.
