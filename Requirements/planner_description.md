@@ -206,6 +206,8 @@ An **LSEG OA Preparation** slot focuses specifically on the 4 major and 3 minor 
 
 This is separate from normal DSA preparation.
 
+Use `Sources/LSEG/OA/` as the source of truth for the OA questions and their major/minor classification.
+
 ## Objective
 
 The user should become capable of:
