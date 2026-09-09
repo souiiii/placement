@@ -1,0 +1,40 @@
+# Execution resources
+
+Selected on 9 September 2026. This block reuses the approved source map and workload estimates. Resource selection does not change their minutes or require completing an entire external collection. No raw local study notes were reopened.
+
+Practice platforms are preferred here because the missing work is active solving. For HR and company preparation, the short written sources below are sufficient. No backup resources are needed. The links are also the evidence for each selection; page availability was checked, but account sign-in and exercise execution were not tested.
+
+## Selected primary resources
+
+| Resource ID | Preparation unit | Primary resource | Bounded execution use and selection reason |
+|---|---|---|---|
+| `dsa_primary` | `dsa` | [LeetCode Top Interview 150](https://leetcode.com/studyplan/top-interview-150/) | Use as a pool of representative interview problems, guided by the local Pattern Index. Implement in Java, solve under a timer, explain complexity and revisit selected attempts. The provider describes the whole collection as suitable for 3+ months: completing all 150 is **not** assigned. Preserve breadth within the approved 720 minutes; no new problem bank is created here. |
+| `javascript_primary` | `javascript_practice` | [LeetCode 30 Days of JavaScript](https://leetcode.com/studyplan/30-days-of-javascript/) | Use selected coding exercises for active JavaScript preparation, followed by explanation and review. This is a focused basics practice collection, not a promise of complete language/interview coverage. Local JavaScript notes remain the reference for gaps; neither all 30 questions nor a 30-day programme is assigned. |
+| `sql_primary` | `sql_practice` | [LeetCode SQL 50](https://leetcode.com/studyplan/top-sql-50/) | Write and check queries from the basic/intermediate collection, then use timed attempts and error review. Select representative coverage within the existing budget, not completion of all 50. Reuse the same platform as DSA/JavaScript, while DBMS notes supply theory. |
+| `mongodb_primary` | `mongodb_practice` | [MongoDB Complete Aggregation Pipeline Tutorials](https://www.mongodb.com/docs/manual/tutorial/aggregation-complete-examples/) | Use the supplied data and task goals for filtering, grouping, arrays and joins. Attempt the relevant query/pipeline before consulting the worked solution, run it, compare results and explain corrections. These are runnable official tutorials used as reconstruction exercises, not an automatically graded question bank. Use the language selector and the existing Node/backend reference; do not read a broad MongoDB course. |
+| `hr_primary` | `hr_behavioural` | [MIT CAPD: STAR method and worksheet](https://capd.mit.edu/resources/the-star-method-for-behavioral-interviews/) | Use the concise framework to outline the user's own experiences, then practise and receive feedback from ChatGPT. ChatGPT also covers the other behavioural areas required by the planner. Do not copy sample answers or generate scripts in this phase. |
+| `aptitude_primary` | `aptitude` | [IndiaBIX Online Aptitude Tests](https://www.indiabix.com/online-test/aptitude-test/) | Use the existing numbered timed tests and explanations for practice and error review. The page lists 20-question, 30-minute tests, which can use the approved timed-practice component without inventing a new test. This is general aptitude practice; LSEG-specific test scope remains unconfirmed. |
+| `lseg_company_primary` | `lseg_role_company` | [LSEG: About us](https://www.lseg.com/en/about-us) | Study the overview and business descriptions to explain the company in the user's own words. The official page identifies its market-infrastructure and data role and introduces its businesses. Pair this with the exact local JD and submitted resume for role fit; neither a generic careers page nor this company overview replaces the JD. No company fact sheet or interview answers are generated here. |
+| `iwt_primary` | `iwt` | MDN reference: [How the web works](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works); skills exercises: [HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills) and [CSS](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills) | Use the concise reference for clients/servers, DNS, TCP/IP, HTTP requests/responses and URL components within the existing scope-revision allocation. Then use the existing HTML/CSS exercises for active practice. The local README defines the confirmed scope through CSS; it is not study notes. Do not follow the broader curriculum into JavaScript or later modules. |
+
+## Access and execution notes
+
+- **LeetCode:** public study-plan pages were verified. Sign-in, Java execution and any editorial access must be checked when executing; no paid subscription or premium-only exercise is assumed. A collection is a selection pool, not an additional workload requirement. Final representative selection belongs to later task-to-slot preparation; no problem list was generated here.
+- **MongoDB:** the official tutorial hub and its [Group and Total example](https://www.mongodb.com/docs/manual/tutorial/aggregation-examples/group-and-total/) were verified. Language-specific examples require the page's selector. A usable MongoDB environment is an execution prerequisite and has not been checked or provisioned. Any substantial setup need must be raised later rather than silently added to, or taken from, practice time.
+- **HR:** MIT's article was verified through its indexed page content after direct opening failed; no MIT appointment or account is required by the planned ChatGPT practice.
+- **Aptitude:** SHL practice entry points could not be verified reliably in this session, so they are not assigned. IndiaBIX provides a directly accessible practice page; no additional alternative was researched after that selection.
+- **IWT:** MDN’s verified *How the web works* article supplies the Web/HTTP/URL study reference; the existing MDN HTML/CSS exercises supply practice. Use both within the unchanged workload, with an available browser/editor. The scope README is not treated as study notes, and full-course completion is not assigned.
+
+## Local sources and shared execution support
+
+Use the exact paths and roles in `source_map.json`; do not create new study units from supporting files. Core/other technical notes, the three project notes, the submitted resume, JD, seven OA task files, EPQ sources, paired RecSys sources and Blockchain question sheet remain the primary local material. JSON, Collections, Extra Fundamentals, Redis when available, DSA references and images remain integrated supporting material with no extra workload.
+
+ChatGPT is the already-required execution partner for oral subject verification, project questionnaires, resume questioning, role/company questioning, behavioural practice and the final mixed mock. It is also available for explanations during practice. No additional external interview resource is needed for each of these tasks.
+
+## Open material and decisions
+
+- **CV:** reliable lecturer material and scope remain pending. Retain the approved 480-minute mandatory reserve; do not research a syllabus externally.
+- **RecSys numericals:** retain the conditional 90-minute allowance. Redundancy remains undecided; no file comparison or cut was made.
+- **OA:** Tasks 1 and 3 retain the recorded source-fidelity limitations. Task 7 lacks the original question/options: use preserved conceptual reasoning only, and keep exact option-level preparation pending the original material. No external replacement is assigned.
+- **Redis:** its local placeholder remains empty; this creates no independent task or resource hunt.
+- **Unchanged estimation uncertainty:** choosing a resource resolves resource selection, not current skill fluency, source completeness or the adequacy of an approved time allowance. No workload estimate is recalculated.

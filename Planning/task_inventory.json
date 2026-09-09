@@ -1,0 +1,1070 @@
+{
+  "schema_version": 1,
+  "phase": "resource_selection_and_task_inventory",
+  "basis": {
+    "source_map": "Planning/source_map.json",
+    "source_map_sha256": "839d83670fcd4bee5825378bf48a6ee2dc3d0d66f07eb310d7f457ecd9d71618",
+    "workload_estimates": "Planning/workload_estimates.json",
+    "workload_sha256": "0050c49b723712a6c2b6b00a64bed69aa29f5fab16e7a6f4564a8f63a4fe76de",
+    "resource_research": "Planning/resource_research.md",
+    "approval_note": "Current user instruction calls the existing estimates approved; their older review-status field is preserved unchanged. No new workload approval or re-estimation is inferred.",
+    "requirements": "Requirements/master_requirements.md sections 9, 13-19, 26, 29 and 34; existing source-map rules retained."
+  },
+  "task_semantics": [
+    "All tasks are unstarted. Default requirement status is required; only RecSys numericals is conditional. Readiness flags describe input availability, not study completion.",
+    "Each task consumes the listed existing estimate components exactly once. Task minutes are not calendar slots and can be split later. Do not add estimate totals on top of task totals.",
+    "Within a combined task, follow its action order. depends_on means preparation precedes verification/questioning; separate_session_required preserves a distinct later session.",
+    "Local sources are resolved by estimate_id against logical_unit_ids in source_map.json. Preserve primary/supporting roles and RecSys pairs; reuse shared references without standalone tasks or duplicate workload.",
+    "External resource IDs are bound by estimate ID below; execution limits and access notes are in resource_research.md. A selected resource is not a requirement to finish its whole collection.",
+    "General DSA stays independent from OA. Representative selection must protect breadth and remain fixed when the schedule is prepared; no problem bank or adaptive weakness expansion is created here.",
+    "Practice subtasks may later be interleaved by topic once their relevant refresh is done; the aggregate dependencies express the preparation-to-closure sequence, not a requirement for uninterrupted multi-hour blocks."
+  ],
+  "resource_registry": {
+    "dsa_primary": {
+      "urls": [
+        "https://leetcode.com/studyplan/top-interview-150/"
+      ]
+    },
+    "javascript_primary": {
+      "urls": [
+        "https://leetcode.com/studyplan/30-days-of-javascript/"
+      ]
+    },
+    "sql_primary": {
+      "urls": [
+        "https://leetcode.com/studyplan/top-sql-50/"
+      ]
+    },
+    "mongodb_primary": {
+      "urls": [
+        "https://www.mongodb.com/docs/manual/tutorial/aggregation-complete-examples/"
+      ]
+    },
+    "hr_primary": {
+      "urls": [
+        "https://capd.mit.edu/resources/the-star-method-for-behavioral-interviews/"
+      ]
+    },
+    "aptitude_primary": {
+      "urls": [
+        "https://www.indiabix.com/online-test/aptitude-test/"
+      ]
+    },
+    "lseg_company_primary": {
+      "urls": [
+        "https://www.lseg.com/en/about-us"
+      ]
+    },
+    "iwt_primary": {
+      "urls": [
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills",
+        "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_skills"
+      ]
+    }
+  },
+  "external_resource_by_estimate": {
+    "dsa": "dsa_primary",
+    "javascript_practice": "javascript_primary",
+    "sql_practice": "sql_primary",
+    "mongodb_practice": "mongodb_primary",
+    "hr_behavioural": "hr_primary",
+    "aptitude": "aptitude_primary",
+    "lseg_role_company": "lseg_company_primary",
+    "iwt": "iwt_primary"
+  },
+  "additional_local_context": {
+    "lseg_role_company": [
+      "Sources/LSEG/job_description.pdf",
+      "Sources/Resume/submitted_resume.pdf"
+    ],
+    "hr_behavioural": [
+      "Sources/Resume/submitted_resume.pdf"
+    ],
+    "final_mixed_mock": "Reuse the sources/resources of its prerequisite preparation tasks; no additional source set."
+  },
+  "execution_conditions": {
+    "leetcode_execution_access": "Check sign-in, available exercises and chosen language execution at use time; no paid subscription is assumed. No account operation was performed here.",
+    "mongodb_environment_available": "A usable MongoDB practice environment and tutorial data must be available. Neither provisioning nor substantial setup time is authorised or added by this inventory.",
+    "reliable_cv_material_and_scope": "Await reliable lecturer CV materials and confirmed scope before refining the mandatory reserved preparation; no external syllabus investigation.",
+    "recsys_numericals_retained": "A later explicit redundancy decision must determine whether the separate numericals task is needed. It is not an approved cut and remains included in totals."
+  },
+  "remaining_inherited_uncertainties": {
+    "javascript_practice": [
+      "current_practice_fluency_unconfirmed"
+    ],
+    "sql_practice": [
+      "current_practice_fluency_unconfirmed"
+    ],
+    "mongodb_practice": [
+      "current_practice_fluency_unconfirmed"
+    ],
+    "dsa": [
+      "current_pattern_fluency_unconfirmed"
+    ],
+    "recsys_numericals": [
+      "redundancy_decision_pending"
+    ],
+    "cv": [
+      "reliable_material_pending",
+      "active_scope_pending",
+      "workload_reserve_needs_review"
+    ],
+    "lseg_oa_task_1": [
+      "original_prompt_reconstructed"
+    ],
+    "lseg_oa_task_3": [
+      "original_prompt_incomplete"
+    ],
+    "lseg_oa_task_7": [
+      "original_question_and_options_missing"
+    ],
+    "aptitude": [
+      "aptitude_scope_unconfirmed"
+    ]
+  },
+  "resource_resolution_note": "The eight missing resource selections now have primaries. Historical flags in workload_estimates.json are not edited. Fluency, original-material gaps, runtime access and conditional coverage are not resolved merely by choosing a link.",
+  "constraints_for_later_scheduling": [
+    {
+      "id": "daily_midsem_self_study",
+      "rule": "At least one genuine midsem self-study block on every date from 2026-09-10 through 2026-09-16 inclusive. College attendance does not count; no daily blocks are assigned here."
+    },
+    {
+      "id": "project_order",
+      "rule": "Each project revision precedes its separate ChatGPT questionnaire; all three project pairs remain required."
+    },
+    {
+      "id": "subject_closure",
+      "rule": "Revision and applicable practice precede separate final verification. DBMS verification also follows SQL practice; backend verification also follows MongoDB practice."
+    },
+    {
+      "id": "final_mock",
+      "rule": "The full mixed ChatGPT mock belongs on the night of 2026-09-16 after major LSEG preparation, represented by its explicit dependencies. Midsem tasks are not prerequisites for this mock."
+    },
+    {
+      "id": "fixed_plan_and_scope",
+      "rule": "Do not silently cut required tasks, expand weak areas automatically, count OA as DSA, or invent CV scope. RecSys numericals remains conditional and visible."
+    },
+    {
+      "id": "later_feasibility_gate",
+      "rule": "Feasibility and calendar scheduling have not been performed. Retained totals are workload arithmetic only, not a claim that the workload fits."
+    }
+  ],
+  "totals": {
+    "task_count": 67,
+    "estimate_count": 41,
+    "lseg_placement_minutes": 4815,
+    "midsem_minutes_including_conditional": 1770,
+    "conditional_recsys_numericals_minutes": 90,
+    "mandatory_cv_reserve_minutes": 480,
+    "total_minutes_including_conditional": 6585,
+    "matches_approved_estimates": true
+  },
+  "tasks": [
+    {
+      "id": "os.prepare",
+      "estimate_id": "os",
+      "action": "Revise the full relevant Operating Systems notes, then complete the allocated recall or practical component; consult mapped supporting references within this work.",
+      "approved_components_minutes": {
+        "revision": 150,
+        "active_recall": 30
+      },
+      "estimated_minutes": 180,
+      "depends_on": []
+    },
+    {
+      "id": "os.verify",
+      "estimate_id": "os",
+      "action": "Use ChatGPT to verify Operating Systems broadly after revision and applicable practice; explain without notes first and record remaining gaps without automatically extending the allocation.",
+      "approved_components_minutes": {
+        "verification": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "os.prepare"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "cn.prepare",
+      "estimate_id": "cn",
+      "action": "Revise the full relevant Computer Networks notes, then complete the allocated recall or practical component; consult mapped supporting references within this work.",
+      "approved_components_minutes": {
+        "revision": 180,
+        "active_recall": 30
+      },
+      "estimated_minutes": 210,
+      "depends_on": []
+    },
+    {
+      "id": "cn.verify",
+      "estimate_id": "cn",
+      "action": "Use ChatGPT to verify Computer Networks broadly after revision and applicable practice; explain without notes first and record remaining gaps without automatically extending the allocation.",
+      "approved_components_minutes": {
+        "verification": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "cn.prepare"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "dbms.prepare",
+      "estimate_id": "dbms",
+      "action": "Revise the full relevant DBMS notes, then complete the allocated recall or practical component; consult mapped supporting references within this work.",
+      "approved_components_minutes": {
+        "revision": 90,
+        "active_recall": 30
+      },
+      "estimated_minutes": 120,
+      "depends_on": []
+    },
+    {
+      "id": "dbms.verify",
+      "estimate_id": "dbms",
+      "action": "Use ChatGPT to verify DBMS broadly after revision and applicable practice; explain without notes first and record remaining gaps without automatically extending the allocation.",
+      "approved_components_minutes": {
+        "verification": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "dbms.prepare",
+        "sql_practice.review"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "java_oop.prepare",
+      "estimate_id": "java_oop",
+      "action": "Revise the full relevant Java / OOP notes, then complete the allocated recall or practical component; consult mapped supporting references within this work.",
+      "approved_components_minutes": {
+        "revision": 75,
+        "implementation_practice": 45
+      },
+      "estimated_minutes": 120,
+      "depends_on": []
+    },
+    {
+      "id": "java_oop.verify",
+      "estimate_id": "java_oop",
+      "action": "Use ChatGPT to verify Java / OOP broadly after revision and applicable practice; explain without notes first and record remaining gaps without automatically extending the allocation.",
+      "approved_components_minutes": {
+        "verification": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "java_oop.prepare"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "node_backend.prepare",
+      "estimate_id": "node_backend",
+      "action": "Revise the full relevant Node.js / Backend notes, then complete the allocated recall or practical component; consult mapped supporting references within this work.",
+      "approved_components_minutes": {
+        "revision": 240,
+        "implementation_and_explanation": 60
+      },
+      "estimated_minutes": 300,
+      "depends_on": []
+    },
+    {
+      "id": "node_backend.verify",
+      "estimate_id": "node_backend",
+      "action": "Use ChatGPT to verify Node.js / Backend broadly after revision and applicable practice; explain without notes first and record remaining gaps without automatically extending the allocation.",
+      "approved_components_minutes": {
+        "verification": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "node_backend.prepare",
+        "mongodb_practice.review"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "system_design.prepare",
+      "estimate_id": "system_design",
+      "action": "Revise the full relevant System Design notes, then complete the allocated recall or practical component; consult mapped supporting references within this work.",
+      "approved_components_minutes": {
+        "revision": 120,
+        "design_and_tradeoff_practice": 60
+      },
+      "estimated_minutes": 180,
+      "depends_on": []
+    },
+    {
+      "id": "system_design.verify",
+      "estimate_id": "system_design",
+      "action": "Use ChatGPT to verify System Design broadly after revision and applicable practice; explain without notes first and record remaining gaps without automatically extending the allocation.",
+      "approved_components_minutes": {
+        "verification": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "system_design.prepare"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "react.prepare",
+      "estimate_id": "react",
+      "action": "Revise the full relevant React notes, then complete the allocated recall or practical component; consult mapped supporting references within this work.",
+      "approved_components_minutes": {
+        "revision": 180,
+        "implementation_practice": 60
+      },
+      "estimated_minutes": 240,
+      "depends_on": []
+    },
+    {
+      "id": "react.verify",
+      "estimate_id": "react",
+      "action": "Use ChatGPT to verify React broadly after revision and applicable practice; explain without notes first and record remaining gaps without automatically extending the allocation.",
+      "approved_components_minutes": {
+        "verification": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "react.prepare"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "nextjs.prepare",
+      "estimate_id": "nextjs",
+      "action": "Revise the mapped notes, complete the allocated implementation/workflow or explanation component, and finish with active recall; use the existing component order rather than treating reading as completion.",
+      "approved_components_minutes": {
+        "revision": 45,
+        "implementation_practice": 30,
+        "active_recall": 15
+      },
+      "estimated_minutes": 90,
+      "depends_on": []
+    },
+    {
+      "id": "typescript.prepare",
+      "estimate_id": "typescript",
+      "action": "Revise the mapped notes, complete the allocated implementation/workflow or explanation component, and finish with active recall; use the existing component order rather than treating reading as completion.",
+      "approved_components_minutes": {
+        "revision": 45,
+        "implementation_practice": 30,
+        "active_recall": 15
+      },
+      "estimated_minutes": 90,
+      "depends_on": []
+    },
+    {
+      "id": "git_github.prepare",
+      "estimate_id": "git_github",
+      "action": "Revise the mapped notes, complete the allocated implementation/workflow or explanation component, and finish with active recall; use the existing component order rather than treating reading as completion.",
+      "approved_components_minutes": {
+        "revision": 60,
+        "workflow_practice": 30,
+        "active_recall": 15
+      },
+      "estimated_minutes": 105,
+      "depends_on": []
+    },
+    {
+      "id": "python.prepare",
+      "estimate_id": "python",
+      "action": "Revise the mapped notes, complete the allocated implementation/workflow or explanation component, and finish with active recall; use the existing component order rather than treating reading as completion.",
+      "approved_components_minutes": {
+        "revision": 60,
+        "implementation_practice": 45,
+        "active_recall": 15
+      },
+      "estimated_minutes": 120,
+      "depends_on": []
+    },
+    {
+      "id": "ai_fundamentals.prepare",
+      "estimate_id": "ai_fundamentals",
+      "action": "Revise the mapped notes, complete the allocated implementation/workflow or explanation component, and finish with active recall; use the existing component order rather than treating reading as completion.",
+      "approved_components_minutes": {
+        "revision": 60,
+        "explanation_and_recall": 30
+      },
+      "estimated_minutes": 90,
+      "depends_on": []
+    },
+    {
+      "id": "javascript_practice.refresh",
+      "estimate_id": "javascript_practice",
+      "action": "Refresh only the JavaScript concepts needed for the selected exercises using the local reference.",
+      "approved_components_minutes": {
+        "targeted_reference_refresh": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": []
+    },
+    {
+      "id": "javascript_practice.practice",
+      "estimate_id": "javascript_practice",
+      "action": "Implement representative JavaScript exercises from the selected collection before consulting solutions; explain behaviour and debug failed attempts.",
+      "approved_components_minutes": {
+        "active_coding": 150
+      },
+      "estimated_minutes": 150,
+      "depends_on": [
+        "javascript_practice.refresh"
+      ],
+      "execution_conditions": [
+        "leetcode_execution_access"
+      ]
+    },
+    {
+      "id": "javascript_practice.timed",
+      "estimate_id": "javascript_practice",
+      "action": "Attempt selected JavaScript coding exercises under a timer without notes.",
+      "approved_components_minutes": {
+        "timed_practice": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "javascript_practice.practice"
+      ],
+      "execution_conditions": [
+        "leetcode_execution_access"
+      ]
+    },
+    {
+      "id": "javascript_practice.review",
+      "estimate_id": "javascript_practice",
+      "action": "Explain and review JavaScript attempts with ChatGPT, recording errors without expanding the approved practice budget.",
+      "approved_components_minutes": {
+        "explanation_and_review": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "javascript_practice.timed"
+      ],
+      "use_chatgpt": true
+    },
+    {
+      "id": "sql_practice.refresh",
+      "estimate_id": "sql_practice",
+      "action": "Refresh query syntax from DBMS notes after the theory preparation; do not repeat the full DBMS revision.",
+      "approved_components_minutes": {
+        "targeted_reference_refresh": 15
+      },
+      "estimated_minutes": 15,
+      "depends_on": [
+        "dbms.prepare"
+      ]
+    },
+    {
+      "id": "sql_practice.practice",
+      "estimate_id": "sql_practice",
+      "action": "Write and execute representative queries from SQL 50; compare outputs and debug errors before reading solutions.",
+      "approved_components_minutes": {
+        "query_practice": 120
+      },
+      "estimated_minutes": 120,
+      "depends_on": [
+        "sql_practice.refresh"
+      ],
+      "execution_conditions": [
+        "leetcode_execution_access"
+      ]
+    },
+    {
+      "id": "sql_practice.timed",
+      "estimate_id": "sql_practice",
+      "action": "Complete selected SQL query attempts under a timer without consulting answers.",
+      "approved_components_minutes": {
+        "timed_practice": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "sql_practice.practice"
+      ],
+      "execution_conditions": [
+        "leetcode_execution_access"
+      ]
+    },
+    {
+      "id": "sql_practice.review",
+      "estimate_id": "sql_practice",
+      "action": "Explain query choices and review errors with ChatGPT before DBMS final verification.",
+      "approved_components_minutes": {
+        "explanation_and_review": 15
+      },
+      "estimated_minutes": 15,
+      "depends_on": [
+        "sql_practice.timed"
+      ],
+      "use_chatgpt": true
+    },
+    {
+      "id": "mongodb_practice.refresh",
+      "estimate_id": "mongodb_practice",
+      "action": "Refresh the needed MongoDB syntax from Node_Backend.md after backend theory preparation.",
+      "approved_components_minutes": {
+        "targeted_reference_refresh": 15
+      },
+      "estimated_minutes": 15,
+      "depends_on": [
+        "node_backend.prepare"
+      ]
+    },
+    {
+      "id": "mongodb_practice.practice",
+      "estimate_id": "mongodb_practice",
+      "action": "Using the selected official tutorial data and goals, reconstruct and run filtering/grouping/array/join queries or pipelines before comparing with worked solutions.",
+      "approved_components_minutes": {
+        "query_and_aggregation_practice": 105
+      },
+      "estimated_minutes": 105,
+      "depends_on": [
+        "mongodb_practice.refresh"
+      ],
+      "execution_conditions": [
+        "mongodb_environment_available"
+      ]
+    },
+    {
+      "id": "mongodb_practice.review",
+      "estimate_id": "mongodb_practice",
+      "action": "Explain pipeline stages and results with ChatGPT, and review debugging findings before backend final verification.",
+      "approved_components_minutes": {
+        "explanation_and_review": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "mongodb_practice.practice"
+      ],
+      "use_chatgpt": true
+    },
+    {
+      "id": "dsa.refresh",
+      "estimate_id": "dsa",
+      "action": "Use the local Pattern Index and Mistake Log to refresh the major patterns for breadth-oriented Java practice; these remain supporting references.",
+      "approved_components_minutes": {
+        "pattern_refresh": 90
+      },
+      "estimated_minutes": 90,
+      "depends_on": []
+    },
+    {
+      "id": "dsa.practice",
+      "estimate_id": "dsa",
+      "action": "Implement representative problems across the selected pattern categories from the primary pool, explaining approaches and testing edge cases; do not attempt the whole collection.",
+      "approved_components_minutes": {
+        "representative_implementation_practice": 390
+      },
+      "estimated_minutes": 390,
+      "depends_on": [
+        "dsa.refresh"
+      ],
+      "execution_conditions": [
+        "leetcode_execution_access"
+      ]
+    },
+    {
+      "id": "dsa.timed",
+      "estimate_id": "dsa",
+      "action": "Solve selected general DSA problems in Java under a timer and explain the approach aloud; OA work does not count toward this component.",
+      "approved_components_minutes": {
+        "timed_solving": 120
+      },
+      "estimated_minutes": 120,
+      "depends_on": [
+        "dsa.practice"
+      ],
+      "execution_conditions": [
+        "leetcode_execution_access"
+      ]
+    },
+    {
+      "id": "dsa.review",
+      "estimate_id": "dsa",
+      "action": "Re-solve selected earlier attempts and explain time/space complexity with ChatGPT; preserve the fixed breadth allocation rather than adding unlimited weak-pattern remediation.",
+      "approved_components_minutes": {
+        "reexposure_and_complexity_explanation": 120
+      },
+      "estimated_minutes": 120,
+      "depends_on": [
+        "dsa.timed"
+      ],
+      "use_chatgpt": true
+    },
+    {
+      "id": "project_velvet.revision",
+      "estimate_id": "project_velvet",
+      "action": "Revise the Velvet project notes and refresh architecture, implementation, decisions and personal contribution.",
+      "approved_components_minutes": {
+        "revision": 90
+      },
+      "estimated_minutes": 90,
+      "depends_on": [],
+      "separate_session_required": true
+    },
+    {
+      "id": "project_velvet.questionnaire",
+      "estimate_id": "project_velvet",
+      "action": "Use ChatGPT for a separate Velvet questionnaire covering architecture, implementation, trade-offs, failures, security, scalability and contribution; use the project notes as the reference.",
+      "approved_components_minutes": {
+        "questionnaire": 60
+      },
+      "estimated_minutes": 60,
+      "depends_on": [
+        "project_velvet.revision"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "project_eventually.revision",
+      "estimate_id": "project_eventually",
+      "action": "Revise the Eventually project notes and refresh architecture, implementation, decisions and personal contribution.",
+      "approved_components_minutes": {
+        "revision": 90
+      },
+      "estimated_minutes": 90,
+      "depends_on": [],
+      "separate_session_required": true
+    },
+    {
+      "id": "project_eventually.questionnaire",
+      "estimate_id": "project_eventually",
+      "action": "Use ChatGPT for a separate Eventually questionnaire covering architecture, implementation, trade-offs, failures, security, scalability and contribution; use the project notes as the reference.",
+      "approved_components_minutes": {
+        "questionnaire": 60
+      },
+      "estimated_minutes": 60,
+      "depends_on": [
+        "project_eventually.revision"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "project_relay.revision",
+      "estimate_id": "project_relay",
+      "action": "Revise the Relay project notes and refresh architecture, implementation, decisions and personal contribution.",
+      "approved_components_minutes": {
+        "revision": 60
+      },
+      "estimated_minutes": 60,
+      "depends_on": [],
+      "separate_session_required": true
+    },
+    {
+      "id": "project_relay.questionnaire",
+      "estimate_id": "project_relay",
+      "action": "Use ChatGPT for a separate Relay questionnaire covering architecture, implementation, trade-offs, failures, security, scalability and contribution; use the project notes as the reference.",
+      "approved_components_minutes": {
+        "questionnaire": 60
+      },
+      "estimated_minutes": 60,
+      "depends_on": [
+        "project_relay.revision"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "resume.review",
+      "estimate_id": "resume",
+      "action": "Review the exact submitted resume and ensure each meaningful claim can be explained and substantiated; leave detailed project revision in the project tasks.",
+      "approved_components_minutes": {
+        "review": 45
+      },
+      "estimated_minutes": 45,
+      "depends_on": []
+    },
+    {
+      "id": "resume.questionnaire",
+      "estimate_id": "resume",
+      "action": "Use ChatGPT for follow-up questioning on the submitted resume after its review.",
+      "approved_components_minutes": {
+        "questionnaire": 45
+      },
+      "estimated_minutes": 45,
+      "depends_on": [
+        "resume.review"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "lseg_role_company.study",
+      "estimate_id": "lseg_role_company",
+      "action": "Review the exact local JD and the selected official LSEG overview; distinguish company facts from expectations stated by this particular JD.",
+      "approved_components_minutes": {
+        "jd_review": 30,
+        "company_resource_study": 45
+      },
+      "estimated_minutes": 75,
+      "depends_on": []
+    },
+    {
+      "id": "lseg_role_company.fit",
+      "estimate_id": "lseg_role_company",
+      "action": "Connect the JD and company understanding to the user's actual submitted-resume experience; prepare personal talking points without inventing claims.",
+      "approved_components_minutes": {
+        "role_fit_preparation": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "lseg_role_company.study",
+        "resume.review"
+      ]
+    },
+    {
+      "id": "lseg_role_company.questionnaire",
+      "estimate_id": "lseg_role_company",
+      "action": "Use ChatGPT to practise company understanding and role-fit explanations; keep generic behavioural practice separate.",
+      "approved_components_minutes": {
+        "questionnaire": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "lseg_role_company.fit"
+      ],
+      "use_chatgpt": true
+    },
+    {
+      "id": "epq_full_notes.consolidate",
+      "estimate_id": "epq_full_notes",
+      "action": "Refresh the previously substantially prepared EPQ core using full notes, then complete the allocated recall and numerical consolidation; do not restart first-pass learning.",
+      "approved_components_minutes": {
+        "revision": 105,
+        "active_recall": 30,
+        "numerical_consolidation": 15
+      },
+      "estimated_minutes": 150,
+      "depends_on": []
+    },
+    {
+      "id": "epq_revision.consolidate",
+      "estimate_id": "epq_revision",
+      "action": "Use EPQ revision notes for the later recall and numerical consolidation pass, without a second full new-learning treatment.",
+      "approved_components_minutes": {
+        "revision": 60,
+        "active_recall": 30,
+        "numerical_consolidation": 60
+      },
+      "estimated_minutes": 150,
+      "depends_on": [
+        "epq_full_notes.consolidate"
+      ]
+    },
+    {
+      "id": "recsys_unit_1.prepare",
+      "estimate_id": "recsys_unit_1",
+      "action": "Use the ChatGPT and Codex versions side by side as one source; complete conceptual coverage, worked-method/numerical practice, then active recall.",
+      "approved_components_minutes": {
+        "concept_coverage": 90,
+        "worked_method_and_numerical_practice": 60,
+        "active_recall": 30
+      },
+      "estimated_minutes": 180,
+      "depends_on": []
+    },
+    {
+      "id": "recsys_unit_2.prepare",
+      "estimate_id": "recsys_unit_2",
+      "action": "Use the ChatGPT and Codex versions side by side as one source; complete conceptual coverage, worked-method/numerical practice, then active recall.",
+      "approved_components_minutes": {
+        "concept_coverage": 90,
+        "worked_method_and_numerical_practice": 60,
+        "active_recall": 30
+      },
+      "estimated_minutes": 180,
+      "depends_on": []
+    },
+    {
+      "id": "recsys_unit_3.prepare",
+      "estimate_id": "recsys_unit_3",
+      "action": "Use the ChatGPT and Codex versions side by side as one source; complete conceptual coverage, worked-method/numerical practice, then active recall.",
+      "approved_components_minutes": {
+        "concept_coverage": 90,
+        "worked_method_and_numerical_practice": 60,
+        "active_recall": 30
+      },
+      "estimated_minutes": 180,
+      "depends_on": []
+    },
+    {
+      "id": "recsys_final_revision.consolidate",
+      "estimate_id": "recsys_final_revision",
+      "action": "Consolidate the covered RecSys units through the final-revision source, recall and numerical reconstruction.",
+      "approved_components_minutes": {
+        "revision": 60,
+        "active_recall": 30,
+        "numerical_consolidation": 60
+      },
+      "estimated_minutes": 150,
+      "depends_on": [
+        "recsys_unit_1.prepare",
+        "recsys_unit_2.prepare",
+        "recsys_unit_3.prepare"
+      ]
+    },
+    {
+      "id": "recsys_numericals.conditional_practice",
+      "estimate_id": "recsys_numericals",
+      "action": "If separate numerical practice is retained by the later redundancy decision, use the existing numericals source and check/explain results; keep the full allowance visible until that decision.",
+      "approved_components_minutes": {
+        "numerical_practice": 60,
+        "checking_and_explanation": 30
+      },
+      "estimated_minutes": 90,
+      "depends_on": [
+        "recsys_final_revision.consolidate"
+      ],
+      "requirement_status": "conditional",
+      "execution_conditions": [
+        "recsys_numericals_retained"
+      ],
+      "readiness": "conditional_decision_pending"
+    },
+    {
+      "id": "cv.reserved_preparation",
+      "estimate_id": "cv",
+      "action": "Retain mandatory active CV preparation against reliable lecturer material once supplied; detailed actions must follow that material and cannot be invented now.",
+      "approved_components_minutes": {
+        "scope_unspecified_active_preparation_reserve": 480
+      },
+      "estimated_minutes": 480,
+      "depends_on": [],
+      "execution_conditions": [
+        "reliable_cv_material_and_scope"
+      ],
+      "readiness": "blocked_pending_material"
+    },
+    {
+      "id": "blockchain.prepare",
+      "estimate_id": "blockchain",
+      "action": "Prepare the lecturer's narrow expected-question set, practise its two gas/ether numericals and finish with active recall; do not expand to the general syllabus.",
+      "approved_components_minutes": {
+        "question_set_revision": 45,
+        "numerical_practice": 30,
+        "active_recall": 15
+      },
+      "estimated_minutes": 90,
+      "depends_on": []
+    },
+    {
+      "id": "iwt.prepare",
+      "estimate_id": "iwt",
+      "action": "Follow the confirmed README through CSS: study Web/HTTP/URL foundations using MDN How the web works, practise relevant HTML/CSS tasks using the existing MDN exercises, then test recall; exclude JavaScript and later modules.",
+      "approved_components_minutes": {
+        "scope_revision": 45,
+        "html_css_practice": 60,
+        "active_recall": 15
+      },
+      "estimated_minutes": 120,
+      "depends_on": []
+    },
+    {
+      "id": "lseg_oa_task_1.prepare",
+      "estimate_id": "lseg_oa_task_1",
+      "action": "Reconstruct the supplied OA task's approach, implement it independently in Java, test edge cases, and explain time/space complexity; use the preserved task as the scope authority.",
+      "approved_components_minutes": {
+        "approach_reconstruction": 15,
+        "java_implementation": 35,
+        "edge_case_testing": 15,
+        "complexity_and_explanation": 10
+      },
+      "estimated_minutes": 75,
+      "depends_on": [],
+      "oa_category": "Major",
+      "source_limitations": [
+        "original_prompt_reconstructed"
+      ]
+    },
+    {
+      "id": "lseg_oa_task_2.prepare",
+      "estimate_id": "lseg_oa_task_2",
+      "action": "Reconstruct the supplied OA task's approach, implement it independently in Java, test edge cases, and explain time/space complexity; use the preserved task as the scope authority.",
+      "approved_components_minutes": {
+        "approach_reconstruction": 20,
+        "java_implementation": 45,
+        "edge_case_testing": 25,
+        "complexity_and_explanation": 15
+      },
+      "estimated_minutes": 105,
+      "depends_on": [],
+      "oa_category": "Major"
+    },
+    {
+      "id": "lseg_oa_task_5.prepare",
+      "estimate_id": "lseg_oa_task_5",
+      "action": "Reconstruct the supplied OA task's approach, implement it independently in Java, test edge cases, and explain time/space complexity; use the preserved task as the scope authority.",
+      "approved_components_minutes": {
+        "approach_reconstruction": 20,
+        "java_implementation": 45,
+        "edge_case_testing": 25,
+        "complexity_and_explanation": 15
+      },
+      "estimated_minutes": 105,
+      "depends_on": [],
+      "oa_category": "Major"
+    },
+    {
+      "id": "lseg_oa_task_6.prepare",
+      "estimate_id": "lseg_oa_task_6",
+      "action": "Reconstruct the supplied OA task's approach, implement it independently in Java, test edge cases, and explain time/space complexity; use the preserved task as the scope authority.",
+      "approved_components_minutes": {
+        "approach_reconstruction": 20,
+        "java_implementation": 40,
+        "edge_case_testing": 20,
+        "complexity_and_explanation": 10
+      },
+      "estimated_minutes": 90,
+      "depends_on": [],
+      "oa_category": "Major"
+    },
+    {
+      "id": "lseg_oa_task_3.prepare",
+      "estimate_id": "lseg_oa_task_3",
+      "action": "Trace and correct the supplied Java bug, test the allocated counterexamples/edge cases, and explain why the fix works and its complexity.",
+      "approved_components_minutes": {
+        "java_bug_trace_and_fix": 15,
+        "counterexample_testing": 10,
+        "complexity_and_explanation": 10
+      },
+      "estimated_minutes": 35,
+      "depends_on": [],
+      "oa_category": "Minor",
+      "source_limitations": [
+        "original_prompt_incomplete"
+      ]
+    },
+    {
+      "id": "lseg_oa_task_4.prepare",
+      "estimate_id": "lseg_oa_task_4",
+      "action": "Trace and correct the supplied Java bug, test the allocated counterexamples/edge cases, and explain why the fix works and its complexity.",
+      "approved_components_minutes": {
+        "java_bug_trace_and_fix": 10,
+        "edge_case_testing": 10,
+        "complexity_and_explanation": 5
+      },
+      "estimated_minutes": 25,
+      "depends_on": [],
+      "oa_category": "Minor"
+    },
+    {
+      "id": "lseg_oa_task_7.prepare",
+      "estimate_id": "lseg_oa_task_7",
+      "action": "Review the preserved model-evaluation rationale and explain the concepts orally with ChatGPT. Do not reconstruct missing options or claim exact option-level preparation; no Java implementation applies.",
+      "approved_components_minutes": {
+        "concept_refresh": 15,
+        "evaluation_reasoning_practice": 10,
+        "oral_explanation": 5
+      },
+      "estimated_minutes": 30,
+      "depends_on": [],
+      "use_chatgpt": true,
+      "oa_category": "Minor",
+      "source_limitations": [
+        "original_question_and_options_missing"
+      ],
+      "readiness": "partial_material_available"
+    },
+    {
+      "id": "hr_behavioural.prepare",
+      "estimate_id": "hr_behavioural",
+      "action": "Use the selected STAR guide to outline the user's own behavioural examples; keep these separate from company/role study and do not memorise externally generated answers.",
+      "approved_components_minutes": {
+        "response_preparation": 45
+      },
+      "estimated_minutes": 45,
+      "depends_on": []
+    },
+    {
+      "id": "hr_behavioural.practice",
+      "estimate_id": "hr_behavioural",
+      "action": "Practise the required behavioural areas with ChatGPT, receive feedback and recall stronger responses in the user's own words.",
+      "approved_components_minutes": {
+        "chatgpt_behavioural_practice": 60,
+        "feedback_and_recall": 15
+      },
+      "estimated_minutes": 75,
+      "depends_on": [
+        "hr_behavioural.prepare"
+      ],
+      "use_chatgpt": true
+    },
+    {
+      "id": "aptitude.practice",
+      "estimate_id": "aptitude",
+      "action": "Use the selected aptitude tests for targeted refresh, timed solving and error review; retain required coverage while delivery format and LSEG-specific scope remain undecided.",
+      "approved_components_minutes": {
+        "targeted_refresh": 15,
+        "timed_practice": 60,
+        "error_review": 15
+      },
+      "estimated_minutes": 90,
+      "depends_on": []
+    },
+    {
+      "id": "final_mixed_mock.interview",
+      "estimate_id": "final_mixed_mock",
+      "action": "Use ChatGPT for the full mixed LSEG mock across core CS, DSA, OA follow-ups, projects, resume, behavioural and role/company preparation; acknowledge any preserved source limitations.",
+      "approved_components_minutes": {
+        "chatgpt_mixed_interview": 120
+      },
+      "estimated_minutes": 120,
+      "depends_on": [
+        "os.verify",
+        "cn.verify",
+        "dbms.verify",
+        "java_oop.verify",
+        "node_backend.verify",
+        "system_design.verify",
+        "react.verify",
+        "nextjs.prepare",
+        "typescript.prepare",
+        "git_github.prepare",
+        "python.prepare",
+        "ai_fundamentals.prepare",
+        "javascript_practice.review",
+        "sql_practice.review",
+        "mongodb_practice.review",
+        "dsa.review",
+        "project_velvet.questionnaire",
+        "project_eventually.questionnaire",
+        "project_relay.questionnaire",
+        "resume.questionnaire",
+        "lseg_role_company.questionnaire",
+        "lseg_oa_task_1.prepare",
+        "lseg_oa_task_2.prepare",
+        "lseg_oa_task_5.prepare",
+        "lseg_oa_task_6.prepare",
+        "lseg_oa_task_3.prepare",
+        "lseg_oa_task_4.prepare",
+        "lseg_oa_task_7.prepare",
+        "hr_behavioural.practice",
+        "aptitude.practice"
+      ],
+      "use_chatgpt": true,
+      "separate_session_required": true
+    },
+    {
+      "id": "final_mixed_mock.debrief",
+      "estimate_id": "final_mixed_mock",
+      "action": "Review the mixed mock with ChatGPT and capture final feedback; do not automatically add remediation time or reschedule other work.",
+      "approved_components_minutes": {
+        "feedback_and_debrief": 30
+      },
+      "estimated_minutes": 30,
+      "depends_on": [
+        "final_mixed_mock.interview"
+      ],
+      "use_chatgpt": true
+    }
+  ]
+}
