@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "authority": "Latest explicit user instructions in the Phase 2 re-estimation request",
+  "attendance": {
+    "policy": "mandatory_iwt_lab_only",
+    "percentage_attendance_requirement_removed": true,
+    "required_classes": [
+      {
+        "subject": "IWT lab",
+        "date": "2026-09-14",
+        "start": "10:00",
+        "end": "12:00",
+        "timezone": "Asia/Kolkata"
+      }
+    ],
+    "other_class_attendance_required": false,
+    "supersedes": "All approximate-20% and optional-attendance selection requirements in Requirements/master_requirements.md and Requirements/availability.md."
+  },
+  "preparation_mode": {
+    "previously_studied_material": "Targeted high-value/weak-area interview refresh; not exhaustive linear rereading.",
+    "recall_explanation_verification": "Integrate with refresh/practice where practical; no automatic extra 30-minute verification session.",
+    "owned_projects": "Architecture/decision/implementation refresh before a separate questionnaire.",
+    "important_tracks": "Retain all; the earlier Package B deferrals were not approved.",
+    "cv": "Mandatory but provisional reserve must be reassessed rather than preserved at 480 minutes by default."
+  },
+  "unchanged_constraints": "Daily active boundaries, meals, Friday namaz, genuine daily midsem self-study, project ordering and final mixed mock remain in force."
+}

@@ -1,3 +1,5 @@
+> **STALE — historical analysis only.** The Phase 2 re-estimation and mandatory-IWT-lab-only attendance policy supersede this report’s workload, capacity assumptions and proposed cuts. See `workload_revision.md` and `State/approved_constraints.json`. No revised feasibility has been performed.
+
 # Feasibility — 10–16 September 2026
 
 **The full approved plan is infeasible.** Its **6,585 minutes (109h 45m)** exceed a defensible focused-study capacity of **3390 minutes (56h 30m)** by **3,195 minutes (53h 15m)**. Even omitting the conditional RecSys numericals allowance leaves **3,105 minutes (51h 45m)** of overload. No cut, estimate change or task change has been applied.

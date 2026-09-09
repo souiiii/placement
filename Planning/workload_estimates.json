@@ -1,141 +1,140 @@
 {
-  "schema_version": 1,
-  "phase": "phase_2_workload_estimation",
-  "review_status": "proposed_estimates_awaiting_user_review",
+  "schema_version": 2,
+  "phase": "phase_2_workload_reestimation",
+  "review_status": "revised_estimates_awaiting_user_review",
+  "supersedes_baseline_minutes": 6585,
   "source_map": "Planning/source_map.json",
   "source_map_sha256": "839d83670fcd4bee5825378bf48a6ee2dc3d0d66f07eb310d7f457ecd9d71618",
-  "authority_basis": [
-    "Current user Phase 2 instructions",
-    "Approved source_map.json including EPQ prior-preparation correction",
-    "AGENTS.md",
-    "Requirements/master_requirements.md sections 9-25 and 34"
-  ],
-  "state_note": "All three State JSON files and the prior workload_estimates.json were empty at phase start; no saved cuts or workload approvals applied.",
-  "scope_note": "38 source-map units plus three required preparation activities with no separate physical source: HR, aptitude and final mock. This is workload estimation only; no task inventory, resource research, feasibility or schedule is produced.",
+  "authority_basis": "Current user instructions: previously studied material, targeted refresh, integrated recall/checking, all important tracks retained. These supersede earlier full-linear-revision and automatic separate-verification assumptions.",
   "estimation_policy": [
-    "Minutes are proposed focused preparation time, not note-reading-speed calculations, calendar blocks or guarantees of mastery. They exclude meals, breaks, classes and the assistant's planning/research time.",
-    "Placement notes and the user's own projects are treated as revision of previously encountered material. If substantial first-time learning is needed, affected estimates require review. EPQ prior core preparation is explicitly confirmed.",
-    "Each estimated_minutes value already includes all of its component minutes. Components are additive within a unit; do not add verification, questionnaires or mock feedback again elsewhere.",
-    "Core verification uses ChatGPT after subject revision/practice; each project questionnaire is a separate ChatGPT session after its revision. Resume questioning is also a later ChatGPT component.",
-    "DBMS and Node/backend include their reference theory; SQL and MongoDB add active query practice. Brief targeted refresh in practice is intentional retrieval, not a second full note-reading workload.",
-    "Supporting JSON, Collections, Extra Fundamentals, Redis, DSA references and companion images have no independent workload. Consult relevant material within the associated unit components; do not multiply shared-reference time across links. Redis remains an empty placeholder.",
-    "General DSA and all seven OA tasks have distinct time allocations. OA retains four Major and three Minor tasks; README is metadata only. Java applies to implementation/bug-fix work, while Task 7 is reasoning-only.",
-    "RecSys paired files are one unit each. Final revision adds consolidation after unit coverage. The separate numericals allowance is retained provisionally in totals until an explicit redundancy decision; no cut is implied.",
-    "External resources remain pending where flagged. Provisional figures are useful review baselines; missing evidence was not pursued solely to increase confidence."
+    "These are fresh estimates of the revised preparation mode, not the previous feasibility cut package. No important track is deleted or assigned a zero unit budget.",
+    "Source length informs breadth and lookup needs, not linear reading time. Placement material and owned projects are treated as familiar; RecSys first-pass completion is not assumed.",
+    "Recall, explanation and checking are embedded in targeted refresh or active attempts where practical. Each component is charged once; seven legacy verification tasks become zero-additional-minute checkpoints inside named hosts.",
+    "DBMS closure is embedded in SQL error review and backend closure in MongoDB review. These checks do not trigger another blanket 30-minute subject session.",
+    "Project refresh still precedes a separate project questionnaire. Resume, HR and company components may share a focused session within their own tracks; no repeated project rehearsal is added.",
+    "EPQ uses one theory refresh and one numerical/cross-topic pass; RecSys units include their own recall. Final RecSys work is incremental synthesis/error checking, with no blanket repeat reading.",
+    "The conditional RecSys numericals budget is incremental work only and remains included in totals; no source redundancy claim or cut has been made.",
+    "CV is mandatory with a smaller explicitly uncertain working provision, not an evidence-based full-scope duration. Revisit only when reliable lecturer material arrives.",
+    "Previously selected external resources are reused. Resource-selection flags are resolved; remaining fluency, runtime and source gaps are stated explicitly.",
+    "Reasonableness anchors were checked after individual estimates. No capacity comparison, attendance arithmetic or schedule optimisation was used in this re-estimation."
   ],
-  "inspection_note": "Reused saved map sizes/roles. Counted words/lines only for 17 mapped larger/core/midsem Markdown files; obtained page counts for three PDFs; read seven small OA tasks directly. No new note headings, raw note content, images, PDF text or external sources inspected.",
+  "inspection_note": "One pass over saved estimates and task/resource bindings; reused previously inspected OA complexity and source-map scope. No raw notes, additional metadata counts, external browsing or resource research.",
   "summary": {
     "estimated_unit_count": 41,
+    "existing_task_count": 67,
     "lseg_placement": {
-      "estimated_minutes": 4815,
-      "display": "80h 15m"
+      "estimated_minutes": 2500,
+      "display": "41h 40m"
     },
     "midsem": {
-      "estimated_minutes": 1770,
-      "display": "29h 30m",
-      "includes_pending_recsys_numericals_minutes": 90
+      "estimated_minutes": 1065,
+      "display": "17h 45m",
+      "includes_conditional_recsys_numericals_minutes": 45
     },
     "combined": {
-      "estimated_minutes": 6585,
-      "display": "109h 45m"
+      "estimated_minutes": 3565,
+      "display": "59h 25m"
     },
+    "combined_excluding_conditional_minutes": 3520,
+    "previous_combined_minutes": 6585,
+    "decrease_minutes": 3020,
+    "comparison_groups": [
+      {
+        "group": "Technical/core revision and associated practice",
+        "previous_minutes": 2055,
+        "revised_minutes": 855
+      },
+      {
+        "group": "JavaScript + SQL + MongoDB + general DSA",
+        "previous_minutes": 1290,
+        "revised_minutes": 735
+      },
+      {
+        "group": "Three projects",
+        "previous_minutes": 420,
+        "revised_minutes": 230
+      },
+      {
+        "group": "LSEG OA",
+        "previous_minutes": 465,
+        "revised_minutes": 305
+      },
+      {
+        "group": "Resume + company/JD + HR + aptitude + final mock",
+        "previous_minutes": 585,
+        "revised_minutes": 375
+      },
+      {
+        "group": "Midsem",
+        "previous_minutes": 1770,
+        "revised_minutes": 1065
+      }
+    ],
     "track_totals": [
       {
         "track": "placement",
-        "estimated_minutes": 3345,
-        "display": "55h 45m"
+        "estimated_minutes": 1590,
+        "display": "26h 30m"
       },
       {
         "track": "projects",
-        "estimated_minutes": 420,
-        "display": "7h 00m"
+        "estimated_minutes": 230,
+        "display": "3h 50m"
       },
       {
         "track": "resume",
-        "estimated_minutes": 90,
-        "display": "1h 30m"
+        "estimated_minutes": 45,
+        "display": "0h 45m"
       },
       {
         "track": "lseg_role_company",
-        "estimated_minutes": 135,
-        "display": "2h 15m"
+        "estimated_minutes": 75,
+        "display": "1h 15m"
       },
       {
         "track": "midsem_epq",
-        "estimated_minutes": 300,
-        "display": "5h 00m"
+        "estimated_minutes": 150,
+        "display": "2h 30m"
       },
       {
         "track": "midsem_recsys",
-        "estimated_minutes": 780,
-        "display": "13h 00m"
+        "estimated_minutes": 570,
+        "display": "9h 30m"
       },
       {
         "track": "midsem_cv",
-        "estimated_minutes": 480,
-        "display": "8h 00m"
+        "estimated_minutes": 180,
+        "display": "3h 00m"
       },
       {
         "track": "midsem_blockchain",
-        "estimated_minutes": 90,
-        "display": "1h 30m"
+        "estimated_minutes": 75,
+        "display": "1h 15m"
       },
       {
         "track": "midsem_iwt",
-        "estimated_minutes": 120,
-        "display": "2h 00m"
-      },
-      {
-        "track": "lseg_oa",
-        "estimated_minutes": 465,
-        "display": "7h 45m"
-      },
-      {
-        "track": "hr_behavioural",
-        "estimated_minutes": 120,
-        "display": "2h 00m"
-      },
-      {
-        "track": "aptitude",
         "estimated_minutes": 90,
         "display": "1h 30m"
       },
       {
+        "track": "lseg_oa",
+        "estimated_minutes": 305,
+        "display": "5h 05m"
+      },
+      {
+        "track": "hr_behavioural",
+        "estimated_minutes": 75,
+        "display": "1h 15m"
+      },
+      {
+        "track": "aptitude",
+        "estimated_minutes": 45,
+        "display": "0h 45m"
+      },
+      {
         "track": "mock_interview",
-        "estimated_minutes": 150,
-        "display": "2h 30m"
-      }
-    ],
-    "largest_individual_allocations": [
-      {
-        "id": "dsa",
-        "estimated_minutes": 720,
-        "display": "12h 00m"
-      },
-      {
-        "id": "cv",
-        "estimated_minutes": 480,
-        "display": "8h 00m"
-      },
-      {
-        "id": "node_backend",
-        "estimated_minutes": 330,
-        "display": "5h 30m"
-      },
-      {
-        "id": "react",
-        "estimated_minutes": 270,
-        "display": "4h 30m"
-      },
-      {
-        "id": "cn",
-        "estimated_minutes": 240,
-        "display": "4h 00m"
-      },
-      {
-        "id": "javascript_practice",
-        "estimated_minutes": 240,
-        "display": "4h 00m"
+        "estimated_minutes": 135,
+        "display": "2h 15m"
       }
     ],
     "low_confidence_ids": [
@@ -143,11 +142,12 @@
       "sql_practice",
       "mongodb_practice",
       "dsa",
-      "lseg_role_company",
+      "recsys_unit_1",
+      "recsys_unit_2",
+      "recsys_unit_3",
       "recsys_numericals",
       "cv",
       "lseg_oa_task_7",
-      "hr_behavioural",
       "aptitude"
     ],
     "provisional_ids": [
@@ -155,14 +155,14 @@
       "sql_practice",
       "mongodb_practice",
       "dsa",
-      "lseg_role_company",
+      "recsys_unit_1",
+      "recsys_unit_2",
+      "recsys_unit_3",
       "recsys_numericals",
       "cv",
-      "iwt",
       "lseg_oa_task_1",
       "lseg_oa_task_3",
       "lseg_oa_task_7",
-      "hr_behavioural",
       "aptitude"
     ]
   },
@@ -171,781 +171,826 @@
       "id": "os",
       "label": "Operating Systems",
       "track": "placement",
+      "source_map_id": "os",
       "study_mode": "revision",
-      "estimated_minutes": 210,
+      "previous_estimated_minutes": 210,
+      "estimated_minutes": 90,
       "components_minutes": {
-        "revision": 150,
-        "active_recall": 30,
-        "verification": 30
+        "targeted_refresh_with_recall": 60,
+        "applied_checks_and_explanation": 30
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 53,543 bytes; count only: 9,108 words / 696 lines; core revision and verification requirements.",
-      "reasoning": "Substantial conceptual notes need a full revision pass and retrieval, followed by separate oral closure.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "os"
+      "reasoning": "Previously studied OS needs retrieval-led refresh and checking of weak explanations, not rereading 9,108 words plus separate recall and verification.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "cn",
       "label": "Computer Networks",
       "track": "placement",
+      "source_map_id": "cn",
       "study_mode": "revision",
-      "estimated_minutes": 240,
+      "previous_estimated_minutes": 240,
+      "estimated_minutes": 90,
       "components_minutes": {
-        "revision": 180,
-        "active_recall": 30,
-        "verification": 30
+        "targeted_refresh_with_recall": 60,
+        "applied_checks_and_explanation": 30
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 74,747 bytes; count only: 11,756 words / 3,928 lines; core revision and verification requirements.",
-      "reasoning": "The longer core source warrants more revision time, with explanation and recall before separate oral closure.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "cn"
+      "reasoning": "Known networking material is refreshed through high-value explanations and weak-area lookup; the longer note no longer triggers a longer linear pass.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "dbms",
       "label": "DBMS",
       "track": "placement",
+      "source_map_id": "dbms",
       "study_mode": "revision",
-      "estimated_minutes": 150,
+      "previous_estimated_minutes": 150,
+      "estimated_minutes": 75,
       "components_minutes": {
-        "revision": 90,
-        "active_recall": 30,
-        "verification": 30
+        "targeted_refresh_with_recall": 45,
+        "reasoning_checks": 30
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 28,797 bytes; count only: 4,565 words / 2,071 lines; established SQL reference linkage.",
-      "reasoning": "Cover the compact but dense theory source and explain concepts from memory; hands-on SQL is additional in sql_practice.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "dbms"
+      "reasoning": "Refresh familiar database concepts and reasoning; SQL has its own hands-on budget, whose closing review also checks DBMS understanding.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "java_oop",
       "label": "Java / OOP",
       "track": "placement",
+      "source_map_id": "java_oop",
       "study_mode": "revision",
-      "estimated_minutes": 150,
+      "previous_estimated_minutes": 150,
+      "estimated_minutes": 75,
       "components_minutes": {
-        "revision": 75,
-        "implementation_practice": 45,
-        "verification": 30
+        "targeted_refresh_with_recall": 45,
+        "implementation_with_explanation": 30
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 21,980 bytes; count only: 3,314 words / 898 lines; saved Collections integration rule.",
-      "reasoning": "Revision includes relevant Collections support; implementation and explanation require time beyond reading the short core notes.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "java_oop"
+      "reasoning": "Java is the normal interview language; check OOP and relevant Collections through explanation and short implementation rather than re-learning them.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "node_backend",
       "label": "Node.js / Backend",
       "track": "placement",
+      "source_map_id": "node_backend",
       "study_mode": "revision",
-      "estimated_minutes": 330,
+      "previous_estimated_minutes": 330,
+      "estimated_minutes": 120,
       "components_minutes": {
-        "revision": 240,
-        "implementation_and_explanation": 60,
-        "verification": 30
+        "targeted_refresh_with_recall": 75,
+        "implementation_flow_and_explanation": 45
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 129,695 bytes; count only: 19,516 words / 3,521 lines; saved MongoDB/JSON integration rules.",
-      "reasoning": "The largest placement source needs substantial coverage plus backend reasoning and implementation; MongoDB reference theory is included here, with query exercises counted separately.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "node_backend"
+      "reasoning": "Backend spans several linked concepts, so retains two hours; owned-project familiarity replaces a long source pass, with MongoDB query work counted separately.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "system_design",
       "label": "System Design",
       "track": "placement",
+      "source_map_id": "system_design",
       "study_mode": "revision",
-      "estimated_minutes": 210,
+      "previous_estimated_minutes": 210,
+      "estimated_minutes": 90,
       "components_minutes": {
-        "revision": 120,
-        "design_and_tradeoff_practice": 60,
-        "verification": 30
+        "targeted_refresh_with_recall": 45,
+        "design_walkthrough_with_checks": 45
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 45,142 bytes; count only: 6,835 words / 631 lines; core revision and verification requirements.",
-      "reasoning": "Dense design material needs recall and active trade-off discussion, not only a reading pass; relevant integrated fundamentals fit within these components.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "system_design"
+      "reasoning": "Use a focused design discussion to retrieve concepts and expose weak trade-offs; explanation and verification are part of that walkthrough.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "react",
       "label": "React",
       "track": "placement",
+      "source_map_id": "react",
       "study_mode": "revision",
-      "estimated_minutes": 270,
+      "previous_estimated_minutes": 270,
+      "estimated_minutes": 90,
       "components_minutes": {
-        "revision": 180,
-        "implementation_practice": 60,
-        "verification": 30
+        "targeted_refresh_with_recall": 45,
+        "behaviour_and_code_checks": 45
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 106,352 bytes; count only: 15,749 words / 3,140 lines; companion images not inspected or independently timed.",
-      "reasoning": "Large technical notes need full revision plus practical reconstruction and explanation of retained understanding.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "react"
+      "reasoning": "Already-used React needs targeted behavioural/code checks; note size is reference scope rather than 180 minutes of mandatory rereading.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "nextjs",
       "label": "Next.js",
       "track": "placement",
+      "source_map_id": "nextjs",
       "study_mode": "revision",
-      "estimated_minutes": 90,
+      "previous_estimated_minutes": 90,
+      "estimated_minutes": 45,
       "components_minutes": {
-        "revision": 45,
-        "implementation_practice": 30,
-        "active_recall": 15
+        "targeted_refresh_with_recall": 30,
+        "applied_checks": 15
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 12,532 bytes and dedicated technical-track requirement; raw note not reopened.",
-      "reasoning": "A smaller source still needs applied practice and explanation after revision.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "nextjs"
+      "reasoning": "Refresh familiar framework decisions and check their application; no introductory course or second recall pass.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "typescript",
       "label": "TypeScript",
       "track": "placement",
+      "source_map_id": "typescript",
       "study_mode": "revision",
-      "estimated_minutes": 90,
+      "previous_estimated_minutes": 90,
+      "estimated_minutes": 45,
       "components_minutes": {
-        "revision": 45,
-        "implementation_practice": 30,
-        "active_recall": 15
+        "targeted_refresh_with_recall": 30,
+        "code_checks_with_explanation": 15
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 16,833 bytes and dedicated technical-track requirement; raw note not reopened.",
-      "reasoning": "Allow a focused revision pass plus coding and recall rather than treating familiarity with JavaScript as sufficient.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "typescript"
+      "reasoning": "Use familiar type-system material for targeted explanation and coding checks, not a new language-learning pass.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "git_github",
       "label": "Git / GitHub",
       "track": "placement",
+      "source_map_id": "git_github",
       "study_mode": "revision",
-      "estimated_minutes": 105,
+      "previous_estimated_minutes": 105,
+      "estimated_minutes": 30,
       "components_minutes": {
-        "revision": 60,
-        "workflow_practice": 30,
-        "active_recall": 15
+        "workflow_refresh": 20,
+        "hands_on_checks_with_recall": 10
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 31,581 bytes and dedicated technical-track requirement; raw note not reopened.",
-      "reasoning": "The medium-sized reference needs revision and practical workflow rehearsal with explanation.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "git_github"
+      "reasoning": "An already-used development tool needs a short workflow rehearsal; source length does not imply an hour of reading.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "python",
       "label": "Python",
       "track": "placement",
+      "source_map_id": "python",
       "study_mode": "revision",
-      "estimated_minutes": 120,
+      "previous_estimated_minutes": 120,
+      "estimated_minutes": 60,
       "components_minutes": {
-        "revision": 60,
-        "implementation_practice": 45,
-        "active_recall": 15
+        "targeted_refresh_with_recall": 30,
+        "coding_checks_with_explanation": 30
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 29,600 bytes and dedicated technical-track requirement; raw note not reopened.",
-      "reasoning": "Revision and short implementation work support usable interview recall of the language.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "python"
+      "reasoning": "Retain an hour for language recall and hands-on checks because Java is the main interview language.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "ai_fundamentals",
       "label": "AI fundamentals",
       "track": "placement",
+      "source_map_id": "ai_fundamentals",
       "study_mode": "revision",
-      "estimated_minutes": 90,
+      "previous_estimated_minutes": 90,
+      "estimated_minutes": 45,
       "components_minutes": {
-        "revision": 60,
-        "explanation_and_recall": 30
+        "concept_refresh_with_recall": 30,
+        "interview_explanations": 15
       },
       "confidence": "medium",
-      "inspection_basis": "Saved primary source: 16,458 bytes and dedicated technical-track requirement; raw note not reopened.",
-      "reasoning": "Conceptual familiarity must be converted into clear explanations; this covers fundamentals separately from the exact OA evaluation question.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "ai_fundamentals"
+      "reasoning": "Refresh key concepts through interview explanations; exact OA evaluation reasoning is handled in its own short task.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "javascript_practice",
       "label": "JavaScript practice",
       "track": "placement",
+      "source_map_id": "javascript_practice",
       "study_mode": "practice",
-      "estimated_minutes": 240,
+      "previous_estimated_minutes": 240,
+      "estimated_minutes": 120,
       "components_minutes": {
-        "targeted_reference_refresh": 30,
-        "active_coding": 150,
-        "timed_practice": 30,
-        "explanation_and_review": 30
+        "targeted_reference_refresh": 10,
+        "active_coding_with_explanation": 70,
+        "timed_practice": 25,
+        "error_review": 15
       },
       "confidence": "low",
-      "inspection_basis": "Saved practice-track classification and 49,339-byte reference; no exercise set selected or note reopened.",
-      "reasoning": "An active practice allocation across representative skills; the local note is used only for targeted lookup.",
       "provisional": true,
       "pending_flags": [
-        "external_practice_resource_pending",
-        "current_practice_fluency_unconfirmed"
+        "current_practice_fluency_unconfirmed",
+        "representative_exercises_not_fixed"
       ],
-      "source_map_id": "javascript_practice"
+      "reasoning": "A focused known-language practice pass uses the selected exercises, short timed attempts and error-only review; removes a long preliminary reread and repeated explanations.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
+      "plausible_range_minutes": [
+        90,
+        180
+      ]
     },
     {
       "id": "sql_practice",
       "label": "SQL practice",
       "track": "placement",
+      "source_map_id": "sql_practice",
       "study_mode": "practice",
-      "estimated_minutes": 180,
+      "previous_estimated_minutes": 180,
+      "estimated_minutes": 105,
       "components_minutes": {
-        "targeted_reference_refresh": 15,
-        "query_practice": 120,
-        "timed_practice": 30,
-        "explanation_and_review": 15
+        "targeted_reference_refresh": 10,
+        "query_practice_with_explanation": 60,
+        "timed_practice": 20,
+        "error_review_and_dbms_closure": 15
       },
       "confidence": "low",
-      "inspection_basis": "Required independent practice track; saved DBMS reference linkage; no exercises inspected.",
-      "reasoning": "Reserve sustained query writing and checking; do not repeat the DBMS theory pass.",
       "provisional": true,
       "pending_flags": [
-        "external_practice_resource_pending",
-        "current_practice_fluency_unconfirmed"
+        "current_practice_fluency_unconfirmed",
+        "representative_exercises_not_fixed"
       ],
-      "source_map_id": "sql_practice"
+      "reasoning": "Query writing remains substantive; DBMS theory is not taught again, and final query review also serves as the DBMS closure check.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
+      "plausible_range_minutes": [
+        75,
+        150
+      ]
     },
     {
       "id": "mongodb_practice",
       "label": "MongoDB practice",
       "track": "placement",
+      "source_map_id": "mongodb_practice",
       "study_mode": "practice",
-      "estimated_minutes": 150,
+      "previous_estimated_minutes": 150,
+      "estimated_minutes": 90,
       "components_minutes": {
-        "targeted_reference_refresh": 15,
-        "query_and_aggregation_practice": 105,
-        "explanation_and_review": 30
+        "targeted_reference_refresh": 10,
+        "query_aggregation_with_explanation": 65,
+        "error_review_and_backend_closure": 15
       },
       "confidence": "low",
-      "inspection_basis": "Required independent practice track; MongoDB reference embedded in Node_Backend.md per approved source map; no repeat inspection.",
-      "reasoning": "Allow hands-on query and aggregation work plus debugging and explanation; Node/backend already carries the reference theory revision.",
       "provisional": true,
       "pending_flags": [
-        "external_practice_resource_pending",
-        "current_practice_fluency_unconfirmed"
+        "current_practice_fluency_unconfirmed",
+        "practice_environment_unverified"
       ],
-      "source_map_id": "mongodb_practice"
+      "reasoning": "Use runnable official scenarios for a focused query/aggregation refresh; backend theory and separate full reconstructions are not counted again.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
+      "plausible_range_minutes": [
+        60,
+        150
+      ]
     },
     {
       "id": "dsa",
       "label": "General DSA",
       "track": "placement",
+      "source_map_id": "dsa",
       "study_mode": "practice",
-      "estimated_minutes": 720,
+      "previous_estimated_minutes": 720,
+      "estimated_minutes": 420,
       "components_minutes": {
-        "pattern_refresh": 90,
-        "representative_implementation_practice": 390,
-        "timed_solving": 120,
-        "reexposure_and_complexity_explanation": 120
+        "pattern_refresh": 30,
+        "representative_implementation_with_explanation": 240,
+        "timed_solving": 90,
+        "selected_reexposure_and_error_review": 60
       },
       "confidence": "low",
-      "inspection_basis": "Independent active track and breadth requirements; saved supporting Pattern Index/Mistake Log roles; supporting files not reopened.",
-      "reasoning": "Twelve hours is a provisional weekly breadth allocation for someone with prior DSA exposure, including implementation, timed solving and planned re-exposure; it is not a question-count target or a from-scratch DSA course.",
       "provisional": true,
       "pending_flags": [
-        "external_problem_set_pending",
-        "current_pattern_fluency_unconfirmed"
+        "current_pattern_fluency_unconfirmed",
+        "representative_exercises_not_fixed"
       ],
-      "source_map_id": "dsa"
+      "reasoning": "Seven hours supports breadth-oriented practice of previously encountered patterns, with explanation during solving and selective re-exposure rather than a second comprehensive pattern pass. Fluency is not measured.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
+      "plausible_range_minutes": [
+        300,
+        540
+      ]
     },
     {
       "id": "project_velvet",
       "label": "Velvet",
       "track": "projects",
+      "source_map_id": "project_velvet",
       "study_mode": "revision",
-      "estimated_minutes": 150,
+      "previous_estimated_minutes": 150,
+      "estimated_minutes": 80,
       "components_minutes": {
-        "revision": 90,
-        "questionnaire": 60
+        "architecture_decision_refresh": 35,
+        "questionnaire_with_feedback": 45
       },
       "confidence": "medium",
-      "inspection_basis": "Saved project source: 34,859 bytes; requirements mandate revision then a separate questionnaire; raw note not reopened.",
-      "reasoning": "Review the user's own project, then use a separate ChatGPT questionnaire for architecture, implementation, trade-offs and contribution; questionnaire time is additional to revision.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "project_velvet"
+      "reasoning": "The user built this project: refresh architecture, decisions and implementation cues, then rehearse likely follow-ups once with feedback. Preserve a separate questionnaire after refresh.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "project_eventually",
       "label": "Eventually",
       "track": "projects",
+      "source_map_id": "project_eventually",
       "study_mode": "revision",
-      "estimated_minutes": 150,
+      "previous_estimated_minutes": 150,
+      "estimated_minutes": 80,
       "components_minutes": {
-        "revision": 90,
-        "questionnaire": 60
+        "architecture_decision_refresh": 35,
+        "questionnaire_with_feedback": 45
       },
       "confidence": "medium",
-      "inspection_basis": "Saved project source: 34,945 bytes; requirements mandate revision then a separate questionnaire; raw note not reopened.",
-      "reasoning": "Review the user's own project, then use a separate ChatGPT questionnaire for architecture, implementation, trade-offs and contribution; questionnaire time is additional to revision.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "project_eventually"
+      "reasoning": "The user built this project: refresh architecture, decisions and implementation cues, then rehearse likely follow-ups once with feedback. Preserve a separate questionnaire after refresh.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "project_relay",
       "label": "Relay",
       "track": "projects",
+      "source_map_id": "project_relay",
       "study_mode": "revision",
-      "estimated_minutes": 120,
+      "previous_estimated_minutes": 120,
+      "estimated_minutes": 70,
       "components_minutes": {
-        "revision": 60,
-        "questionnaire": 60
+        "architecture_decision_refresh": 30,
+        "questionnaire_with_feedback": 40
       },
       "confidence": "medium",
-      "inspection_basis": "Saved project source: 17,277 bytes; requirements mandate revision then a separate questionnaire; raw note not reopened.",
-      "reasoning": "Review the user's own project, then use a separate ChatGPT questionnaire for architecture, implementation, trade-offs and contribution; questionnaire time is additional to revision.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "project_relay"
+      "reasoning": "The user built this project: refresh architecture, decisions and implementation cues, then rehearse likely follow-ups once with feedback. Preserve a separate questionnaire after refresh.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "resume",
       "label": "Submitted LSEG resume",
       "track": "resume",
+      "source_map_id": "resume",
       "study_mode": "revision",
-      "estimated_minutes": 90,
+      "previous_estimated_minutes": 90,
+      "estimated_minutes": 45,
       "components_minutes": {
-        "review": 45,
-        "questionnaire": 45
+        "claim_refresh": 20,
+        "questioning_with_feedback": 25
       },
       "confidence": "medium",
-      "inspection_basis": "Submitted resume source of truth from map; pdfinfo page count: 1; review/questioning requirements; PDF content not read.",
-      "reasoning": "Review and substantiate claims, then practise ChatGPT follow-up questioning; detailed project revision is counted in the project units.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "resume"
+      "reasoning": "The one-page submitted resume and owned-project familiarity support a short claim check and one questioning pass; project explanations are not rehearsed fully again.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "lseg_role_company",
       "label": "LSEG role and company",
       "track": "lseg_role_company",
-      "study_mode": "provisional",
-      "estimated_minutes": 135,
+      "source_map_id": "lseg_role_company",
+      "study_mode": "revision",
+      "previous_estimated_minutes": 135,
+      "estimated_minutes": 75,
       "components_minutes": {
-        "jd_review": 30,
-        "company_resource_study": 45,
-        "role_fit_preparation": 30,
-        "questionnaire": 30
+        "jd_review": 20,
+        "company_reference_study": 20,
+        "role_fit_preparation": 20,
+        "questionnaire_with_feedback": 15
       },
-      "confidence": "low",
-      "inspection_basis": "Saved JD primary role and empty company research placeholder; pdfinfo JD page count: 5; requirements section 17; PDF content not read.",
-      "reasoning": "Study the supplied JD and later-selected company resources, connect the role to personal experience, and rehearse with ChatGPT; generic HR is separate.",
-      "provisional": true,
-      "pending_flags": [
-        "external_company_resources_pending"
-      ],
-      "source_map_id": "lseg_role_company"
+      "confidence": "medium",
+      "provisional": false,
+      "pending_flags": [],
+      "reasoning": "The exact JD and concise official company resource are now selected. One source review and role-fit rehearsal is sufficient as a baseline; generic behavioural practice stays separate.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "epq_full_notes",
       "label": "EPQ full notes",
       "track": "midsem_epq",
+      "source_map_id": "epq_full_notes",
       "study_mode": "revision",
-      "estimated_minutes": 150,
+      "previous_estimated_minutes": 150,
+      "estimated_minutes": 60,
       "components_minutes": {
-        "revision": 105,
-        "active_recall": 30,
-        "numerical_consolidation": 15
+        "targeted_theory_refresh_with_recall": 60
       },
       "confidence": "medium",
-      "inspection_basis": "Approved prior-preparation metadata; saved 54,479 bytes; count only: 7,928 words / 648 lines; no overlap comparison.",
-      "reasoning": "First-pass core preparation was substantially completed; use the full notes for structured refresh and gap recall rather than new learning.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "epq_full_notes"
+      "reasoning": "Confirmed substantial first-pass completion means the full notes serve as gap lookup for one retrieval-led theory refresh; no separate long recall component.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "epq_revision",
       "label": "EPQ revision notes",
       "track": "midsem_epq",
+      "source_map_id": "epq_revision",
       "study_mode": "revision",
-      "estimated_minutes": 150,
+      "previous_estimated_minutes": 150,
+      "estimated_minutes": 90,
       "components_minutes": {
-        "revision": 60,
-        "active_recall": 30,
-        "numerical_consolidation": 60
+        "numerical_consolidation_with_explanation": 60,
+        "cross_topic_exam_retrieval": 30
       },
       "confidence": "medium",
-      "inspection_basis": "Approved prior-preparation metadata; saved 67,938 bytes; count only: 9,488 words / 721 lines; no overlap comparison.",
-      "reasoning": "A later consolidation pass emphasises retrieval and numerical reconstruction; the long revision source does not imply relearning the subject or rereading both sources in full.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "epq_revision"
+      "reasoning": "Use the revision source mainly for numerical execution and cross-topic exam retrieval; do not reread theory refreshed with the full notes or repeat already-secure numerical attempts.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "recsys_unit_1",
       "label": "RecSys Unit 1",
       "track": "midsem_recsys",
+      "source_map_id": "recsys_unit_1",
       "study_mode": "scope-based",
-      "estimated_minutes": 180,
+      "previous_estimated_minutes": 180,
+      "estimated_minutes": 150,
       "components_minutes": {
-        "concept_coverage": 90,
-        "worked_method_and_numerical_practice": 60,
-        "active_recall": 30
+        "concept_refresh_or_gap_learning": 75,
+        "method_practice_with_recall": 75
       },
-      "confidence": "medium",
-      "inspection_basis": "Approved paired logical unit; combined saved size 48,697 bytes; combined counts only: 6,870 words / 1,798 lines; pair not semantically compared.",
-      "reasoning": "Study both versions side by side as one unit; allow conceptual coverage, reconstruction of methods and active recall without two independent reading passes.",
-      "provisional": false,
-      "pending_flags": [],
-      "source_map_id": "recsys_unit_1"
+      "confidence": "low",
+      "provisional": true,
+      "pending_flags": [
+        "first_pass_completion_unconfirmed"
+      ],
+      "reasoning": "The paired source remains one unit. Recall/explanation is embedded in concept and method work; first-pass completion is not confirmed, so retain more coverage time than for familiar placement subjects.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
+      "plausible_range_minutes": [
+        120,
+        210
+      ]
     },
     {
       "id": "recsys_unit_2",
       "label": "RecSys Unit 2",
       "track": "midsem_recsys",
+      "source_map_id": "recsys_unit_2",
       "study_mode": "scope-based",
-      "estimated_minutes": 180,
+      "previous_estimated_minutes": 180,
+      "estimated_minutes": 150,
       "components_minutes": {
-        "concept_coverage": 90,
-        "worked_method_and_numerical_practice": 60,
-        "active_recall": 30
+        "concept_refresh_or_gap_learning": 75,
+        "method_practice_with_recall": 75
       },
-      "confidence": "medium",
-      "inspection_basis": "Approved paired logical unit; combined saved size 40,786 bytes; combined counts only: 5,801 words / 1,524 lines; pair not semantically compared.",
-      "reasoning": "Study both versions side by side as one unit; allow conceptual coverage, reconstruction of methods and active recall without two independent reading passes.",
-      "provisional": false,
-      "pending_flags": [],
-      "source_map_id": "recsys_unit_2"
+      "confidence": "low",
+      "provisional": true,
+      "pending_flags": [
+        "first_pass_completion_unconfirmed"
+      ],
+      "reasoning": "The paired source remains one unit. Recall/explanation is embedded in concept and method work; first-pass completion is not confirmed, so retain more coverage time than for familiar placement subjects.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
+      "plausible_range_minutes": [
+        120,
+        210
+      ]
     },
     {
       "id": "recsys_unit_3",
       "label": "RecSys Unit 3",
       "track": "midsem_recsys",
+      "source_map_id": "recsys_unit_3",
       "study_mode": "scope-based",
-      "estimated_minutes": 180,
+      "previous_estimated_minutes": 180,
+      "estimated_minutes": 150,
       "components_minutes": {
-        "concept_coverage": 90,
-        "worked_method_and_numerical_practice": 60,
-        "active_recall": 30
+        "concept_refresh_or_gap_learning": 75,
+        "method_practice_with_recall": 75
       },
-      "confidence": "medium",
-      "inspection_basis": "Approved paired logical unit; combined saved size 39,514 bytes; combined counts only: 5,956 words / 1,349 lines; pair not semantically compared.",
-      "reasoning": "Study both versions side by side as one unit; allow conceptual coverage, reconstruction of methods and active recall without two independent reading passes.",
-      "provisional": false,
-      "pending_flags": [],
-      "source_map_id": "recsys_unit_3"
+      "confidence": "low",
+      "provisional": true,
+      "pending_flags": [
+        "first_pass_completion_unconfirmed"
+      ],
+      "reasoning": "The paired source remains one unit. Recall/explanation is embedded in concept and method work; first-pass completion is not confirmed, so retain more coverage time than for familiar placement subjects.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
+      "plausible_range_minutes": [
+        120,
+        210
+      ]
     },
     {
       "id": "recsys_final_revision",
       "label": "RecSys final revision",
       "track": "midsem_recsys",
+      "source_map_id": "recsys_final_revision",
       "study_mode": "revision",
-      "estimated_minutes": 150,
+      "previous_estimated_minutes": 150,
+      "estimated_minutes": 75,
       "components_minutes": {
-        "revision": 60,
-        "active_recall": 30,
-        "numerical_consolidation": 60
+        "cross_unit_retrieval": 30,
+        "numerical_error_and_synthesis_check": 45
       },
       "confidence": "medium",
-      "inspection_basis": "Saved final-revision role and 49,270 bytes; count only: 6,819 words / 995 lines; no comparison with numericals.",
-      "reasoning": "Consolidate the three units with recall and numerical reconstruction after coverage; this is a review workload, not new unit coverage.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "recsys_final_revision"
+      "reasoning": "Final revision checks cross-unit synthesis and numerical errors only; no complete repeat reading or repetition of each unit's method practice.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "recsys_numericals",
       "label": "RecSys numericals",
       "track": "midsem_recsys",
+      "source_map_id": "recsys_numericals",
       "study_mode": "practice",
-      "estimated_minutes": 90,
+      "previous_estimated_minutes": 90,
+      "estimated_minutes": 45,
       "components_minutes": {
-        "numerical_practice": 60,
-        "checking_and_explanation": 30
+        "additional_uncovered_numerical_methods": 45
       },
       "confidence": "low",
-      "inspection_basis": "Saved redundancy-sensitive role and 26,107 bytes; count only: 3,496 words / 792 lines; no overlap investigation.",
-      "reasoning": "Hold a separate conditional practice estimate while overlap with final revision remains unresolved; the reported total retains the entire allowance.",
       "provisional": true,
       "pending_flags": [
-        "redundancy_decision_pending"
+        "incremental_coverage_and_redundancy_unresolved"
       ],
-      "source_map_id": "recsys_numericals",
-      "inclusion_note": "Included in reported totals pending redundancy decision; no omission or cut approved."
+      "reasoning": "Only genuinely additional numerical methods need this conditional allowance. Lower budget reflects incremental work rather than another complete numerical pass; overlap is still unverified.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
+      "plausible_range_minutes": [
+        0,
+        90
+      ],
+      "inclusion_note": "Conditional additional work only if it covers numerical methods not already refreshed; 45 minutes remains included in the headline total. No redundancy finding or omission approved."
     },
     {
       "id": "cv",
       "label": "Computer Vision",
       "track": "midsem_cv",
+      "source_map_id": "cv",
       "study_mode": "provisional",
-      "estimated_minutes": 480,
+      "previous_estimated_minutes": 480,
+      "estimated_minutes": 180,
       "components_minutes": {
-        "scope_unspecified_active_preparation_reserve": 480
+        "provisional_active_preparation": 180
       },
       "confidence": "low",
-      "inspection_basis": "Approved mandatory CV track; empty placeholder and pending lecturer material in source map; no invented scope or raw-source inspection.",
-      "reasoning": "Reserve eight hours for mandatory active preparation pending reliable lecturer material; this is a reviewable placeholder, not a known syllabus or a sufficient-coverage guarantee.",
       "provisional": true,
       "pending_flags": [
         "reliable_material_pending",
-        "active_scope_pending",
-        "workload_reserve_needs_review"
+        "active_scope_pending"
       ],
-      "source_map_id": "cv"
+      "reasoning": "Replace an unsupported eight-hour default with a three-hour initial active-preparation provision. This is still not a source-derived completion estimate; material and scope could justify substantially more or less.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
+      "plausible_range_minutes": [
+        120,
+        360
+      ]
     },
     {
       "id": "blockchain",
       "label": "Blockchain expected questions",
       "track": "midsem_blockchain",
+      "source_map_id": "blockchain",
       "study_mode": "scope-based",
-      "estimated_minutes": 90,
+      "previous_estimated_minutes": 90,
+      "estimated_minutes": 75,
       "components_minutes": {
-        "question_set_revision": 45,
-        "numerical_practice": 30,
-        "active_recall": 15
+        "expected_question_refresh_with_recall": 35,
+        "two_numericals_with_explanation": 40
       },
       "confidence": "medium",
-      "inspection_basis": "Requirements section 24 and approved narrow scope; pdfinfo page count: 1; PDF questions not reread.",
-      "reasoning": "A narrow expected-question set with two gas/ether numericals supports a focused preparation allowance rather than broad syllabus study.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "blockchain"
+      "reasoning": "A single-page exact-question set warrants focused answer refresh plus substantive work on its two numericals, with checking embedded.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "iwt",
       "label": "IWT: Web fundamentals, HTML and CSS",
       "track": "midsem_iwt",
+      "source_map_id": "iwt",
       "study_mode": "scope-based",
-      "estimated_minutes": 120,
+      "previous_estimated_minutes": 120,
+      "estimated_minutes": 90,
       "components_minutes": {
-        "scope_revision": 45,
-        "html_css_practice": 60,
-        "active_recall": 15
+        "web_http_url_and_scope_refresh": 35,
+        "html_css_practice_with_recall": 55
       },
       "confidence": "medium",
-      "inspection_basis": "Approved source-map scope from previously read IWT README; no new README inspection.",
-      "reasoning": "Confirmed Web/HTTP/URL, HTML and CSS scope needs concise revision plus hands-on markup/styling and recall; later modules are excluded.",
-      "provisional": true,
-      "pending_flags": [
-        "study_resource_pending"
-      ],
-      "source_map_id": "iwt"
+      "provisional": false,
+      "pending_flags": [],
+      "reasoning": "Use the selected concise fundamentals reference and HTML/CSS exercises for familiar web material; checking is embedded rather than a separate recall block.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened."
     },
     {
       "id": "lseg_oa_task_1",
       "label": "Task 1: Market Data Integrity",
       "track": "lseg_oa",
+      "source_map_id": "lseg_oa_task_1",
       "study_mode": "practice",
-      "estimated_minutes": 75,
+      "previous_estimated_minutes": 75,
+      "estimated_minutes": 50,
       "components_minutes": {
-        "approach_reconstruction": 15,
-        "java_implementation": 35,
-        "edge_case_testing": 15,
-        "complexity_and_explanation": 10
+        "approach_refresh": 5,
+        "java_implementation": 25,
+        "testing_with_complexity_explanation": 20
       },
       "confidence": "medium",
-      "inspection_basis": "Direct read of the 2,443-byte Major task; supplied reconstructed prompt and preserved implementation.",
-      "reasoning": "Several coordinated outputs and tie/gap rules require independent reconstruction, Java implementation and test reasoning despite the short source.",
       "provisional": true,
       "pending_flags": [
         "original_prompt_reconstructed"
       ],
-      "source_map_id": "lseg_oa_task_1",
+      "reasoning": "Known map/set processing needs a quick rule refresh and one Java implementation with integrated tests/explanation, not a full discovery session.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "oa_category": "Major"
     },
     {
       "id": "lseg_oa_task_2",
       "label": "Task 2: Hierarchical Risk Limits",
       "track": "lseg_oa",
+      "source_map_id": "lseg_oa_task_2",
       "study_mode": "practice",
-      "estimated_minutes": 105,
+      "previous_estimated_minutes": 105,
+      "estimated_minutes": 70,
       "components_minutes": {
-        "approach_reconstruction": 20,
-        "java_implementation": 45,
-        "edge_case_testing": 25,
-        "complexity_and_explanation": 15
+        "approach_refresh": 10,
+        "java_implementation": 35,
+        "testing_with_complexity_explanation": 25
       },
       "confidence": "medium",
-      "inspection_basis": "Direct read of the 2,944-byte Major task; supplied question and implementation.",
-      "reasoning": "Hierarchical inheritance, memoisation and multiple violation rules warrant a larger implementation and edge-case allowance.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "lseg_oa_task_2",
+      "reasoning": "Hierarchy, inherited limits and violation rules retain a larger substantive Java/testing allocation; remove redundant long approach reconstruction.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "oa_category": "Major"
     },
     {
       "id": "lseg_oa_task_5",
       "label": "Task 5: Monitoring SLA Window Breaches",
       "track": "lseg_oa",
+      "source_map_id": "lseg_oa_task_5",
       "study_mode": "practice",
-      "estimated_minutes": 105,
+      "previous_estimated_minutes": 105,
+      "estimated_minutes": 70,
       "components_minutes": {
-        "approach_reconstruction": 20,
-        "java_implementation": 45,
-        "edge_case_testing": 25,
-        "complexity_and_explanation": 15
+        "approach_refresh": 10,
+        "java_implementation": 35,
+        "testing_with_complexity_explanation": 25
       },
       "confidence": "medium",
-      "inspection_basis": "Direct read of the 2,275-byte Major task; supplied question and implementation.",
-      "reasoning": "Efficient window processing and monotonic-deque invariants need deliberate Java implementation, boundary checks and complexity explanation.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "lseg_oa_task_5",
+      "reasoning": "Sliding-window/deque invariants justify the same larger allocation as hierarchy; use one implementation and combined edge-case/complexity check.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "oa_category": "Major"
     },
     {
       "id": "lseg_oa_task_6",
       "label": "Task 6: Portfolio Risk Metrics",
       "track": "lseg_oa",
+      "source_map_id": "lseg_oa_task_6",
       "study_mode": "practice",
-      "estimated_minutes": 90,
+      "previous_estimated_minutes": 90,
+      "estimated_minutes": 60,
       "components_minutes": {
-        "approach_reconstruction": 20,
-        "java_implementation": 40,
-        "edge_case_testing": 20,
-        "complexity_and_explanation": 10
+        "approach_refresh": 10,
+        "java_implementation": 30,
+        "testing_with_complexity_explanation": 20
       },
       "confidence": "medium",
-      "inspection_basis": "Direct read of the 2,634-byte Major task; supplied question and implementation.",
-      "reasoning": "Probability normalisation, grouped boundaries and tolerance handling need careful reconstruction and implementation using the supplied task definitions.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "lseg_oa_task_6",
+      "reasoning": "Refresh the preserved probability/boundary rules and implement once in Java; testing and explanation occur together.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "oa_category": "Major"
     },
     {
       "id": "lseg_oa_task_3",
       "label": "Task 3: DFS Cycle Detection Bugfix",
       "track": "lseg_oa",
+      "source_map_id": "lseg_oa_task_3",
       "study_mode": "practice",
-      "estimated_minutes": 35,
+      "previous_estimated_minutes": 35,
+      "estimated_minutes": 25,
       "components_minutes": {
         "java_bug_trace_and_fix": 15,
-        "counterexample_testing": 10,
-        "complexity_and_explanation": 10
+        "counterexample_with_explanation": 10
       },
       "confidence": "medium",
-      "inspection_basis": "Direct read of the 1,384-byte Minor task; incomplete original prompt and preserved Java fix.",
-      "reasoning": "Explain the visited-state bug and demonstrate it on a counterexample in the supplied Java context, rather than memorising the replacement line.",
       "provisional": true,
       "pending_flags": [
         "original_prompt_incomplete"
       ],
-      "source_map_id": "lseg_oa_task_3",
+      "reasoning": "A focused Java state-tracking bug needs tracing and a counterexample, not full algorithm reconstruction.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "oa_category": "Minor"
     },
     {
       "id": "lseg_oa_task_4",
       "label": "Task 4: Order Book Zero Quantity Bugfix",
       "track": "lseg_oa",
+      "source_map_id": "lseg_oa_task_4",
       "study_mode": "practice",
-      "estimated_minutes": 25,
+      "previous_estimated_minutes": 25,
+      "estimated_minutes": 15,
       "components_minutes": {
-        "java_bug_trace_and_fix": 10,
-        "edge_case_testing": 10,
-        "complexity_and_explanation": 5
+        "java_bug_trace_and_fix": 5,
+        "edge_case_check_with_explanation": 10
       },
       "confidence": "medium",
-      "inspection_basis": "Direct read of the 1,741-byte Minor task; supplied Java bug-fix context.",
-      "reasoning": "A small deletion fix still needs update/removal and empty-book checks plus an explanation of the supplied Java implementation.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": "lseg_oa_task_4",
+      "reasoning": "The localised zero-quantity deletion correction needs a short trace, edge cases and explanation, not an implementation session from scratch.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "oa_category": "Minor"
     },
     {
       "id": "lseg_oa_task_7",
       "label": "Task 7: Classification Evaluation Multiple Select",
       "track": "lseg_oa",
+      "source_map_id": "lseg_oa_task_7",
       "study_mode": "provisional",
-      "estimated_minutes": 30,
+      "previous_estimated_minutes": 30,
+      "estimated_minutes": 15,
       "components_minutes": {
-        "concept_refresh": 15,
-        "evaluation_reasoning_practice": 10,
-        "oral_explanation": 5
+        "concept_check_with_oral_reasoning": 15
       },
       "confidence": "low",
-      "inspection_basis": "Direct read of the 632-byte Minor task; original question/options absent and only answer labels plus partial rationale preserved.",
-      "reasoning": "Prepare the preserved class-imbalance and false-positive reasoning; exact option-level preparation cannot be claimed without the original question. No Java implementation is applicable to this selection task.",
       "provisional": true,
       "pending_flags": [
         "original_question_and_options_missing"
       ],
-      "source_map_id": "lseg_oa_task_7",
+      "reasoning": "Only preserved evaluation reasoning is available. Briefly check it without repeating AI fundamentals or pretending missing original options can be practised.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "oa_category": "Minor"
     },
     {
       "id": "hr_behavioural",
       "label": "HR / behavioural preparation",
       "track": "hr_behavioural",
-      "study_mode": "provisional",
-      "estimated_minutes": 120,
-      "components_minutes": {
-        "response_preparation": 45,
-        "chatgpt_behavioural_practice": 60,
-        "feedback_and_recall": 15
-      },
-      "confidence": "low",
-      "inspection_basis": "Requirements section 18; source map records no dedicated local HR resource; external resources not researched.",
-      "reasoning": "Prepare personal examples and rehearse behavioural responses with feedback; keep company/role study in its own unit.",
-      "provisional": true,
-      "pending_flags": [
-        "external_hr_resources_pending"
-      ],
       "source_map_id": null,
+      "study_mode": "revision",
+      "previous_estimated_minutes": 120,
+      "estimated_minutes": 75,
+      "components_minutes": {
+        "personal_example_preparation": 20,
+        "chatgpt_rehearsal": 45,
+        "feedback_and_recall": 10
+      },
+      "confidence": "medium",
+      "provisional": false,
+      "pending_flags": [],
+      "reasoning": "Use the selected STAR resource and owned experiences for one rehearsal cycle, covering feedback within the session rather than repeated scripts.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "requirement_basis": "Requirements/master_requirements.md; section 18"
     },
     {
       "id": "aptitude",
       "label": "Aptitude",
       "track": "aptitude",
+      "source_map_id": null,
       "study_mode": "practice",
-      "estimated_minutes": 90,
+      "previous_estimated_minutes": 90,
+      "estimated_minutes": 45,
       "components_minutes": {
-        "targeted_refresh": 15,
-        "timed_practice": 60,
+        "timed_practice": 30,
         "error_review": 15
       },
       "confidence": "low",
-      "inspection_basis": "Requirements section 19 and source-map missing-resource flag; no problem set or interview-specific aptitude scope inspected.",
-      "reasoning": "Retain a provisional practice allocation with review; later resource selection must establish useful question coverage and whether delivery is integrated.",
       "provisional": true,
       "pending_flags": [
-        "external_practice_resource_pending",
         "aptitude_scope_unconfirmed"
       ],
-      "source_map_id": null,
+      "reasoning": "One existing timed test plus review provides a focused general-aptitude baseline; no separate broad refresh or second test is justified without a confirmed assessment scope.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "requirement_basis": "Requirements/master_requirements.md; section 19"
     },
     {
       "id": "final_mixed_mock",
       "label": "Full mixed LSEG mock",
       "track": "mock_interview",
+      "source_map_id": null,
       "study_mode": "verification",
-      "estimated_minutes": 150,
+      "previous_estimated_minutes": 150,
+      "estimated_minutes": 135,
       "components_minutes": {
         "chatgpt_mixed_interview": 120,
-        "feedback_and_debrief": 30
+        "feedback_and_debrief": 15
       },
       "confidence": "medium",
-      "inspection_basis": "Requirements section 34; no separate physical source needed; no questions generated.",
-      "reasoning": "A full mixed interview across the required areas needs a substantial oral/practical session plus feedback; this adds assessment time without replacing subject verification or project questionnaires.",
       "provisional": false,
       "pending_flags": [],
-      "source_map_id": null,
+      "reasoning": "Keep the full two-hour mixed interview; a focused 15-minute debrief avoids treating feedback as another rehearsal session.",
+      "inspection_basis": "Latest user familiarity and integration instructions; existing source map, cached Phase 2 inspection and task/resource bindings. No raw source or external resource reopened.",
       "requirement_basis": "Requirements/master_requirements.md; section 34"
     }
   ]
