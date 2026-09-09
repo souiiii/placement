@@ -58,11 +58,13 @@ The user should:
 
 Codex should:
 
-- inspect the actual source length and density;
+- use the saved workload estimate, or estimate from source size, headings/structure, and minimal targeted sampling when needed;
 - decide how much can realistically fit in the slot;
 - split long sources across multiple blocks if needed;
 - avoid assuming one file equals one revision block;
 - avoid using arbitrary question counts as the definition of completion.
+
+Codex should not deeply read a full note merely to size a revision block.
 
 ## Typical examples
 
@@ -471,7 +473,7 @@ The full notes may require more than one block.
 
 Revision notes are better suited to later consolidation and recall.
 
-Codex should inspect actual length and overlap rather than assigning blocks based on file count.
+Codex should use source size, headings/structure, and saved estimates to judge workload. Investigate overlap only if deciding redundancy materially affects the planner; do not deeply compare the notes by default.
 
 ---
 
@@ -534,7 +536,7 @@ Codex must not invent detailed coverage based on unrelated old papers.
 
 Codex should:
 
-- inspect it;
+- inspect its scope/structure using page count, headings, and targeted sections only as needed;
 - identify logical sections;
 - estimate realistic study time;
 - split the work across days if needed;
@@ -828,7 +830,7 @@ The content decides the duration.
 
 Codex should:
 
-- inspect workload;
+- use saved workload estimates or lightweight source/workload inspection;
 - estimate realistic time;
 - split large tasks;
 - combine small compatible tasks when sensible;
