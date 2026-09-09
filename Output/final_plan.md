@@ -226,7 +226,7 @@ Friday's protected 12:30–15:00 namaz window is shown as two namaz events with 
 | 22:00–22:25 | 🌙 Wind Down | — | Rest/buffer | 25 |
 | 22:25–22:30 | 🕓 Unused Slack | — | Unused slack | 5 |
 
-**Totals —** LSEG **310**, midsem **225**, fixed commitments **120**, protected rest/buffer **150**, true unused slack **5** · day total **805** minutes (09:00–22:30).
+**Totals —** LSEG **310**, midsem **225**, fixed commitments **120**, protected rest/buffer **150**, true unused slack **5** · day total **810** minutes (09:00–22:30).
 
 <details><summary>Session briefs</summary>
 
