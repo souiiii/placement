@@ -1,158 +1,164 @@
-> **STALE — historical analysis only.** The Phase 2 re-estimation and mandatory-IWT-lab-only attendance policy supersede this report’s workload, capacity assumptions and proposed cuts. See `workload_revision.md` and `State/approved_constraints.json`. No revised feasibility has been performed.
+# Feasibility — 10–16 September 2026 (revised workload)
 
-# Feasibility — 10–16 September 2026
+**The revised plan fits, but with effectively no margin.** Realistic focused-study capacity under the mandatory-lab-only attendance rule is **3,570 minutes (59h 30m)**. The accepted revised workload is **3,565 minutes (59h 25m)**, including the 45 conditional RecSys numerical minutes. The margin is **+5 minutes (0.14%)**. Excluding the conditional numericals the workload is **3,520 minutes (58h 40m)** and the margin is **+50 minutes**.
 
-**The full approved plan is infeasible.** Its **6,585 minutes (109h 45m)** exceed a defensible focused-study capacity of **3390 minutes (56h 30m)** by **3,195 minutes (53h 15m)**. Even omitting the conditional RecSys numericals allowance leaves **3,105 minutes (51h 45m)** of overload. No cut, estimate change or task change has been applied.
+Day-level and dependency feasibility also pass, subject to two placement rules that scheduling must honour (Wednesday's mock window and the pre-mock partition). No estimate, duration, task or scope has been changed by this analysis. Package A and Package B are superseded and are not revived.
 
-This analysis reuses [source mapping](source_map.json), [approved estimates](workload_estimates.json), [task inventory](task_inventory.json), [selected resources](resource_research.md), [availability](../Requirements/availability.md) and the relevant [master requirements](../Requirements/master_requirements.md). State files were empty at the start. The latest user instructions supply the approval status for the existing workload. No raw notes, new resources, study timetable or calendar were inspected/created.
+Inputs used: [revised estimates](workload_estimates.json), [task inventory](task_inventory.json), [revision report](workload_revision.md), [availability](../Requirements/availability.md) and [approved constraints](../State/approved_constraints.json). No source notes were reopened and no resource research was performed.
 
-## Clock time and fixed commitments
+---
 
-Seven calendar days contain 168 hours. The permitted 09:00–22:30 window provides **13h 30m per day × 7 = 94h 30m (5,670 minutes)**. The remaining 73h 30m lies outside the preparation boundary and is not available capacity.
+## 1. Capacity under the current attendance rule
+
+The permitted window is 09:00–22:30, i.e. **810 minutes × 7 days = 5,670 minutes (94h 30m)** of gross clock time. Deductions are the preserved fixed commitments only.
 
 | Item | Minutes | Hours | Treatment |
 |---|---:|---:|---|
-| Gross permitted clock time | 5,670 | 94h 30m | Starting capacity |
-| Daily lunch and dinner | −840 | −14h 00m | Seven one-hour lunches and seven one-hour dinners |
-| Friday namaz, incremental | −90 | −1h 30m | 12:30–15:00 is 150 minutes, but its 60-minute lunch overlap is already deducted |
-| Mandatory Monday IWT lab | −120 | −2h 00m | Attendance only |
-| Selected CV / RecSys / EPQ classes | −180 | −3h 00m | One one-hour class per subject; attendance only |
-| Clock time after fixed commitments | **4,440** | **74h 00m** | Not all focused-study capacity |
-| Rest, transitions and contingency | −1,050 | −17h 30m | 150 minutes per day, described below |
-| **Realistic focused-study capacity** | **3,390** | **56h 30m** | Includes all study, questionnaires, verification and mocks |
+| Gross permitted clock time | 5,670 | 94h 30m | Starting point |
+| Daily lunch and dinner | −840 | −14h 00m | 7 × 60 lunch + 7 × 60 dinner |
+| Friday namaz, incremental | −90 | −1h 30m | 12:30–15:00 is 150 min; its 60-min lunch overlap is already deducted |
+| Mandatory Monday IWT lab | −120 | −2h 00m | Attendance only; never counted as study |
+| Optional class attendance | −0 | −0h 00m | **Removed** by the current attendance rule |
+| Clock time after fixed commitments | **4,620** | **77h 00m** | Not yet focused capacity |
+| Rest, transitions and contingency | −1,050 | −17h 30m | Preserved allowance of 150 min/day |
+| **Realistic focused-study capacity** | **3,570** | **59h 30m** | All study, questionnaires, checks and mocks |
 
-The fixed unavailable union is **1,230 minutes (20h 30m)** within the active windows. Meals, namaz and classes are never counted as preparation. The final mock and daily midsem study consume the workload/capacity above; they are not extra deductions on top of it.
+The rest allowance is unchanged from the previous analysis: **90 minutes real rest + 30 minutes transitions/logistics + 30 minutes contingency per day**. It is a planning judgment, not hidden study time, and it is the only genuine buffer in this plan.
 
-## Attendance selection for the capacity calculation
+The only capacity change against the stale report is the attendance rule: dropping the four optional CV/RecSys/EPQ/IWT meetings returns **+180 minutes**, moving capacity from 3,390 to 3,570.
 
-Count whole class meetings rather than contact hours. This is the least disruptive simple selection from the listed timetable: cluster attendance next to the fixed lunch break or mandatory lab, using only two attendance days and leaving the final preparation day free of optional classes. It selects existing classes for arithmetic, not study blocks or a new timetable.
+### Per-day focused capacity
 
-| Subject | Listed meetings in the window | Selected existing meeting | Attendance | Why this choice |
-|---|---:|---|---:|---|
-| IWT | 5, including Friday and Monday labs as one meeting each | Monday 14 Sep, mandatory lab 10:00–12:00 | 1/5 = 20% | Mandatory lab alone satisfies the approximate target |
-| CV | 3 | Thursday 10 Sep, 12:00–13:00 | 1/3 ≈ 33% | Immediately before lunch; one is the minimum sensible whole class |
-| RecSys | 3 | Thursday 10 Sep, 14:00–15:00 | 1/3 ≈ 33% | Immediately after lunch, on the same attendance day as CV |
-| EPQ | 3 | Monday 14 Sep, 09:00–10:00 | 1/3 ≈ 33% | Directly before the mandatory IWT lab |
-
-Total: four meetings, **300 minutes**. Zero meetings would not satisfy the practical one-class guidance for CV/RecSys/EPQ; exact 20% is impossible with three listed meetings. All other optional meetings are unselected. Blockchain, EMC and TW classes do not happen and reserve no time.
-
-The Friday lab's exact morning time is unspecified, but it is optional and not selected; investigating it would not change this result. The meeting-based IWT count follows availability.md. Different institutional lab-period accounting could change the percentage, not the massive workload shortfall.
-
-## Rest, transitions and focused capacity
-
-Use **150 minutes per day** as a planning allowance: **90 minutes of real rest**, **30 minutes of transitions/logistics**, and **30 minutes of contingency**. These are distinct from meals and are not hidden study time. This is an explicit planning judgment, not a measured personal productivity limit.
-
-The logistics allowance assumes no substantial commute beyond the short transitions it covers, with attendance clustered as above. Any longer travel or substantial tool setup lowers capacity further; none is treated as free. On other days, the allowance protects ordinary task switching and personal logistics. A new mandatory prayer or commitment not listed in availability.md would likewise reduce capacity.
-
-| Day | Gross min | Meals | Classes | Extra namaz | Rest/buffer | Focused capacity |
+| Day | Gross | Meals | Class | Namaz | Rest/buffer | Focused capacity |
 |---|---:|---:|---:|---:|---:|---:|
-| Thursday 10 Sep | 810 | 120 | 120 | 0 | 150 | 420 (7h 00m) |
-| Friday 11 Sep | 810 | 120 | 0 | 90 | 150 | 450 (7h 30m) |
-| Saturday 12 Sep | 810 | 120 | 0 | 0 | 150 | 540 (9h 00m) |
-| Sunday 13 Sep | 810 | 120 | 0 | 0 | 150 | 540 (9h 00m) |
-| Monday 14 Sep | 810 | 120 | 180 | 0 | 150 | 360 (6h 00m) |
-| Tuesday 15 Sep | 810 | 120 | 0 | 0 | 150 | 540 (9h 00m) |
-| Wednesday 16 Sep | 810 | 120 | 0 | 0 | 150 | 540 (9h 00m) |
-| **Total** | **5,670** | **840** | **300** | **90** | **1,050** | **3,390 (56h 30m)** |
+| Thursday 10 Sep | 810 | 120 | 0 | 0 | 150 | **540** (9h 00m) |
+| Friday 11 Sep | 810 | 120 | 0 | 90 | 150 | **450** (7h 30m) |
+| Saturday 12 Sep | 810 | 120 | 0 | 0 | 150 | **540** (9h 00m) |
+| Sunday 13 Sep | 810 | 120 | 0 | 0 | 150 | **540** (9h 00m) |
+| Monday 14 Sep | 810 | 120 | 120 | 0 | 150 | **420** (7h 00m) |
+| Tuesday 15 Sep | 810 | 120 | 0 | 0 | 150 | **540** (9h 00m) |
+| Wednesday 16 Sep | 810 | 120 | 0 | 0 | 150 | **540** (9h 00m) |
+| **Total** | **5,670** | **840** | **120** | **90** | **1,050** | **3,570** (59h 30m) |
 
-This implies about eight focused hours per day on average, with nine on unconstrained days: ambitious sustained preparation, not a relaxed week. No study topics or start/end times are assigned in this table. Later scheduling must protect daily midsem self-study and enough energy for the final mock.
+---
 
-A single sensitivity check is enough: allowing only two hours of rest/buffer daily raises capacity to **60h**, still **49h 45m short**; three hours daily lowers it to **53h**, **56h 45m short**. Even the unrealistic zero-rest ceiling of **74h** is **35h 45m short**. The conclusion does not depend on fine-tuning breaks, attendance choices or uncertain CV detail.
+## 2. Aggregate comparison
 
-## Workload and requirement status
-
-| Workload | Minutes | Hours |
+| Quantity | Minutes | Hours |
 |---|---:|---:|
-| LSEG / placement | 4,815 | 80h 15m |
-| Required midsem excluding separate conditional numericals | 1,680 | 28h 00m |
-| Conditional RecSys numericals, retained in baseline | 90 | 1h 30m |
-| Midsem baseline including conditional allowance | 1,770 | 29h 30m |
-| **Full baseline** | **6,585** | **109h 45m** |
-| **Overload against realistic capacity** | **3,195** | **53h 15m** |
+| LSEG / placement workload | 2,500 | 41h 40m |
+| Midsem workload, excluding conditional numericals | 1,020 | 17h 00m |
+| Conditional RecSys numericals | 45 | 0h 45m |
+| Midsem workload, including conditional | 1,065 | 17h 45m |
+| **Revised total workload** | **3,565** | **59h 25m** |
+| Realistic focused capacity | 3,570 | 59h 30m |
+| **Margin, conditional numericals included** | **+5** | **+0h 05m** |
+| **Margin, conditional numericals excluded** | **+50** | **+0h 50m** |
 
-The estimates and task inventory reconcile exactly. Existing overlapping references are already integrated: there is no extra block for JSON, Collections, Extra Fundamentals, Redis or DSA reference files to remove. Classes cannot reduce this workload.
+Utilisation is **99.86%** of focused capacity with the conditional block, **98.6%** without it. Average committed load is **8h 29m of focused work per day** across seven consecutive days, on top of the fixed commitments.
 
-- **REQUIRED as currently approved — 6,495 minutes (108h 15m):** every baseline unit except the separate conditional RecSys numericals allowance. This includes all six core subjects, additional technical tracks, active JavaScript/SQL/MongoDB/DSA, all seven OA tasks, three ordered project pairs, resume, company, HR, aptitude, final mock, EPQ, RecSys units/final revision, mandatory CV reserve, Blockchain and IWT. Secondary technical tracks remain required until the user explicitly approves a deferral; they are not relabelled optional here.
-- **DESIRABLE — no extra baseline minutes:** an earlier optional mock, extra weak-topic attempts and wider resource coverage beyond the approved scope. Not adding them saves **zero** from the 6,585-minute baseline.
-- **REDUNDANT-OR-CONDITIONAL — 90 minutes provisionally:** only the separate RecSys numericals allowance is an identified conditional candidate. Its redundancy has not been established. Supporting resources have no standalone budget, so integrating them again saves **zero**. RecSys paired notes are not presumed duplicates.
+### Sensitivity to the rest allowance
 
-Major contributors:
+The result is entirely determined by the preserved 150 min/day rest allowance, and is not robust to changing it.
 
-| Allocation group | Minutes | Hours |
-|---|---:|---:|
-| Core revision, practice and verification | 1290 | 21h 30m |
-| Additional technical subjects | 765 | 12h 45m |
-| JavaScript / SQL / MongoDB practice | 570 | 9h 30m |
-| General DSA | 720 | 12h 00m |
-| LSEG OA: 4 Major + 3 Minor | 465 | 7h 45m |
-| Three projects: revision + questionnaires | 420 | 7h 00m |
-| Resume / company / HR / aptitude / final mock | 585 | 9h 45m |
-| EPQ | 300 | 5h 00m |
-| RecSys, including conditional numericals | 780 | 13h 00m |
-| CV reserve | 480 | 8h 00m |
-| Blockchain + IWT | 210 | 3h 30m |
+| Rest/buffer per day | Capacity | Margin vs 3,565 |
+|---:|---:|---:|
+| 120 min | 3,780 (63h 00m) | +215 |
+| **150 min (preserved)** | **3,570 (59h 30m)** | **+5** |
+| 180 min | 3,360 (56h 00m) | −205 |
+| 210 min | 3,150 (52h 30m) | −415 |
 
-A useful lower bound: keeping DSA (720), OA (465), all project pairs (420), final mock (150) and all required midsem work (1,680) alone needs **3,435 minutes (57h 15m)**. That already exceeds capacity by 45 minutes before any core revision, additional technology, resume, HR, company or aptitude work. Small efficiencies cannot preserve all existing depth.
+Raising daily rest by even 30 minutes makes the plan infeasible by 3h 25m. This is recorded as a risk, not as a proposed change.
 
-## Proposed trade-offs — none applied
+---
 
-A reduction below an approved estimate is a proposal to do less or different work, not evidence that the original workload can be completed faster. Moving work out of this week is a true deferral and leaves it unprepared before the interview unless separately completed; no future time is assumed available.
+## 3. Day-level feasibility
 
-### Package A — limited repeat-reading reductions; insufficient on its own
+Aggregate fit is not sufficient, because two structural constraints bind particular days.
 
-| Proposal | Current → proposed min | Saved | Consequence |
-|---|---:|---:|---|
-| EPQ full notes + revision notes | 300 → 180 | 120 | Omit repeated reading while retaining the approved recall and numerical work, justified by confirmed substantial first-pass completion |
-| RecSys final revision | 150 → 90 | 60 | Omit its 60-minute repeat-reading component; retain 30 minutes recall and 60 minutes numerical consolidation |
-| Separate RecSys numericals | 90 → 0 | 90 | Omit a separate pass only with explicit approval; overlap remains unverified |
-| **Total** | | **270 (4h 30m)** | **No saving is credited twice in Package B** |
+### 3.1 Wednesday 16 September — the mock window is the tightest point
 
-This leaves **6,315 minutes (105h 15m)** and **2,925 minutes (48h 45m)** of overload. These are plausible lower-impact reductions in repeat work, not a feasible weekly package or proven redundancy. All other budgets remain unchanged under A.
+`final_mixed_mock.interview` (120 min) plus `final_mixed_mock.debrief` (15 min) is a **135-minute ordered block that must occur on the night of 16 September**, and the debrief must finish inside the active window because 17 September is the interview day and lies outside the planning window.
 
-### Package B — selective preparation within the fixed week
+The post-dinner window on 16 September is **20:30–22:30 = 120 minutes exactly**. The 135-minute block therefore **does not fit after dinner**. The only placement that satisfies every preserved constraint is the pre-dinner evening: **mock 17:15–19:15, debrief 19:15–19:30**, ending exactly at the dinner boundary.
 
-**Recommended only if the dates/boundaries are fixed and the user accepts substantial scope loss.** It keeps every OA task at its approved time, all three projects with revision before separate questionnaires, the full final mock/debrief, the complete provisional CV reserve, and unchanged Blockchain/IWT. It reduces DSA volume explicitly and makes core preparation selective; it does not satisfy the original full-note coverage requirement.
+Two consequences follow and must be carried into scheduling:
 
-| Track / group | Current min | Proposed min | Saved min | Type and scope consequence |
-|---|---:|---:|---:|---|
-| OS / CN / DBMS / Java-OOP | 750 | 360 | 390 | True scope reduction: targeted revision plus separate verification replaces full-note preparation. |
-| Node/backend + System Design | 540 | 0 | 540 | True deferral of dedicated preparation; incidental project/mock discussion is not equivalent coverage. |
-| React / Next.js / TypeScript / Git-GitHub / Python / AI fundamentals | 765 | 0 | 765 | True deferral of dedicated tracks, including their practice/recall; no claim these are redundant or irrelevant to the JD. |
-| JavaScript / SQL / MongoDB practice | 570 | 0 | 570 | True deferral of three required active-practice tracks; their time is not hidden inside other sessions. |
-| General DSA | 720 | 480 | 240 | Reduced practice volume and re-exposure; keep breadth, Java implementation, timed solving and explanation. |
-| All seven OA tasks | 465 | 465 | 0 | Unchanged. |
-| Three project pairs | 420 | 300 | 120 | Shorter revision and questionnaires; retain all six separate ordered sessions. |
-| Resume | 90 | 60 | 30 | Shorter review and questioning, with fewer follow-ups. |
-| LSEG role/company | 135 | 90 | 45 | Shorter source study and rehearsal; exact JD remains primary. |
-| HR/behavioural | 120 | 90 | 30 | Fewer rehearsal repetitions; remains distinct from company preparation. |
-| Aptitude | 90 | 45 | 45 | One timed practice component instead of two; remove separate refresh, preserve error review. |
-| Final mixed mock | 150 | 150 | 0 | Unchanged full interview and debrief. |
-| EPQ | 300 | 180 | 120 | Reduce repeated reading using confirmed prior preparation; preserve recall and numerical components. |
-| RecSys Units 1–3 | 540 | 360 | 180 | True depth reduction: less concept-coverage and worked-method practice; not full coverage at a faster speed. |
-| RecSys final revision | 150 | 90 | 60 | Omit the repeat reading component; preserve active recall and numerical consolidation. |
-| Separate RecSys numericals | 90 | 0 | 90 | Conditional omission requiring explicit approval; redundancy is not established. |
-| CV | 480 | 480 | 0 | Mandatory provisional reserve unchanged. |
-| Blockchain + IWT | 210 | 210 | 0 | Unchanged narrow-scope preparation, including IWT Web/HTTP/URL and HTML/CSS. |
-| **Total** | **6,585** | **3,360** | **3,225** | **All changes require approval** |
+- Every one of the mock's **30 LSEG prerequisites must be complete by 17:15 on 16 September**, not merely "by Wednesday".
+- The **20:30–22:30 slot on 16 September can hold midsem work only**, since all remaining LSEG tasks are prerequisites of a mock that has already run.
 
-Exact proposed component limits for review:
+This is a hard placement rule, not an infeasibility.
 
-- **OS, CN and DBMS:** 90 minutes each = 45 targeted revision + 15 recall + 30 separate verification. **Java/OOP:** 90 = 30 targeted revision + 30 implementation + 30 separate verification. Broad verification identifies gaps; it does not replace omitted revision. This explicitly waives full-source coverage for these four subjects.
-- **Node/backend, System Design, React, Next.js, TypeScript, Git/GitHub, Python, AI fundamentals, JavaScript practice, SQL practice and MongoDB practice:** zero dedicated minutes in this week. Their discussion may arise within existing project/resume/mock work, but that is limited exposure and saves no additional minutes. Their JD/resume relevance has not been reassessed; the user must accept these particular deferrals or nominate equivalent replacements before a schedule can be considered.
-- **DSA:** 480 = 60 pattern refresh + 270 representative Java implementation + 90 timed solving + 60 re-exposure/complexity explanation. Preserve major-pattern breadth, but accept fewer representative attempts and less repetition than the approved 720 minutes. OA remains entirely separate.
-- **Velvet and Eventually:** 105 each = 60 revision + a separate 45-minute questionnaire. **Relay:** 90 = 45 revision + a separate 45-minute questionnaire. All six sessions and their order remain mandatory; interview-questioning depth decreases.
-- **Resume:** 60 = 30 review + 30 later questioning. **Role/company:** 90 = 20 JD review + 25 company study + 20 role-fit preparation + 25 questioning. **HR:** 90 = 30 preparation + 45 ChatGPT practice + 15 feedback. **Aptitude:** 45 = 30 timed practice + 15 error review. These are shorter passes/fewer repetitions, not removal of the tracks or a merger of HR and company work.
-- **EPQ:** full-note refresh 90 = 45 revision + 30 recall + 15 numericals; revision-note consolidation 90 = 30 recall + 60 numericals. **RecSys Units 1–3:** 120 each = 60 concept coverage + 30 method/numerical practice + 30 recall, still using each paired source as one unit. **RecSys final revision:** 90 = 30 recall + 60 numericals. The three unit reductions sacrifice coverage/depth; they are not justified as removal of duplicate paired files.
-- **CV 480, Blockchain 90, IWT 120, OA 465 and final mock 150:** unchanged. The final mock remains 120 interview + 30 debrief. CV is still a provisional reserve, not a known sufficient duration.
+### 3.2 The pre-mock partition still closes
 
-Package B totals: **LSEG/placement 2,040 minutes (34h)** and **midsem 1,320 minutes (22h)**, combined **3,360 minutes (56h)**. LSEG retains the largest share (about 61%); midsem retains substantial work across all five subjects, including eight hours of CV. Daily midsem self-study must still be enforced in later scheduling, and classes never substitute for it.
+Applying 3.1, capacity splits as follows.
 
-There is **30 minutes of unallocated capacity** beyond the already-deducted rest/buffer allowance. This is an aggregate capacity fit only, not a validated schedule or a guarantee that the reduced coverage is sufficient. If the separate 90-minute RecSys numericals task must be retained, Package B becomes **57h 30m**, which is **one hour over capacity** after using the 30-minute margin. Additional CV material, commute or setup could also require another decision.
+| Window | Focused minutes | Admissible work |
+|---|---:|---|
+| Thu–Tue (all days) | 3,030 | LSEG or midsem |
+| Wed daytime, 09:00–17:15 | ≤285 | LSEG or midsem |
+| Wed mock block, 17:15–19:30 | 135 | Mock + debrief only |
+| Wed 20:30–22:30 | ≤120 | Midsem only |
+| **Total** | **3,570** | |
 
-## Approval required before proceeding
+Pre-mock LSEG work is 2,500 − 135 = **2,365 minutes** and must fit in the 3,315 minutes of Thu–Tue plus Wed daytime. That leaves **950 minutes** in those windows for midsem, and Wed evening supplies at most 120 more: **1,070 available against 1,065 required**. The partition closes with the same 5-minute slack as the aggregate — no additional day-level loss appears, but none is absorbed either.
 
-1. **Choose the scope direction:** Package A alone is insufficient. Approve Package B's explicitly reduced preparation contract, or identify a different set of required-track deferrals/reductions totalling at least **3,195 minutes**. Keeping all original scope requires additional usable preparation time outside the current constraints; none has been identified or assumed.
-2. **For Package B, explicitly accept** targeted rather than full-note OS/CN/DBMS/Java preparation; the eleven named dedicated-track deferrals; DSA 720→480; project pairs 420→300 with ordering intact; and the stated resume/company/HR/aptitude reductions.
-3. **Accept the midsem changes:** EPQ 300→180, RecSys unit coverage 540→360, final revision 150→90, and the proposed separate-numericals omission 90→0 despite unresolved redundancy. CV, Blockchain, IWT and daily genuine midsem self-study remain protected.
+### 3.3 A demonstrated feasible day-level allocation
 
-The attendance selection and capacity assumptions above are analysis choices already authorised by this task; they are not requests to loosen the attendance or daily boundaries. No proposed cut has been entered into approved_cuts.json. Workload estimates, task inventory, source map and resources are unchanged. After the user's decision, only approved scope changes may be recorded, dependencies adjusted (including DBMS verification if SQL is deferred), and feasibility rechecked before any draft schedule.
+This is a minute budget proving day-level fit, **not a timetable**. No start times other than the mock placement are assigned.
+
+| Day | Capacity | LSEG | Midsem | Mock | Slack |
+|---|---:|---:|---:|---:|---:|
+| Thursday 10 Sep | 540 | 390 | 150 | — | 0 |
+| Friday 11 Sep | 450 | 300 | 150 | — | 0 |
+| Saturday 12 Sep | 540 | 390 | 150 | — | 0 |
+| Sunday 13 Sep | 540 | 390 | 150 | — | 0 |
+| Monday 14 Sep | 420 | 300 | 120 | — | 0 |
+| Tuesday 15 Sep | 540 | 310 | 225 | — | 5 |
+| Wednesday 16 Sep | 540 | 285 | 120 | 135 | 0 |
+| **Total** | **3,570** | **2,365** | **1,065** | **135** | **5** |
+
+Every day carries a genuine midsem self-study block of at least 120 minutes, distinct from any class. Six of seven days are booked to the minute.
+
+### 3.4 Dependency and ordering checks
+
+- **RecSys chain** (`unit_1`, `unit_2`, `unit_3` → `final_revision` → conditional `numericals`, 570 min total) fits the midsem column above: units on 10/11/12 Sep at 150 each, final revision (75) and the conditional numericals (45) together in the 120-minute midsem slot on 16 Sep. The conditional block is scheduled last in its own chain, so removing it removes 45 minutes cleanly and disturbs nothing upstream.
+- **EPQ**: `epq_full_notes.consolidate` (60) precedes `epq_revision.consolidate` (90); both land in the 14–15 Sep midsem allocation.
+- **Project ordering**: all three revision → questionnaire pairs remain separate and ordered; total 310 minutes, no day-level obstruction.
+- **Integrated closure checks**: `dbms.verify` requires `sql_practice.review`, and `node_backend.verify` requires `mongodb_practice.review`. Both are zero-additional-minute checkpoints, but they impose real ordering: DBMS and Node/backend preparation must precede their SQL/MongoDB practice chains, which must in turn finish before the mock. Chain lengths are 75+105 = 180 and 120+90 = 210 minutes respectively — comfortable within six pre-mock days.
+- **Longest chain**: DSA (`refresh` 30 → `practice` 240 → `timed` 90 → `review` 60 = 420 minutes, depth 4). Spread across 10–15 Sep it needs about 70 minutes per day; no day is forced to absorb it whole.
+- **Longest single task**: `dsa.practice` at 240 minutes. The largest uninterrupted window on every day is at least 240 minutes (09:00–13:00 on unfragmented days; 14:00–19:30 gives 330 on Monday, 15:00–19:30 gives 270 on Friday), so it fits contiguously if wanted, and the inventory permits splitting it in any case.
+- **Fragmented days**: Monday's mandatory lab splits the day into 09:00–10:00, 12:00–13:00, 14:00–19:30 and 20:30–22:30; Friday's namaz leaves 09:00–12:30, 15:00–19:30 and 20:30–22:30. Both still clear their reduced 420 and 450 minute loads, and both retain a ≥270-minute contiguous block.
+
+**Day-level and dependency feasibility pass.**
+
+---
+
+## 4. Conditional RecSys numericals
+
+The 45-minute `recsys_numericals.conditional_practice` block is treated exactly as recorded: **required in the totals, conditional in status, redundancy unverified, not cut**. It is the terminal node of the RecSys chain, so it is the single cleanest item to drop if capacity is later needed — dropping it moves the margin from +5 to +50 minutes. No such decision is made or recommended here.
+
+---
+
+## 5. Risks and assumptions
+
+The plan is feasible on the recorded numbers. It is not resilient, because the margin is 5 minutes and several inputs are explicitly low confidence.
+
+1. **Zero effective margin.** Any single 10-minute overrun consumes the entire aggregate slack. The real buffer is the 1,050-minute rest/contingency allowance, which must not be re-labelled as study to absorb overruns.
+2. **CV scope is provisional.** `cv.reserved_preparation` is 180 minutes against an indicative 120–360 range with no confirmed syllabus. The upper end alone adds 180 minutes and breaks feasibility.
+3. **RecSys first-pass status unconfirmed.** Units 1–3 are 150 each against an indicative 120–210 range. The upper end adds 180 minutes and breaks feasibility.
+4. **DSA fluency unmeasured.** 420 minutes against an indicative 300–540 range; the upper end adds 120 minutes and breaks feasibility.
+5. **Rest allowance sensitivity.** 180 minutes of daily rest instead of 150 produces a 205-minute deficit. Feasibility depends on the preserved allowance holding in practice.
+6. **No commute, setup or environment time is assumed.** MongoDB practice presumes a working environment; LeetCode presumes usable access. Substantial setup or travel would come straight out of the 5-minute margin.
+7. **Wednesday's mock placement is fixed by arithmetic**, not by preference. If the mock must instead run after dinner, the debrief has nowhere inside the window to go.
+8. **Midsem exam order is still unknown.** It may later change the relative emphasis of the 15–16 September midsem blocks, but not these totals.
+
+If any of items 2–4 is confirmed at the upper end, the correct response is a focused re-estimate of that specific track, not an automatic cut elsewhere.
+
+---
+
+## 6. Result
+
+**FEASIBLE — READY FOR SCHEDULING**, with a +5 minute margin including the conditional RecSys numericals and +50 minutes without them, and with the Wednesday mock placement rule and pre-mock partition from section 3 binding on the schedule.
+
+No timetable has been produced. No cut, deferral or estimate change has been applied, and the superseded Package A and Package B proposals remain withdrawn.

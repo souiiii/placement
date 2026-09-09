@@ -159,7 +159,7 @@
     },
     {
       "id": "later_feasibility_gate",
-      "rule": "Previous feasibility is stale after re-estimation and attendance-rule removal. No revised feasibility or schedule has been produced."
+      "rule": "Feasibility was recalculated against the revised estimates and the mandatory-lab-only attendance rule; see Planning/feasibility.md. Result: feasible with a 5-minute aggregate margin including the conditional RecSys numericals (50 minutes without). Day-level and dependency checks pass. Scheduling must honour the recorded mock-placement rules on 2026-09-16. No schedule has been produced."
     },
     {
       "id": "mandatory_lab_only_attendance",
