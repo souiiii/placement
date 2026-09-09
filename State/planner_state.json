@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "phase": "phase_3_feasibility_complete",
-  "status": "feasible_ready_for_scheduling",
+  "phase": "phase_4_draft_schedule_complete",
+  "status": "draft_schedule_awaiting_approval",
   "planning_window": {
     "start": "2026-09-10",
     "end": "2026-09-16",
@@ -64,6 +64,61 @@
   "previous_tradeoff_packages": "Package A and Package B remain superseded, unapproved and withdrawn; no track deferral or cut is applied.",
   "feasibility_recalculated": true,
   "workload_unchanged": true,
-  "schedule_created": false,
-  "next_action": "Proceed to schedule construction for 2026-09-10 to 2026-09-16, honouring the binding placement rules and preserved constraints."
+  "schedule_created": true,
+  "next_action": "Present Output/draft_plan.md for approval. On approval, copy to Output/final_plan.md and prepare Output/calendar_events.json; create live calendar events only on an explicit user instruction.",
+  "schedule": {
+    "draft_plan": "Output/draft_plan.md",
+    "final_plan": "Output/final_plan.md",
+    "final_plan_status": "empty_pending_user_approval",
+    "calendar_events": "Output/calendar_events.json",
+    "calendar_events_status": "not_prepared_pending_approval",
+    "live_calendar_events_created": false,
+    "created_on": "2026-09-09",
+    "total_scheduled_minutes": 3565,
+    "lseg_placement_minutes_including_mock": 2500,
+    "midsem_minutes_including_conditional": 1065,
+    "conditional_recsys_numericals": {
+      "task_id": "recsys_numericals.conditional_practice",
+      "minutes": 45,
+      "scheduled": "2026-09-16 21:45-22:30",
+      "status": "retained_conditional_not_cut"
+    },
+    "nonzero_tasks_scheduled": 60,
+    "nonzero_tasks_total": 60,
+    "each_task_scheduled_once": true,
+    "task_durations_changed": false,
+    "day_partition_matches_feasibility": true,
+    "protected_rest_minutes": 1050,
+    "true_unused_slack_minutes": 5,
+    "slack_location": "2026-09-15 wind-down",
+    "fixed_placements": {
+      "mandatory_iwt_lab": "2026-09-14 10:00-12:00",
+      "friday_namaz": "2026-09-11 12:30-15:00 (rendered as 12:30-13:00 and 14:00-15:00 around the fixed lunch hour)",
+      "final_mixed_mock": "2026-09-16 17:15-19:15",
+      "mock_debrief": "2026-09-16 19:15-19:30",
+      "wednesday_post_dinner": "2026-09-16 20:30-22:30 midsem only (RecSys final revision then conditional numericals)",
+      "last_lseg_prerequisite_ends": "2026-09-16 16:30"
+    },
+    "optional_class_attendance_scheduled": false,
+    "validation": {
+      "no_overlaps_or_gaps": "PASS",
+      "daily_boundaries_09_00_22_30": "PASS",
+      "meals_namaz_lab_free_of_study": "PASS",
+      "daily_midsem_block_all_seven_days": "PASS",
+      "protected_rest_150_per_day": "PASS",
+      "all_dependencies_chronological": "PASS",
+      "project_revision_before_questionnaire": "PASS",
+      "dbms_sql_and_node_mongodb_closure_order": "PASS",
+      "dsa_chain_order": "PASS",
+      "recsys_and_epq_chain_order": "PASS",
+      "mock_prerequisites_before_17_15": "PASS",
+      "totals_equal_3565": "PASS",
+      "active_requirements_checklist": "PASS (32 checks recorded in Output/draft_plan.md section 4)"
+    },
+    "precedence_resolutions": [
+      "20% per-subject attendance target in master_requirements.md 28 and availability.md 6/11 is superseded by State/approved_constraints.json; only the mandatory Monday IWT lab is scheduled.",
+      "Dedicated Phase-3 verification blocks in master_requirements.md 9 are superseded by the approved Phase 2 preparation mode; the seven verification tasks are zero-additional-minute checkpoints inside named hosts."
+    ],
+    "requirement_conflicts_found": "none"
+  }
 }
