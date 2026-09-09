@@ -1,0 +1,1335 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//lseg_midsem_planner//Final Plan 10-16 Sep 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:LSEG + Midsem Plan (10-16 Sep 2026)
+X-WR-TIMEZONE:Asia/Kolkata
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+TZNAME:IST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:e001-cf7b4239be50@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T090000
+DTEND;TZID=Asia/Kolkata:20260910T103000
+SUMMARY:⚙️ OS — Targeted Refresh
+DESCRIPTION:Refresh high-value and weak OS areas from `Sources/Placement/
+ Core/OS.md` using retrieval first\, then work the applied checks. Explain
+  answers aloud and open the notes only to close gaps\; this block also ca
+ rries the OS closure check\, so no separate verification slot exists.\n\n
+ Resources:\nSources/Placement/Core/OS.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e002-86cb0c8bf1bb@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T103000
+DTEND;TZID=Asia/Kolkata:20260910T104500
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e003-9885399100f1@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T104500
+DTEND;TZID=Asia/Kolkata:20260910T121500
+SUMMARY:🌐 CN — Targeted Refresh
+DESCRIPTION:Refresh networking from `Sources/Placement/Core/CN.md` by rec
+ alling the high-value layers\, protocols and trade-offs before reading. V
+ erify weak explanations inside this block\; CN closure is integrated here
+ .\n\nResources:\nSources/Placement/Core/CN.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e004-35f0915d31a0@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T121500
+DTEND;TZID=Asia/Kolkata:20260910T130000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e005-588a797a6445@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T130000
+DTEND;TZID=Asia/Kolkata:20260910T140000
+SUMMARY:🍽️ Lunch
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e006-2fcd33a0e372@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T140000
+DTEND;TZID=Asia/Kolkata:20260910T151500
+SUMMARY:🗃️ DBMS — Targeted Refresh
+DESCRIPTION:Refresh database concepts and reasoning from `Sources/Placeme
+ nt/Core/DBMS.md`. This must come before tomorrow's SQL chain\, whose revi
+ ew block carries the DBMS closure check — do not add a separate DBMS ve
+ rification session.\n\nResources:\nSources/Placement/Core/DBMS.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e007-6cebaa32c79b@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T151500
+DTEND;TZID=Asia/Kolkata:20260910T154500
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e008-9b47fe5c40b2@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T154500
+DTEND;TZID=Asia/Kolkata:20260910T161500
+SUMMARY:🧩 DSA — Pattern Refresh
+DESCRIPTION:Use `Sources/Placement/Supporting/DSA_Pattern_Index.md` and t
+ he mistake log to re-fix the major interview patterns before solving star
+ ts. Targeted refresh only — no full notes pass.\n\nResources:\nhttps://
+ leetcode.com/studyplan/top-interview-150/\nSources/Placement/Supporting/D
+ SA_Pattern_Index.md\nSources/Placement/Supporting/DSA_Mistake_Log.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e009-f061aa0458aa@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T161500
+DTEND;TZID=Asia/Kolkata:20260910T180000
+SUMMARY:🧩 DSA — Practice (Part 1)
+DESCRIPTION:Solve representative problems from [LeetCode Top Interview 15
+ 0](https://leetcode.com/studyplan/top-interview-150/) in Java\, guided by
+  the pattern index. Name the pattern\, implement\, and explain complexity
+  during the attempt. Breadth over volume\; completing the collection is n
+ ot the goal.\n\nResources:\nhttps://leetcode.com/studyplan/top-interview-
+ 150/\nSources/Placement/Supporting/DSA_Pattern_Index.md\nSources/Placemen
+ t/Supporting/DSA_Mistake_Log.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e010-87cfe4432596@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T180000
+DTEND;TZID=Asia/Kolkata:20260910T183000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e011-ae6c7fcfaa1b@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T183000
+DTEND;TZID=Asia/Kolkata:20260910T193000
+SUMMARY:🧠 RecSys — Unit 1 (Part 1)
+DESCRIPTION:Work `Sources/Midsem/RecSys/unit1_chatgpt.md` and `unit1_code
+ x.md` side by side as one logical unit. Cover concepts and methods with r
+ ecall built in\; no separate consolidation pass is scheduled.\n\nResource
+ s:\nSources/Midsem/RecSys/unit1_chatgpt.md\nSources/Midsem/RecSys/unit1_c
+ odex.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e012-180b73021e01@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T193000
+DTEND;TZID=Asia/Kolkata:20260910T203000
+SUMMARY:🍛 Dinner
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e013-1944b722272a@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T203000
+DTEND;TZID=Asia/Kolkata:20260910T220000
+SUMMARY:🧠 RecSys — Unit 1 (Part 2)
+DESCRIPTION:Continue the paired Unit 1 sources\, finishing the methods an
+ d worked examples. Explain each method in your own words before checking 
+ it.\n\nResources:\nSources/Midsem/RecSys/unit1_chatgpt.md\nSources/Midsem
+ /RecSys/unit1_codex.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e014-bd184e41fa10@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260910T220000
+DTEND;TZID=Asia/Kolkata:20260910T223000
+SUMMARY:🌙 Wind Down
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e015-a4589fcd4afd@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T090000
+DTEND;TZID=Asia/Kolkata:20260911T101500
+SUMMARY:☕ Java / OOP — Targeted Refresh
+DESCRIPTION:Check OOP and the relevant Collections through explanation an
+ d short implementation using `Sources/Placement/Core/Java_OOP.md` and the
+  Collections reference. Java is the interview language\, so write code ra
+ ther than only reading. Closure is integrated here.\n\nResources:\nSource
+ s/Placement/Core/Java_OOP.md\nSources/Placement/Supporting/Java_Collectio
+ ns.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e016-e00a6d4a3ad8@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T101500
+DTEND;TZID=Asia/Kolkata:20260911T103000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e017-54ee83ac0869@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T103000
+DTEND;TZID=Asia/Kolkata:20260911T123000
+SUMMARY:🟩 Node.js / Backend — Targeted Refresh
+DESCRIPTION:Refresh backend concepts from `Sources/Placement/Core/Node_Ba
+ ckend.md`\, using the JSON and Redis references where they come up. This 
+ precedes tomorrow's MongoDB chain\, whose review block carries the backen
+ d closure check.\n\nResources:\nSources/Placement/Core/Node_Backend.md\nS
+ ources/Placement/Supporting/JSON.md\nSources/Placement/Supporting/Redis.m
+ d
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e018-c272738e7742@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T123000
+DTEND;TZID=Asia/Kolkata:20260911T130000
+SUMMARY:🕌 Namaz
+CATEGORIES:namaz
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e019-0c275a77fe79@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T130000
+DTEND;TZID=Asia/Kolkata:20260911T140000
+SUMMARY:🍽️ Lunch
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e020-e6676cec2837@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T140000
+DTEND;TZID=Asia/Kolkata:20260911T150000
+SUMMARY:🕌 Namaz
+CATEGORIES:namaz
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e021-b32fee3131d3@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T150000
+DTEND;TZID=Asia/Kolkata:20260911T153000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e022-3cc8ccd9a26b@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T153000
+DTEND;TZID=Asia/Kolkata:20260911T164000
+SUMMARY:🗃️ SQL — Refresh & Practice
+DESCRIPTION:Take the short syntax refresh you actually need\, then write 
+ queries from [LeetCode SQL 50](https://leetcode.com/studyplan/top-sql-50/
+ ) — joins\, grouping\, subqueries\, window functions. Use the DBMS note
+ s only to unblock a concept\; this is execution\, not theory.\n\nResource
+ s:\nhttps://leetcode.com/studyplan/top-sql-50/\nSources/Placement/Core/DB
+ MS.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e023-049796ad92db@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T164000
+DTEND;TZID=Asia/Kolkata:20260911T165500
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e024-26f26b687ce4@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T165500
+DTEND;TZID=Asia/Kolkata:20260911T173000
+SUMMARY:🗃️ SQL — Timed Set & Error Review
+DESCRIPTION:Solve a distinct timed set\, then review only the errors. Clo
+ se with a brief DBMS reasoning check — this is the recorded DBMS closur
+ e checkpoint\, so no extra DBMS session follows.\n\nResources:\nhttps://l
+ eetcode.com/studyplan/top-sql-50/\nSources/Placement/Core/DBMS.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e025-e8a845bce900@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T173000
+DTEND;TZID=Asia/Kolkata:20260911T190000
+SUMMARY:🧠 RecSys — Unit 2 (Part 1)
+DESCRIPTION:Work `unit2_chatgpt.md` and `unit2_codex.md` side by side as 
+ one logical unit\, covering concepts and methods with recall built in.\n\
+ nResources:\nSources/Midsem/RecSys/unit2_chatgpt.md\nSources/Midsem/RecSy
+ s/unit2_codex.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e026-51df2a224ca3@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T190000
+DTEND;TZID=Asia/Kolkata:20260911T193000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e027-706e1cfdeb94@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T193000
+DTEND;TZID=Asia/Kolkata:20260911T203000
+SUMMARY:🍛 Dinner
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e028-5eb3efb7b1af@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T203000
+DTEND;TZID=Asia/Kolkata:20260911T213000
+SUMMARY:🧠 RecSys — Unit 2 (Part 2)
+DESCRIPTION:Finish the paired Unit 2 sources\, prioritising the methods a
+ nd numerical steps you cannot yet reproduce unaided.\n\nResources:\nSourc
+ es/Midsem/RecSys/unit2_chatgpt.md\nSources/Midsem/RecSys/unit2_codex.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e029-c9b8e3d38a34@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260911T213000
+DTEND;TZID=Asia/Kolkata:20260911T223000
+SUMMARY:🌙 Wind Down
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e030-d4c259893208@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T090000
+DTEND;TZID=Asia/Kolkata:20260912T103000
+SUMMARY:🏗️ System Design — Targeted Refresh
+DESCRIPTION:Walk one focused design discussion using `Sources/Placement/C
+ ore/System_Design.md`\, retrieving concepts and exposing weak trade-offs.
+  Explanation and verification happen inside this walkthrough.\n\nResource
+ s:\nSources/Placement/Core/System_Design.md\nSources/Placement/Supporting
+ /Redis.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e031-847879c69369@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T103000
+DTEND;TZID=Asia/Kolkata:20260912T104500
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e032-5126d888e741@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T104500
+DTEND;TZID=Asia/Kolkata:20260912T120000
+SUMMARY:🍃 MongoDB — Refresh & Practice
+DESCRIPTION:Take a short query-syntax refresh\, then reconstruct pipeline
+ s from the [MongoDB aggregation tutorials](https://www.mongodb.com/docs/m
+ anual/tutorial/aggregation-complete-examples/) — filtering\, grouping\,
+  arrays\, joins. Attempt each before reading the worked solution\, then r
+ un and compare. A working environment is a prerequisite.\n\nResources:\nh
+ ttps://www.mongodb.com/docs/manual/tutorial/aggregation-complete-examples
+ /\nSources/Placement/Core/Node_Backend.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e033-1601a04e6c68@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T120000
+DTEND;TZID=Asia/Kolkata:20260912T121500
+SUMMARY:🍃 MongoDB — Review & Backend Closure
+DESCRIPTION:Review only the pipelines you got wrong\, then close with a b
+ rief backend reasoning check. This is the recorded Node/backend closure c
+ heckpoint.\n\nResources:\nhttps://www.mongodb.com/docs/manual/tutorial/ag
+ gregation-complete-examples/\nSources/Placement/Core/Node_Backend.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e034-23caf7249890@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T121500
+DTEND;TZID=Asia/Kolkata:20260912T130000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e035-0d464c777df2@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T130000
+DTEND;TZID=Asia/Kolkata:20260912T140000
+SUMMARY:🍽️ Lunch
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e036-c341ea8edf8d@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T140000
+DTEND;TZID=Asia/Kolkata:20260912T152000
+SUMMARY:⚡ JavaScript — Refresh & Practice
+DESCRIPTION:Refresh only the syntax you need\, then solve selected exerci
+ ses from [30 Days of JavaScript](https://leetcode.com/studyplan/30-days-o
+ f-javascript/). `Sources/Placement/Tech/JavaScript.md` is reference mater
+ ial — do not turn this into a reading block.\n\nResources:\nhttps://lee
+ tcode.com/studyplan/30-days-of-javascript/\nSources/Placement/Tech/JavaSc
+ ript.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e037-1b898583bba4@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T152000
+DTEND;TZID=Asia/Kolkata:20260912T153500
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e038-64ed76566cc1@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T153500
+DTEND;TZID=Asia/Kolkata:20260912T161500
+SUMMARY:⚡ JavaScript — Timed Set & Review
+DESCRIPTION:Solve a distinct set under a timer\, then review errors and f
+ lag anything worth re-exposure. Do not repeat the whole practice pass.\n\
+ nResources:\nhttps://leetcode.com/studyplan/30-days-of-javascript/\nSourc
+ es/Placement/Tech/JavaScript.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e039-bfded94aef64@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T161500
+DTEND;TZID=Asia/Kolkata:20260912T164500
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e040-63f3862d7b47@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T164500
+DTEND;TZID=Asia/Kolkata:20260912T181500
+SUMMARY:🧩 DSA — Practice (Part 2)
+DESCRIPTION:Continue representative problems from Top Interview 150 in Ja
+ va\, deliberately covering patterns you have not touched yet this week. E
+ xplain the approach and complexity as you solve.\n\nResources:\nhttps://l
+ eetcode.com/studyplan/top-interview-150/\nSources/Placement/Supporting/DS
+ A_Pattern_Index.md\nSources/Placement/Supporting/DSA_Mistake_Log.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e041-11847570e949@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T181500
+DTEND;TZID=Asia/Kolkata:20260912T183000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e042-325678b3061d@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T183000
+DTEND;TZID=Asia/Kolkata:20260912T193000
+SUMMARY:🧠 RecSys — Unit 3 (Part 1)
+DESCRIPTION:Work `unit3_chatgpt.md` and `unit3_codex.md` side by side as 
+ one logical unit\, covering concepts and methods with recall built in.\n\
+ nResources:\nSources/Midsem/RecSys/unit3_chatgpt.md\nSources/Midsem/RecSy
+ s/unit3_codex.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e043-9e996400824f@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T193000
+DTEND;TZID=Asia/Kolkata:20260912T203000
+SUMMARY:🍛 Dinner
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e044-21a0a68b1b76@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T203000
+DTEND;TZID=Asia/Kolkata:20260912T220000
+SUMMARY:🧠 RecSys — Unit 3 (Part 2)
+DESCRIPTION:Finish the paired Unit 3 sources. This completes all three un
+ its\, which the Wednesday final revision depends on.\n\nResources:\nSourc
+ es/Midsem/RecSys/unit3_chatgpt.md\nSources/Midsem/RecSys/unit3_codex.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e045-0e2f7c395cec@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260912T220000
+DTEND;TZID=Asia/Kolkata:20260912T223000
+SUMMARY:🌙 Wind Down
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e046-cc6ed29594ed@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T090000
+DTEND;TZID=Asia/Kolkata:20260913T094500
+SUMMARY:🧩 DSA — Practice (Part 3)
+DESCRIPTION:Close out the representative-problem pass with the patterns s
+ till uncovered. This is the last practice block — timed solving depends
+  on it.\n\nResources:\nhttps://leetcode.com/studyplan/top-interview-150/\
+ nSources/Placement/Supporting/DSA_Pattern_Index.md\nSources/Placement/Sup
+ porting/DSA_Mistake_Log.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e047-436cfd8f89e5@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T094500
+DTEND;TZID=Asia/Kolkata:20260913T100000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e048-dc4b0d14f8cc@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T100000
+DTEND;TZID=Asia/Kolkata:20260913T113000
+SUMMARY:🧩 DSA — Timed Solving
+DESCRIPTION:Solve distinct\, previously unattempted problems under interv
+ iew time pressure in Java. Commit to an approach quickly\, state complexi
+ ty\, and log what went wrong for Tuesday's review. General DSA stays sepa
+ rate from the OA track.\n\nResources:\nhttps://leetcode.com/studyplan/top
+ -interview-150/\nSources/Placement/Supporting/DSA_Pattern_Index.md\nSourc
+ es/Placement/Supporting/DSA_Mistake_Log.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e049-5d183168304e@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T113000
+DTEND;TZID=Asia/Kolkata:20260913T120000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e050-69fae12baa74@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T120000
+DTEND;TZID=Asia/Kolkata:20260913T125000
+SUMMARY:💹 LSEG OA — Task 1: Market Data Integrity
+DESCRIPTION:Re-read `Sources/LSEG/OA/Major/Task_1_Market_Data_Integrity.m
+ d`\, refresh the map/set processing rules\, then implement once in Java w
+ ith tests and complexity discussed inside the attempt. Note the recorded 
+ source-fidelity caveat on this task.\n\nResources:\nSources/LSEG/OA/Major
+ /Task_1_Market_Data_Integrity.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e051-76d1585e7054@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T125000
+DTEND;TZID=Asia/Kolkata:20260913T130000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e052-953ca715c9a4@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T130000
+DTEND;TZID=Asia/Kolkata:20260913T140000
+SUMMARY:🍽️ Lunch
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e053-f7f6cad9d6ed@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T140000
+DTEND;TZID=Asia/Kolkata:20260913T151000
+SUMMARY:💹 LSEG OA — Task 2: Hierarchical Risk Limits
+DESCRIPTION:Work `Task_2_Hierarchical_Risk_Limits.md`: refresh hierarchy\
+ , inherited limits and violation rules\, then write a substantive Java im
+ plementation and test the edge cases. Be able to talk through the design\
+ , not just reproduce it.\n\nResources:\nSources/LSEG/OA/Major/Task_2_Hier
+ archical_Risk_Limits.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e054-9e1f5c1295bf@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T151000
+DTEND;TZID=Asia/Kolkata:20260913T153000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e055-2d4c6f45d805@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T153000
+DTEND;TZID=Asia/Kolkata:20260913T164000
+SUMMARY:💹 LSEG OA — Task 5: SLA Window Breaches
+DESCRIPTION:Work `Task_5_Monitoring_SLA_Window_Breaches.md`. Re-establish
+  the sliding-window/deque invariants\, implement once in Java\, and combi
+ ne edge-case and complexity checking into the same attempt.\n\nResources:
+ \nSources/LSEG/OA/Major/Task_5_Monitoring_SLA_Window_Breaches.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e056-208f4504ebc1@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T164000
+DTEND;TZID=Asia/Kolkata:20260913T171000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e057-9aca6cbb5c24@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T171000
+DTEND;TZID=Asia/Kolkata:20260913T174500
+SUMMARY:📄 Velvet — Revision
+DESCRIPTION:Refresh Velvet's architecture\, decisions and implementation 
+ details from `Sources/Projects/Velvet.md` and note cues for likely follow
+ -ups. Tomorrow's questionnaire depends on this session.\n\nResources:\nSo
+ urces/Projects/Velvet.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e058-3bd1e4603301@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T174500
+DTEND;TZID=Asia/Kolkata:20260913T181500
+SUMMARY:📄 Relay — Revision
+DESCRIPTION:Refresh Relay's architecture\, decisions and implementation d
+ etails from `Sources/Projects/Relay.md`. Its questionnaire is on Tuesday.
+ \n\nResources:\nSources/Projects/Relay.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e059-a93bdf34a89c@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T181500
+DTEND;TZID=Asia/Kolkata:20260913T183000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e060-0c61e389ae64@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T183000
+DTEND;TZID=Asia/Kolkata:20260913T193000
+SUMMARY:⚡ EPQ — Theory Refresh
+DESCRIPTION:Refresh EPQ theory by retrieval\, using `Sources/Midsem/EPQ/n
+ otes.md` for targeted lookup rather than a linear pass. Numerical executi
+ on is handled in Tuesday's revision-notes block.\n\nResources:\nSources/M
+ idsem/EPQ/notes.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e061-4dc2d240e3de@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T193000
+DTEND;TZID=Asia/Kolkata:20260913T203000
+SUMMARY:🍛 Dinner
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e062-66c6eee67642@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T203000
+DTEND;TZID=Asia/Kolkata:20260913T220000
+SUMMARY:🎨 IWT — Web Fundamentals + HTML/CSS
+DESCRIPTION:Use MDN's [How the web works](https://developer.mozilla.org/e
+ n-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web
+ _works) for clients/servers\, DNS\, TCP/IP\, HTTP and URLs\, then do the 
+ [HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Cor
+ e/Structuring_content/Test_your_skills) and [CSS](https://developer.mozil
+ la.org/en-US/docs/Learn_web_development/Core/Styling_basics/Test_your_ski
+ lls) skills exercises. `Sources/Midsem/IWT/README.md` fixes the scope —
+  stop at CSS.\n\nResources:\nhttps://developer.mozilla.org/en-US/docs/Lea
+ rn_web_development/Getting_started/Web_standards/How_the_web_works\nhttps
+ ://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structurin
+ g_content/Test_your_skills\nhttps://developer.mozilla.org/en-US/docs/Lear
+ n_web_development/Core/Styling_basics/Test_your_skills\nSources/Midsem/IW
+ T/README.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e063-64588d1fe153@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260913T220000
+DTEND;TZID=Asia/Kolkata:20260913T223000
+SUMMARY:🌙 Wind Down
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e064-1a3676ff46a2@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T090000
+DTEND;TZID=Asia/Kolkata:20260914T093000
+SUMMARY:🔧 Git / GitHub — Workflow Refresh
+DESCRIPTION:Short rehearsal of the everyday workflow from `Sources/Placem
+ ent/Tech/Git_GitHub.md` — branching\, merge vs rebase\, conflict resolu
+ tion\, undoing mistakes. Explain each aloud\; this is a tool you already 
+ use.\n\nResources:\nSources/Placement/Tech/Git_GitHub.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e065-f668478d0608@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T093000
+DTEND;TZID=Asia/Kolkata:20260914T100000
+SUMMARY:🚶 Transition / Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e066-f93fd6a11f1b@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T100000
+DTEND;TZID=Asia/Kolkata:20260914T120000
+SUMMARY:🏫 IWT — Lab (Mandatory)
+DESCRIPTION:Mandatory IWT lab attendance. This is not study time and does
+  not replace today's midsem self-study block.
+CATEGORIES:class_attendance
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e067-b7fc000b4a92@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T120000
+DTEND;TZID=Asia/Kolkata:20260914T121500
+SUMMARY:🚶 Transition / Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e068-d10e32d77e87@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T121500
+DTEND;TZID=Asia/Kolkata:20260914T130000
+SUMMARY:🤖 AI Fundamentals — Concept Refresh
+DESCRIPTION:Refresh the key concepts in `Sources/Placement/Tech/AI_Fundam
+ entals.md` through interview-style explanations. The OA evaluation-metric
+  reasoning has its own short slot on Tuesday.\n\nResources:\nSources/Plac
+ ement/Tech/AI_Fundamentals.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e069-5bf2ad19fb6e@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T130000
+DTEND;TZID=Asia/Kolkata:20260914T140000
+SUMMARY:🍽️ Lunch
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e070-12da3490614c@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T140000
+DTEND;TZID=Asia/Kolkata:20260914T153000
+SUMMARY:⚛️ React — Targeted Refresh
+DESCRIPTION:Targeted behavioural and code checks against `Sources/Placeme
+ nt/Tech/React.md` — rendering\, state\, effects\, keys\, performance. R
+ eason about small snippets rather than rereading the note\; React closure
+  is integrated here.\n\nResources:\nSources/Placement/Tech/React.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e071-b03a1b9da554@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T153000
+DTEND;TZID=Asia/Kolkata:20260914T155000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e072-998e68668955@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T155000
+DTEND;TZID=Asia/Kolkata:20260914T163500
+SUMMARY:▲ Next.js — Targeted Refresh
+DESCRIPTION:Refresh routing\, rendering strategies and the decisions you 
+ actually made in your projects\, using `Sources/Placement/Tech/NextJS.md`
+ . Check by applying\, not by rereading.\n\nResources:\nSources/Placement/
+ Tech/NextJS.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e073-9b2310f0fb5b@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T163500
+DTEND;TZID=Asia/Kolkata:20260914T165000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e074-c3ee8c8de973@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T165000
+DTEND;TZID=Asia/Kolkata:20260914T173500
+SUMMARY:🔷 TypeScript — Targeted Refresh
+DESCRIPTION:Refresh the type system from `Sources/Placement/Tech/TypeScri
+ pt.md` with short typed snippets — generics\, narrowing\, utility types
+ . Familiar material\, so keep it applied.\n\nResources:\nSources/Placemen
+ t/Tech/TypeScript.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e075-40e852c1b190@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T173500
+DTEND;TZID=Asia/Kolkata:20260914T181500
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e076-bc4fbeb6026f@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T181500
+DTEND;TZID=Asia/Kolkata:20260914T190000
+SUMMARY:🎤 Velvet — Questionnaire
+DESCRIPTION:Use ChatGPT for a full Velvet questionnaire. Answer aloud wit
+ hout notes unless stuck\, and let it probe architecture\, implementation\
+ , trade-offs\, security\, scalability and your own contribution. Brief fe
+ edback is included in this slot.\n\nResources:\nSources/Projects/Velvet.m
+ d
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e077-acbee1819da1@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T190000
+DTEND;TZID=Asia/Kolkata:20260914T193000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e078-9bed208c0dc9@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T193000
+DTEND;TZID=Asia/Kolkata:20260914T203000
+SUMMARY:🍛 Dinner
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e079-7b2a906f4949@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260914T203000
+DTEND;TZID=Asia/Kolkata:20260914T223000
+SUMMARY:👁️ CV — Active Coverage (Part 1)
+DESCRIPTION:Mandatory active CV preparation\, reserved pending reliable l
+ ecturer material. Work whatever confirmed scope exists when the block sta
+ rts\; do not invent topics from unrelated old papers. Today's IWT lab doe
+ s not substitute for this block.\n\nResources:\nSources/Midsem/CV/README.
+ md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e080-1400efe2e8b3@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T090000
+DTEND;TZID=Asia/Kolkata:20260915T100000
+SUMMARY:💹 LSEG OA — Task 6: Portfolio Risk Metrics
+DESCRIPTION:Work `Task_6_Portfolio_Risk_Metrics.md`: refresh the preserve
+ d probability and boundary rules\, implement once in Java\, and test and 
+ explain in the same attempt.\n\nResources:\nSources/LSEG/OA/Major/Task_6_
+ Portfolio_Risk_Metrics.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e081-f5efc44b37b8@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T100000
+DTEND;TZID=Asia/Kolkata:20260915T101500
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e082-f45d5abf2595@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T101500
+DTEND;TZID=Asia/Kolkata:20260915T104000
+SUMMARY:💹 LSEG OA — Task 3: DFS Cycle Detection Bugfix
+DESCRIPTION:Trace the state-tracking bug in `Task_3_DFS_Cycle_Detection_B
+ ugfix.md` and produce a counterexample plus the fix. Focused debugging\, 
+ not full algorithm reconstruction\; note the recorded source-fidelity cav
+ eat.\n\nResources:\nSources/LSEG/OA/Minor/Task_3_DFS_Cycle_Detection_Bugf
+ ix.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e083-15375d981fb3@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T104000
+DTEND;TZID=Asia/Kolkata:20260915T105500
+SUMMARY:💹 LSEG OA — Task 4: Order Book Zero-Quantity Bugfix
+DESCRIPTION:Short trace of the zero-quantity deletion fix in `Task_4_Orde
+ r_Book_Zero_Quantity_Bugfix.md`\, covering edge cases and the explanation
+  you would give an interviewer.\n\nResources:\nSources/LSEG/OA/Minor/Task
+ _4_Order_Book_Zero_Quantity_Bugfix.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e084-3e64abba1d85@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T105500
+DTEND;TZID=Asia/Kolkata:20260915T111000
+SUMMARY:💹 LSEG OA — Task 7: Classification Evaluation Recap
+DESCRIPTION:Check the preserved evaluation reasoning in `Task_7_Classific
+ ation_Evaluation_Multiple_Select.md` with ChatGPT. The original options a
+ re missing — discuss only what is preserved and do not invent them or r
+ edo AI fundamentals.\n\nResources:\nSources/LSEG/OA/Minor/Task_7_Classifi
+ cation_Evaluation_Multiple_Select.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e085-f9c755fff97c@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T111000
+DTEND;TZID=Asia/Kolkata:20260915T114000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e086-e5ba68781095@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T114000
+DTEND;TZID=Asia/Kolkata:20260915T124000
+SUMMARY:🐍 Python — Language Refresh
+DESCRIPTION:Recall and hands-on checks from `Sources/Placement/Tech/Pytho
+ n.md`. Java stays the interview language\, so keep this to the idioms and
+  standard-library work you would actually be asked about.\n\nResources:\n
+ Sources/Placement/Tech/Python.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e087-75e368166cc6@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T124000
+DTEND;TZID=Asia/Kolkata:20260915T130000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e088-f95acaac154c@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T130000
+DTEND;TZID=Asia/Kolkata:20260915T140000
+SUMMARY:🍽️ Lunch
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e089-62fbf29dbb0a@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T140000
+DTEND;TZID=Asia/Kolkata:20260915T150000
+SUMMARY:🧩 DSA — Error Review & Re-exposure
+DESCRIPTION:Review only the errors and weak attempts from this week's pra
+ ctice and timed sets\, with ChatGPT where an explanation helps. Re-attemp
+ t a small number of selected problems\; do not repeat the whole pass.\n\n
+ Resources:\nhttps://leetcode.com/studyplan/top-interview-150/\nSources/Pl
+ acement/Supporting/DSA_Pattern_Index.md\nSources/Placement/Supporting/DSA
+ _Mistake_Log.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e090-cd3ccb331419@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T150000
+DTEND;TZID=Asia/Kolkata:20260915T152000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e091-10eb8401b5a5@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T152000
+DTEND;TZID=Asia/Kolkata:20260915T160000
+SUMMARY:🎤 Relay — Questionnaire
+DESCRIPTION:Use ChatGPT for the Relay questionnaire\, answering aloud and
+  allowing follow-ups on design decisions\, trade-offs\, failures and your
+  contribution. Brief feedback is included here.\n\nResources:\nSources/Pr
+ ojects/Relay.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e092-0a64156d7dd6@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T160000
+DTEND;TZID=Asia/Kolkata:20260915T163500
+SUMMARY:📄 Eventually — Revision
+DESCRIPTION:Refresh Eventually's architecture\, decisions and implementat
+ ion details from `Sources/Projects/Eventually.md`. Tomorrow's questionnai
+ re depends on this session.\n\nResources:\nSources/Projects/Eventually.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e093-bde32f949093@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T163500
+DTEND;TZID=Asia/Kolkata:20260915T170500
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e094-dd71ca253fa1@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T170500
+DTEND;TZID=Asia/Kolkata:20260915T182000
+SUMMARY:⛓️ Blockchain — Expected Question Set
+DESCRIPTION:Work the lecturer's exact expected questions in `Sources/Mids
+ em/Blockchain/questions.pdf`\, including both gas/ether numericals. Stay 
+ inside this question set rather than expanding into broad syllabus study.
+ \n\nResources:\nSources/Midsem/Blockchain/questions.pdf
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e095-fe8f50d16804@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T182000
+DTEND;TZID=Asia/Kolkata:20260915T192000
+SUMMARY:👁️ CV — Active Coverage (Part 2)
+DESCRIPTION:Second reserved CV block\, continuing from Monday against wha
+ tever confirmed material is available. Scope is still provisional — fla
+ g it if three hours is clearly not enough.\n\nResources:\nSources/Midsem/
+ CV/README.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e096-c4133795eccc@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T192000
+DTEND;TZID=Asia/Kolkata:20260915T193000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e097-0431cd4a1ae2@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T193000
+DTEND;TZID=Asia/Kolkata:20260915T203000
+SUMMARY:🍛 Dinner
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e098-1792452389bd@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T203000
+DTEND;TZID=Asia/Kolkata:20260915T220000
+SUMMARY:⚡ EPQ — Numericals & Cross-topic Revision
+DESCRIPTION:Use `Sources/Midsem/EPQ/revision.md` mainly for numerical exe
+ cution and cross-topic exam retrieval. Do not reread the theory already r
+ efreshed on Sunday or redo numericals you can already do.\n\nResources:\n
+ Sources/Midsem/EPQ/revision.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e099-dfb91fadac8b@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T220000
+DTEND;TZID=Asia/Kolkata:20260915T222500
+SUMMARY:🌙 Wind Down
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e100-9e0a812a44c1@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260915T222500
+DTEND;TZID=Asia/Kolkata:20260915T223000
+SUMMARY:🕓 Unused Slack
+CATEGORIES:unused_slack
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e101-c05988be6590@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T090000
+DTEND;TZID=Asia/Kolkata:20260916T094500
+SUMMARY:📑 Resume — Review & Questioning
+DESCRIPTION:Refresh every meaningful claim in `Sources/Resume/submitted_r
+ esume.pdf`\, then use ChatGPT for focused follow-ups with immediate feedb
+ ack. The submitted version is the source of truth\; do not re-run full pr
+ oject preparation here.\n\nResources:\nSources/Resume/submitted_resume.pd
+ f
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e102-b0dbeb609612@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T094500
+DTEND;TZID=Asia/Kolkata:20260916T100000
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e103-d636412b8e32@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T100000
+DTEND;TZID=Asia/Kolkata:20260916T111500
+SUMMARY:🏢 LSEG — Role & Company
+DESCRIPTION:Read `Sources/LSEG/job_description.pdf` selectively alongside
+  [LSEG About us](https://www.lseg.com/en/about-us)\, connect it to your a
+ ctual resume experience\, then close with one ChatGPT rehearsal of why LS
+ EG\, why this role and how you fit. Keep this distinct from HR practice.\
+ n\nResources:\nhttps://www.lseg.com/en/about-us\nSources/LSEG/job_descrip
+ tion.pdf\nSources/Resume/submitted_resume.pdf
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e104-ee699ac2fbae@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T111500
+DTEND;TZID=Asia/Kolkata:20260916T114500
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e105-000926e7b8bb@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T114500
+DTEND;TZID=Asia/Kolkata:20260916T123000
+SUMMARY:🎤 Eventually — Questionnaire
+DESCRIPTION:Use ChatGPT for the Eventually questionnaire\, answering alou
+ d and allowing follow-ups on architecture\, trade-offs\, data flow\, secu
+ rity and improvements. Brief feedback is included here.\n\nResources:\nSo
+ urces/Projects/Eventually.md
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e106-b626444e1a83@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T123000
+DTEND;TZID=Asia/Kolkata:20260916T130000
+SUMMARY:🛑 Rest / Buffer
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e107-ae68625ec4a4@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T130000
+DTEND;TZID=Asia/Kolkata:20260916T140000
+SUMMARY:🍽️ Lunch
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e108-1dbcae9e611c@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T140000
+DTEND;TZID=Asia/Kolkata:20260916T151500
+SUMMARY:🗣️ HR — Behavioural Prep & Practice
+DESCRIPTION:Outline your own examples against the [MIT STAR method](https
+ ://capd.mit.edu/resources/the-star-method-for-behavioral-interviews/)\, t
+ hen run one ChatGPT rehearsal cycle across teamwork\, conflict\, failure\
+ , strengths and motivation. Keep answers grounded in real experience\; no
+  memorised scripts.\n\nResources:\nhttps://capd.mit.edu/resources/the-sta
+ r-method-for-behavioral-interviews/\nSources/Resume/submitted_resume.pdf
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e109-81e6361789cf@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T151500
+DTEND;TZID=Asia/Kolkata:20260916T154500
+SUMMARY:☕ Break
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e110-60a74e267ee6@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T154500
+DTEND;TZID=Asia/Kolkata:20260916T163000
+SUMMARY:🧮 Aptitude — Timed Test & Review
+DESCRIPTION:Take one [IndiaBIX timed aptitude test](https://www.indiabix.
+ com/online-test/aptitude-test/) under its own timer\, then review the err
+ ors in the same session. LSEG's exact assessment scope is unconfirmed\, s
+ o this is a general baseline.\n\nResources:\nhttps://www.indiabix.com/onl
+ ine-test/aptitude-test/
+CATEGORIES:lseg_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e111-0a4f51f88d74@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T163000
+DTEND;TZID=Asia/Kolkata:20260916T171500
+SUMMARY:🛑 Pre-Mock Reset
+CATEGORIES:rest_buffer
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e112-73429ce865dd@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T171500
+DTEND;TZID=Asia/Kolkata:20260916T191500
+SUMMARY:🎯 LSEG — Full Mixed Mock
+DESCRIPTION:Use ChatGPT for the full two-hour mixed LSEG mock: core CS\, 
+ DSA and problem solving\, OA follow-ups\, projects\, resume\, HR and role
+ /company. Treat it as a real interview\, not a short verification. All LS
+ EG preparation is complete before this block begins.
+CATEGORIES:mock_interview
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e113-a416278c5abb@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T191500
+DTEND;TZID=Asia/Kolkata:20260916T193000
+SUMMARY:🎯 Mock — Debrief
+DESCRIPTION:Capture the mock's key feedback once — the two or three thi
+ ngs to tighten before tomorrow. Do not restart preparation or re-run the 
+ interview.
+CATEGORIES:mock_interview
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e114-3f73a289d1a1@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T193000
+DTEND;TZID=Asia/Kolkata:20260916T203000
+SUMMARY:🍛 Dinner
+CATEGORIES:meal
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e115-08c12cb96743@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T203000
+DTEND;TZID=Asia/Kolkata:20260916T214500
+SUMMARY:🧠 RecSys — Final Revision
+DESCRIPTION:Use `Sources/Midsem/RecSys/final_revision.md` to check cross-
+ unit connections and unresolved numerical errors after Units 1–3. Do no
+ t redo every unit exercise.\n\nResources:\nSources/Midsem/RecSys/final_re
+ vision.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+UID:e116-419e7c07c450@lseg-midsem-planner
+DTSTAMP:20260909T000000Z
+DTSTART;TZID=Asia/Kolkata:20260916T214500
+DTEND;TZID=Asia/Kolkata:20260916T223000
+SUMMARY:🧠 RecSys — Numericals (Conditional)
+DESCRIPTION:**Conditional block — retained\, not approved as a cut.** P
+ ractise only numerical methods or gaps that the units and final revision 
+ did not already cover\, using `Sources/Midsem/RecSys/numericals.md`. If t
+ he final revision has just covered everything\, this block can be dropped
+ \; redundancy is still unverified.\n\nRetained\, not approved as a cut. I
+ f the final revision has already closed the numerical gaps\, drop this bl
+ ock and finish early — do not replace it with other study.\n\nResources
+ :\nSources/Midsem/RecSys/numericals.md
+CATEGORIES:midsem_preparation
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
