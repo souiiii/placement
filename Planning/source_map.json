@@ -1,0 +1,858 @@
+{
+  "schema_version": 1,
+  "phase": "phase_1_source_mapping",
+  "basis": [
+    "Current user Phase 1 instructions",
+    "AGENTS.md",
+    "Requirements/master_requirements.md",
+    "Targeted source-related lines in Requirements/planner_description.md and Requirements/calendar_rules.md",
+    "Sources/Midsem/IWT/README.md",
+    "Sources/LSEG/OA/README.md"
+  ],
+  "state_note": "All three State JSON files and the pre-existing source_map.json were empty; no saved approvals or mapping were available.",
+  "inspection_policy": "Inventory paths and byte sizes; reuse established mappings. Read only IWT and OA scope READMEs. No note analysis, PDF/image inspection, duration estimates, research, tasks or scheduling.",
+  "mapping_policy": "Logical units are not calendar blocks. Supporting files and images are integrated references. Multiple unit links indicate reuse, not duplicated workload.",
+  "inventory_counts": {
+    "physical_files": 50,
+    "empty_files": 3,
+    "logical_units": 38
+  },
+  "logical_units": [
+    {
+      "id": "os",
+      "track": "placement",
+      "label": "Operating Systems",
+      "status": "present"
+    },
+    {
+      "id": "cn",
+      "track": "placement",
+      "label": "Computer Networks",
+      "status": "present"
+    },
+    {
+      "id": "dbms",
+      "track": "placement",
+      "label": "DBMS",
+      "status": "present"
+    },
+    {
+      "id": "java_oop",
+      "track": "placement",
+      "label": "Java / OOP",
+      "status": "present"
+    },
+    {
+      "id": "node_backend",
+      "track": "placement",
+      "label": "Node.js / Backend",
+      "status": "present"
+    },
+    {
+      "id": "system_design",
+      "track": "placement",
+      "label": "System Design",
+      "status": "present"
+    },
+    {
+      "id": "react",
+      "track": "placement",
+      "label": "React",
+      "status": "present"
+    },
+    {
+      "id": "nextjs",
+      "track": "placement",
+      "label": "Next.js",
+      "status": "present"
+    },
+    {
+      "id": "typescript",
+      "track": "placement",
+      "label": "TypeScript",
+      "status": "present"
+    },
+    {
+      "id": "git_github",
+      "track": "placement",
+      "label": "Git / GitHub",
+      "status": "present"
+    },
+    {
+      "id": "python",
+      "track": "placement",
+      "label": "Python",
+      "status": "present"
+    },
+    {
+      "id": "ai_fundamentals",
+      "track": "placement",
+      "label": "AI fundamentals",
+      "status": "present"
+    },
+    {
+      "id": "javascript_practice",
+      "track": "placement",
+      "label": "JavaScript practice",
+      "status": "practice_resource_pending",
+      "mapping_note": "Existing notes are reference material; an active preparation resource is to be selected in a later phase."
+    },
+    {
+      "id": "sql_practice",
+      "track": "placement",
+      "label": "SQL practice",
+      "status": "practice_resource_pending",
+      "mapping_note": "Separate practice area; DBMS is an associated reference, not an inspected or confirmed SQL exercise set."
+    },
+    {
+      "id": "mongodb_practice",
+      "track": "placement",
+      "label": "MongoDB practice",
+      "status": "practice_resource_pending",
+      "mapping_note": "MongoDB reference material is inside Node_Backend.md, per AGENTS.md; no separate MongoDB file is required."
+    },
+    {
+      "id": "dsa",
+      "track": "placement",
+      "label": "General DSA",
+      "status": "practice_resource_pending",
+      "mapping_note": "Independent of LSEG OA. Pattern index and mistake log support coverage and review; neither is a standalone study unit."
+    },
+    {
+      "id": "project_velvet",
+      "track": "projects",
+      "label": "Velvet",
+      "status": "present",
+      "mapping_note": "One logical project source supports revision followed by a separate ChatGPT questionnaire; these are not separate physical sources."
+    },
+    {
+      "id": "project_eventually",
+      "track": "projects",
+      "label": "Eventually",
+      "status": "present",
+      "mapping_note": "One logical project source supports revision followed by a separate ChatGPT questionnaire; these are not separate physical sources."
+    },
+    {
+      "id": "project_relay",
+      "track": "projects",
+      "label": "Relay",
+      "status": "present",
+      "mapping_note": "One logical project source supports revision followed by a separate ChatGPT questionnaire; these are not separate physical sources."
+    },
+    {
+      "id": "resume",
+      "track": "resume",
+      "label": "Submitted LSEG resume",
+      "status": "present",
+      "mapping_note": "Submitted PDF is the source of truth per filename and requirements; content/version not independently verified."
+    },
+    {
+      "id": "lseg_role_company",
+      "track": "lseg_role_company",
+      "label": "LSEG role and company",
+      "status": "present",
+      "mapping_note": "JD is the primary role-specific source. Company research placeholder is empty; keep this track separate from generic HR."
+    },
+    {
+      "id": "epq_full_notes",
+      "track": "midsem_epq",
+      "label": "EPQ full notes",
+      "status": "present",
+      "mapping_note": "Separate logical source group per requirements; overlap not investigated. First-pass core preparation was already substantially completed before this planner; later workload estimation should treat EPQ primarily as revision, recall and numerical consolidation rather than completely new learning."
+    },
+    {
+      "id": "epq_revision",
+      "track": "midsem_epq",
+      "label": "EPQ revision notes",
+      "status": "present",
+      "mapping_note": "Separate logical source group per requirements; overlap not investigated. First-pass core preparation was already substantially completed before this planner; later workload estimation should treat EPQ primarily as revision, recall and numerical consolidation rather than completely new learning."
+    },
+    {
+      "id": "recsys_unit_1",
+      "track": "midsem_recsys",
+      "label": "RecSys Unit 1",
+      "status": "present",
+      "mapping_note": "ChatGPT and Codex versions are used side by side as one logical source; not treated as duplicates."
+    },
+    {
+      "id": "recsys_unit_2",
+      "track": "midsem_recsys",
+      "label": "RecSys Unit 2",
+      "status": "present",
+      "mapping_note": "ChatGPT and Codex versions are used side by side as one logical source; not treated as duplicates."
+    },
+    {
+      "id": "recsys_unit_3",
+      "track": "midsem_recsys",
+      "label": "RecSys Unit 3",
+      "status": "present",
+      "mapping_note": "ChatGPT and Codex versions are used side by side as one logical source; not treated as duplicates."
+    },
+    {
+      "id": "recsys_final_revision",
+      "track": "midsem_recsys",
+      "label": "RecSys final revision",
+      "status": "present"
+    },
+    {
+      "id": "recsys_numericals",
+      "track": "midsem_recsys",
+      "label": "RecSys numericals",
+      "status": "redundancy_unresolved",
+      "mapping_note": "Redundancy-sensitive candidate: separate treatment only if justified by coverage outside final revision. No comparison or removal approved."
+    },
+    {
+      "id": "cv",
+      "track": "midsem_cv",
+      "label": "Computer Vision",
+      "status": "pending_or_incomplete",
+      "mapping_note": "Mandatory active preparation retained. Current lecturer PPTs/notes and reliable detailed scope are pending; do not infer a syllabus."
+    },
+    {
+      "id": "blockchain",
+      "track": "midsem_blockchain",
+      "label": "Blockchain expected questions",
+      "status": "present",
+      "mapping_note": "Constrained lecturer question set, including two gas/ether numericals per requirements; PDF not inspected."
+    },
+    {
+      "id": "iwt",
+      "track": "midsem_iwt",
+      "label": "IWT: Web fundamentals, HTML and CSS",
+      "status": "scope_only",
+      "mapping_note": "Scope is Module I through CSS, including Web/HTTP/URL fundamentals. JavaScript and later modules are excluded. README defines scope, not a standalone reading unit."
+    },
+    {
+      "id": "lseg_oa_task_1",
+      "track": "lseg_oa",
+      "label": "Task 1: Market Data Integrity",
+      "status": "present",
+      "mapping_note": "Preserve supplied OA category; Java is the preparation language. This does not substitute for general DSA.",
+      "oa_category": "Major"
+    },
+    {
+      "id": "lseg_oa_task_2",
+      "track": "lseg_oa",
+      "label": "Task 2: Hierarchical Risk Limits",
+      "status": "present",
+      "mapping_note": "Preserve supplied OA category; Java is the preparation language. This does not substitute for general DSA.",
+      "oa_category": "Major"
+    },
+    {
+      "id": "lseg_oa_task_5",
+      "track": "lseg_oa",
+      "label": "Task 5: Monitoring SLA Window Breaches",
+      "status": "present",
+      "mapping_note": "Preserve supplied OA category; Java is the preparation language. This does not substitute for general DSA.",
+      "oa_category": "Major"
+    },
+    {
+      "id": "lseg_oa_task_6",
+      "track": "lseg_oa",
+      "label": "Task 6: Portfolio Risk Metrics",
+      "status": "present",
+      "mapping_note": "Preserve supplied OA category; Java is the preparation language. This does not substitute for general DSA.",
+      "oa_category": "Major"
+    },
+    {
+      "id": "lseg_oa_task_3",
+      "track": "lseg_oa",
+      "label": "Task 3: DFS Cycle Detection Bugfix",
+      "status": "present",
+      "mapping_note": "Preserve supplied OA category; Java is the preparation language. This does not substitute for general DSA.",
+      "oa_category": "Minor"
+    },
+    {
+      "id": "lseg_oa_task_4",
+      "track": "lseg_oa",
+      "label": "Task 4: Order Book Zero Quantity Bugfix",
+      "status": "present",
+      "mapping_note": "Preserve supplied OA category; Java is the preparation language. This does not substitute for general DSA.",
+      "oa_category": "Minor"
+    },
+    {
+      "id": "lseg_oa_task_7",
+      "track": "lseg_oa",
+      "label": "Task 7: Classification Evaluation Multiple Select",
+      "status": "present",
+      "mapping_note": "Preserve supplied OA category; Java is the preparation language. This does not substitute for general DSA.",
+      "oa_category": "Minor"
+    }
+  ],
+  "physical_files": [
+    {
+      "path": "Sources/LSEG/OA/Major/Task_1_Market_Data_Integrity.md",
+      "size_bytes": 2443,
+      "role": "practice_reference",
+      "status": "present",
+      "logical_unit_ids": [
+        "lseg_oa_task_1"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/LSEG/OA/Major/Task_2_Hierarchical_Risk_Limits.md",
+      "size_bytes": 2944,
+      "role": "practice_reference",
+      "status": "present",
+      "logical_unit_ids": [
+        "lseg_oa_task_2"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/LSEG/OA/Major/Task_5_Monitoring_SLA_Window_Breaches.md",
+      "size_bytes": 2275,
+      "role": "practice_reference",
+      "status": "present",
+      "logical_unit_ids": [
+        "lseg_oa_task_5"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/LSEG/OA/Major/Task_6_Portfolio_Risk_Metrics.md",
+      "size_bytes": 2634,
+      "role": "practice_reference",
+      "status": "present",
+      "logical_unit_ids": [
+        "lseg_oa_task_6"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/LSEG/OA/Minor/Task_3_DFS_Cycle_Detection_Bugfix.md",
+      "size_bytes": 1384,
+      "role": "practice_reference",
+      "status": "present",
+      "logical_unit_ids": [
+        "lseg_oa_task_3"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/LSEG/OA/Minor/Task_4_Order_Book_Zero_Quantity_Bugfix.md",
+      "size_bytes": 1741,
+      "role": "practice_reference",
+      "status": "present",
+      "logical_unit_ids": [
+        "lseg_oa_task_4"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/LSEG/OA/Minor/Task_7_Classification_Evaluation_Multiple_Select.md",
+      "size_bytes": 632,
+      "role": "practice_reference",
+      "status": "present",
+      "logical_unit_ids": [
+        "lseg_oa_task_7"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/LSEG/OA/README.md",
+      "size_bytes": 1168,
+      "role": "scope_definition",
+      "status": "present",
+      "logical_unit_ids": [
+        "lseg_oa_task_1",
+        "lseg_oa_task_2",
+        "lseg_oa_task_5",
+        "lseg_oa_task_6",
+        "lseg_oa_task_3",
+        "lseg_oa_task_4",
+        "lseg_oa_task_7"
+      ],
+      "inspection": "scope_readme",
+      "mapping_note": "OA category/scope and source-fidelity metadata only; not an eighth study unit."
+    },
+    {
+      "path": "Sources/LSEG/job_description.pdf",
+      "size_bytes": 199275,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "lseg_role_company"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Primary role-specific source; PDF content not inspected."
+    },
+    {
+      "path": "Sources/LSEG/lseg_research.md",
+      "size_bytes": 0,
+      "role": "pending_or_incomplete",
+      "status": "empty_placeholder",
+      "logical_unit_ids": [
+        "lseg_role_company"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Company research placeholder; no research performed in Phase 1."
+    },
+    {
+      "path": "Sources/Midsem/Blockchain/questions.pdf",
+      "size_bytes": 116689,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "blockchain"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Midsem/CV/README.md",
+      "size_bytes": 0,
+      "role": "pending_or_incomplete",
+      "status": "empty_placeholder",
+      "logical_unit_ids": [
+        "cv"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Empty placeholder, not usable study content or a confirmed scope definition."
+    },
+    {
+      "path": "Sources/Midsem/EPQ/notes.md",
+      "size_bytes": 54479,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "epq_full_notes"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Midsem/EPQ/revision.md",
+      "size_bytes": 67938,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "epq_revision"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Midsem/IWT/README.md",
+      "size_bytes": 2425,
+      "role": "scope_definition",
+      "status": "present",
+      "logical_unit_ids": [
+        "iwt"
+      ],
+      "inspection": "scope_readme"
+    },
+    {
+      "path": "Sources/Midsem/RecSys/final_revision.md",
+      "size_bytes": 49270,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "recsys_final_revision"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Midsem/RecSys/numericals.md",
+      "size_bytes": 26107,
+      "role": "optional_or_redundant",
+      "status": "present",
+      "logical_unit_ids": [
+        "recsys_numericals"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Candidate for integration/omission of a separate block, not an approved cut; redundancy unverified."
+    },
+    {
+      "path": "Sources/Midsem/RecSys/unit1_chatgpt.md",
+      "size_bytes": 24095,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "recsys_unit_1"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Midsem/RecSys/unit1_codex.md",
+      "size_bytes": 24602,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "recsys_unit_1"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Midsem/RecSys/unit2_chatgpt.md",
+      "size_bytes": 20804,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "recsys_unit_2"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Midsem/RecSys/unit2_codex.md",
+      "size_bytes": 19982,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "recsys_unit_2"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Midsem/RecSys/unit3_chatgpt.md",
+      "size_bytes": 17248,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "recsys_unit_3"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Midsem/RecSys/unit3_codex.md",
+      "size_bytes": 22266,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "recsys_unit_3"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Core/CN.md",
+      "size_bytes": 74747,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "cn"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Core/DBMS.md",
+      "size_bytes": 28797,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "dbms",
+        "sql_practice"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Primary DBMS revision source; associated reference for SQL practice. SQL exercises were not inspected."
+    },
+    {
+      "path": "Sources/Placement/Core/Java_OOP.md",
+      "size_bytes": 21980,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "java_oop"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Core/Node_Backend.md",
+      "size_bytes": 129695,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "node_backend",
+        "mongodb_practice"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Primary backend revision source, with integrated MongoDB reference material per AGENTS.md."
+    },
+    {
+      "path": "Sources/Placement/Core/OS.md",
+      "size_bytes": 53543,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "os"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Core/System_Design.md",
+      "size_bytes": 45142,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "system_design"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Supporting/DSA_Mistake_Log.md",
+      "size_bytes": 10056,
+      "role": "supporting_embedded",
+      "status": "present",
+      "logical_unit_ids": [
+        "dsa"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Supporting selection/review reference; no standalone study unit."
+    },
+    {
+      "path": "Sources/Placement/Supporting/DSA_Pattern_Index.md",
+      "size_bytes": 12797,
+      "role": "supporting_embedded",
+      "status": "present",
+      "logical_unit_ids": [
+        "dsa"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Supporting coverage reference; no standalone study unit."
+    },
+    {
+      "path": "Sources/Placement/Supporting/Extra_Fundamentals.md",
+      "size_bytes": 11442,
+      "role": "supporting_embedded",
+      "status": "present",
+      "logical_unit_ids": [
+        "os",
+        "cn",
+        "dbms",
+        "java_oop",
+        "node_backend",
+        "system_design"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Use where relevant during broader core/interview consolidation; unit links are integration candidates, not confirmed section coverage."
+    },
+    {
+      "path": "Sources/Placement/Supporting/JSON.md",
+      "size_bytes": 7367,
+      "role": "supporting_embedded",
+      "status": "present",
+      "logical_unit_ids": [
+        "node_backend"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Integrated backend reference."
+    },
+    {
+      "path": "Sources/Placement/Supporting/JSON_image.png",
+      "size_bytes": 27007,
+      "role": "supporting_embedded",
+      "status": "present",
+      "logical_unit_ids": [
+        "node_backend"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Companion image associated by filename/location; image and embedding links not inspected. No standalone study unit."
+    },
+    {
+      "path": "Sources/Placement/Supporting/Java_Collections.md",
+      "size_bytes": 6275,
+      "role": "supporting_embedded",
+      "status": "present",
+      "logical_unit_ids": [
+        "java_oop",
+        "dsa"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Integrated Java/OOP or DSA implementation reference."
+    },
+    {
+      "path": "Sources/Placement/Supporting/Java_Collections_image.png",
+      "size_bytes": 112795,
+      "role": "supporting_embedded",
+      "status": "present",
+      "logical_unit_ids": [
+        "java_oop",
+        "dsa"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Companion image associated by filename/location; image and embedding links not inspected. No standalone study unit."
+    },
+    {
+      "path": "Sources/Placement/Supporting/Redis.md",
+      "size_bytes": 0,
+      "role": "supporting_embedded",
+      "status": "empty_placeholder",
+      "logical_unit_ids": [
+        "node_backend",
+        "system_design"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Empty placeholder; integrate where relevant when material is available."
+    },
+    {
+      "path": "Sources/Placement/Tech/AI_Fundamentals.md",
+      "size_bytes": 16458,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "ai_fundamentals"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Tech/Git_GitHub.md",
+      "size_bytes": 31581,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "git_github"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Tech/JavaScript.md",
+      "size_bytes": 49339,
+      "role": "practice_reference",
+      "status": "present",
+      "logical_unit_ids": [
+        "javascript_practice"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Tech/NextJS.md",
+      "size_bytes": 12532,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "nextjs"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Tech/Python.md",
+      "size_bytes": 29600,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "python"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Tech/React.md",
+      "size_bytes": 106352,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "react"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Placement/Tech/React_Screenshot_2025-03-18_170012.png",
+      "size_bytes": 27301,
+      "role": "supporting_embedded",
+      "status": "present",
+      "logical_unit_ids": [
+        "react"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Companion image associated by filename/location; image and embedding links not inspected. No standalone study unit."
+    },
+    {
+      "path": "Sources/Placement/Tech/React_Screenshot_2025-03-18_171010.png",
+      "size_bytes": 222531,
+      "role": "supporting_embedded",
+      "status": "present",
+      "logical_unit_ids": [
+        "react"
+      ],
+      "inspection": "path+file_metadata",
+      "mapping_note": "Companion image associated by filename/location; image and embedding links not inspected. No standalone study unit."
+    },
+    {
+      "path": "Sources/Placement/Tech/TypeScript.md",
+      "size_bytes": 16833,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "typescript"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Projects/Eventually.md",
+      "size_bytes": 34945,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "project_eventually"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Projects/Relay.md",
+      "size_bytes": 17277,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "project_relay"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Projects/Velvet.md",
+      "size_bytes": 34859,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "project_velvet"
+      ],
+      "inspection": "path+file_metadata"
+    },
+    {
+      "path": "Sources/Resume/submitted_resume.pdf",
+      "size_bytes": 114537,
+      "role": "primary_revision",
+      "status": "present",
+      "logical_unit_ids": [
+        "resume"
+      ],
+      "inspection": "path+file_metadata"
+    }
+  ],
+  "oa_structure": {
+    "Major": [
+      "lseg_oa_task_1",
+      "lseg_oa_task_2",
+      "lseg_oa_task_5",
+      "lseg_oa_task_6"
+    ],
+    "Minor": [
+      "lseg_oa_task_3",
+      "lseg_oa_task_4",
+      "lseg_oa_task_7"
+    ],
+    "metadata_source": "Sources/LSEG/OA/README.md",
+    "source_fidelity": "README says task numbers 2, 5 and 6 are explicit; 1, 3, 4 and 7 are inferred. Some prompts are reconstructions from preserved answers/screenshots, not exact original wording."
+  },
+  "open_items": [
+    {
+      "id": "cv_material_pending",
+      "detail": "CV README is empty; reliable current lecturer materials and detailed scope remain pending. Mandatory track retained."
+    },
+    {
+      "id": "empty_supporting_material",
+      "detail": "Redis.md and lseg_research.md are empty placeholders."
+    },
+    {
+      "id": "recsys_numericals_overlap",
+      "detail": "Overlap with final revision is unverified; no redundancy decision or cut made."
+    },
+    {
+      "id": "practice_resources_pending",
+      "detail": "Active JavaScript, SQL, MongoDB and general DSA practice resources remain for later selection; existing notes/support files are not assumed to supply complete exercises."
+    },
+    {
+      "id": "iwt_scope_only",
+      "detail": "IWT has confirmed README scope but no separate local study notes in its directory."
+    },
+    {
+      "id": "other_inputs",
+      "detail": "Official midsem subject order remains pending per requirements; no timetable source was found. No dedicated local HR/behavioural or aptitude resource was found; later resource selection is outside Phase 1."
+    }
+  ]
+}
