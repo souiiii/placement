@@ -35,7 +35,7 @@ The planner must not optimize for visual completeness at the cost of unrealistic
 
 Codex is responsible for:
 
-- inspecting source material;
+- inspecting source scope and structure only as deeply as needed for workload estimation;
 - estimating realistic workload;
 - identifying logical study units;
 - researching suitable external resources when required;
@@ -154,6 +154,8 @@ The feasibility analysis must account for:
 - the mandatory final mock;
 - realistic cognitive load.
 
+Source length/density inputs should normally come from saved workload estimates built from metadata, size, headings, and minimal targeted sampling; feasibility should not reopen and deeply analyze raw notes.
+
 ### 7.1 If the plan is unrealistic
 
 If the requested workload does not fit realistically:
@@ -180,7 +182,7 @@ This is a hard rule.
 
 > **One document does not equal one study block.**
 
-Codex must estimate block duration from the actual content.
+Codex must estimate block duration from actual workload signals such as source size, structure/headings, purpose, study mode, and minimal targeted sampling where needed. Full-note analysis is not required for planning.
 
 Examples:
 
@@ -189,7 +191,7 @@ Examples:
 - A logical study unit may consist of multiple physical files.
 - A supporting file may receive no dedicated block at all.
 
-The **content, density, purpose, and plausible completion time** determine scheduling.
+The **source size/structure, density, purpose, study mode, and plausible completion time** determine scheduling.
 
 Codex should automatically split large logical units across multiple blocks/days when necessary.
 
@@ -258,7 +260,7 @@ The following areas are eligible for and should normally receive **dedicated sch
 
 "Dedicated" does **not** mean "exactly one block."
 
-Codex must inspect the source/workload and choose realistic duration and splitting.
+Codex must use saved workload estimates or lightweight source inspection to choose realistic duration and splitting.
 
 ---
 
@@ -506,13 +508,7 @@ EPQ currently has two important logical source groups:
 
 These two sources do not imply exactly two blocks.
 
-Codex should inspect:
-
-- source length;
-- density;
-- overlap;
-- required coverage;
-- likely revision time.
+Codex should estimate EPQ workload from source size, headings/structure, required coverage, and likely revision time. Investigate overlap only if a redundancy decision materially affects feasibility; do not deeply compare the notes by default.
 
 The full notes may require multiple coverage blocks.
 
@@ -579,7 +575,7 @@ Until reliable material is available:
 
 Once proper material arrives:
 
-1. inspect the actual content;
+1. inspect its structure/scope using page count, headings, and targeted sections only as needed;
 2. identify logical sections;
 3. estimate workload;
 4. fit it realistically into the remaining days;
@@ -871,10 +867,9 @@ The preferred workflow is to place local Markdown/PDF snapshots of relevant mate
 
 This allows Codex to:
 
-- inspect exact content;
-- measure length;
-- inspect headings;
-- judge density;
+- measure file/page/word size;
+- inspect headings or table of contents;
+- infer rough density from structure and targeted samples only when needed;
 - estimate workload consistently;
 - reuse analysis reproducibly.
 
@@ -935,7 +930,7 @@ Do not use these flawed assumptions:
 
 Instead:
 
-1. inspect the actual workload;
+1. inspect workload using saved estimates or lightweight structural/source signals;
 2. identify logical study units;
 3. classify sources correctly;
 4. estimate realistic durations;
